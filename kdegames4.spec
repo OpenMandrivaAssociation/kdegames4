@@ -304,13 +304,38 @@ rm -fr %buildroot
 
 #
 
-#
-#
-#
-#
 %dir %_datadir/applications/kde4/
 %_datadir/applications/kde4/*.desktop
 
+
+%_bindir/kiriki
+%_bindir/ksquares
+
+
+%_datadir/apps/kbattleship/pictures/default_theme.svgz
+
+%_datadir/apps/kgoldrunner/pics/README
+%_datadir/apps/kgoldrunner/pics/*.desktop
+%_datadir/apps/kgoldrunner/pics/*.svg
+
+%dir %_datadir/apps/kiriki/
+%dir %_datadir/apps/kiriki/images/
+%_datadir/apps/kiriki/images/*.png
+%_datadir/apps/kiriki/kirikiui.rc
+
+%_datadir/apps/klines/klines.svgz
+
+%_datadir/apps/kmines/themes/kmines_oxygen.svgz
+%_datadir/apps/ksquares/ksquaresui.rc
+
+
+%_iconsdir/crystalsvg/128x128/apps/knetwalk.png
+%_iconsdir/crystalsvg/16x16/apps/knetwalk.png
+%_iconsdir/crystalsvg/22x22/apps/knetwalk.png
+%_iconsdir/crystalsvg/32x32/apps/knetwalk.png
+%_iconsdir/crystalsvg/48x48/apps/knetwalk.png
+%_iconsdir/crystalsvg/64x64/apps/knetwalk.png
+%_iconsdir/hicolor/scalable/actions/*.svgz
 
 #
 %dir %_datadir/apps/
@@ -583,7 +608,6 @@ rm -fr %buildroot
 %_datadir/apps/kwin4/*.rc
 #
 %_datadir/apps/kblackbox/pics/kblackbox.svgz
-%_datadir/apps/kgoldrunner/pics/kgr_1.svg
 %_datadir/apps/kmines/themes/kmines_classic.svgz
 
 %_datadir/apps/kspaceduel/sprites/backgr.png
@@ -664,14 +688,9 @@ rm -fr %buildroot
 %_datadir/apps/kolf/sounds/*.wav
 
 
-%dir %_datadir/mimelnk/application/
-%_datadir/mimelnk/application/*.desktop
 
-%dir %_datadir/services/
-%_datadir/services/*.protocol
-
-%dir %_datadir/config/magic
-%_datadir/config/magic/*.magic
+%dir %_datadir/kde4/services/
+%_datadir/kde4/services/*.protocol
 
 
 %_datadir/apps/atlantik/atlantik.notifyrc
@@ -866,7 +885,9 @@ rm -fr %buildroot
 %dir %_docdir/HTML/en/kwin4/
 %doc %_docdir/HTML/en/kwin4/*.bz2
 %doc %_docdir/HTML/en/kwin4/*.docbook
-
+%dir %_docdir/HTML/en/ksquares/
+%doc %_docdir/HTML/en/ksquares/index.cache.bz2
+%doc %_docdir/HTML/en/ksquares/index.docbook
 
 
 
@@ -890,6 +911,7 @@ rm -fr %buildroot
 %files -n %lib_name-devel
 %defattr(-,root,root,-)
 
+
 %_datadir/apps/cmake/modules/FindLibKDEGames.cmake
 %_datadir/apps/cmake/modules/GGZ.cmake
 
@@ -909,7 +931,25 @@ rm -fr %buildroot
 %dir %_includedir/atlantik/ui
 %_includedir/atlantik/ui/*.h
 
-
+%_includedir/KDE/KCardDialog
+%_includedir/KDE/KChat
+%_includedir/KDE/KChatBase
+%_includedir/KDE/KChatDialog
+%_includedir/KDE/KExtHighscore
+%_includedir/KDE/KGame/*
+%_includedir/KDE/KGameCanvas
+%_includedir/KDE/KGameLCD
+%_includedir/KDE/KGameMisc
+%_includedir/KDE/KGameProgress
+%_includedir/KDE/KGameSvgDigits
+%_includedir/KDE/KGameSvgDocument
+%_includedir/KDE/KGrid2D
+%_includedir/KDE/KHighscore
+%_includedir/KDE/KScoreDialog
+%_includedir/KDE/KStandardGameAction
+%_includedir/KDE/KZoomMainWindow
+%dir %_includedir/digits/
+%_includedir/digits/kgamesvgdigits.h
 
 %_libdir/libkdegames.so
 %_libdir/libatlantic.so
@@ -918,6 +958,4 @@ rm -fr %buildroot
 
 %dir %_datadir/config.kcfg/
 %_datadir/config.kcfg/*.kcfg
-
-
 
