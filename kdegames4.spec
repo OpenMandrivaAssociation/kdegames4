@@ -548,18 +548,6 @@ rm -fr %buildroot
 
 
 #
-%_iconsdir/*.xpm
-%_iconsdir/*.png
-#
-%dir %_iconsdir/mini/
-%_iconsdir/mini/*.xpm
-%_iconsdir/mini/*.png
-#
-%dir %_iconsdir/large/
-%_iconsdir/large/*.xpm
-%_iconsdir/large/*.png
-#
-
 
 %dir %_datadir/apps/knetwalk/
 %_datadir/apps/knetwalk/knetwalkui.rc
