@@ -56,14 +56,6 @@ Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version-%branch_
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 %endif
 
-Source1:	kfouleggs-16.xpm
-Source2:	kfouleggs-32.xpm
-Source3:	kfouleggs-48.xpm
-
-Source4:	klickety-16.png
-Source5:	klickety-32.png
-Source6:	klickety-48.png
-
 
 Patch2:		kdegames-3.5.0-add-support-avahi.patch
 
@@ -96,31 +88,24 @@ Games for the K Desktop Environment.
 This is a compilation of various games for KDE project
 	- atlantik: Monopoly-like board games
 	- kabalone: board game: move 6 pieces from your opponent over the edge
-	- kasteroids: shoot at those nasty asteroids
 	- katomic: build complex atoms with a minimal amount of moves
 	- kbackgammon: play backgammon against a local human player, via a
                game server or against GNU Backgammon (not included)
 	- kbattleship: battleship game with built-in game server
 	- kblackbox: find atoms in a grid by shooting electrons
-	- kfouleggs: a famous japanese game known as puyo-puyo
 	- kbounce: claim areas and don't get disturbed
-	- kjumpingcube: a tactical game for number-crunchers
 	- klines: place 5 equal pieces together, but wait, there are 3 new ones
 	- mahjongg: a tile laying patience
 	- kmines: the classical mine sweeper
 	- kolf: a golf game
 	- konquest: conquer the planets of your enemy
 	- kpat: several patience card games
-	- kpoker: the game of poker
 	- kreversi: the old reversi board game, also known as othello
 	- ksame: collect pieces of the same color
 	- kshisen: patience game where you take away all pieces
 	- ksirtet: very known if spelt this backwards
 	- ksmiletris: another Tetris-like game
-	- ksnake: don't bite yourself, eat apples!
-	- ksokoban: move all storage boxes into the cabinet
 	- kspaceduel: two player game with shooting spaceships flying around a sun
-	- ktron: like ksnake, but without fruits
 	- ktuberling: kids game: make your own potato (NO french fries!)
 	- kwin4: place 4 pieces in a row
 	- libkdegames: KDE game library used by many of these programs
@@ -194,20 +179,13 @@ export DONT_STRIP=1
 
 make install DESTDIR=%buildroot 
 
-mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kasteroids.desktop "More Applications/Games/Arcade" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kbounce.desktop "More Applications/Games/Arcade" 
-mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kfouleggs.desktop "More Applications/Games/Arcade" 
-mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/klickety.desktop "More Applications/Games/Arcade" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kolf.desktop "More Applications/Games/Arcade" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/ksirtet.desktop "More Applications/Games/Arcade" 
 #mandriva-add-xdg-categories.pl kdegames "More Applications/Games/Arcade" %buildroot/%_datadir/applications/kde/ksmiletris.desktop %buildroot/%_menudir/kdegames-ksmiletris
-mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/ksnake.desktop  "More Applications/Games/Arcade" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kspaceduel.desktop "More Applications/Games/Arcade" 
-mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/ktron.desktop "More Applications/Games/Arcade" 
-mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/atlantik.desktop "More Applications/Games/Boards" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kbackgammon.desktop "More Applications/Games/Boards" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kbattleship.desktop "More Applications/Games/Boards" 
-mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kenolaba.desktop "More Applications/Games/Boards" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/KGoldrunner.desktop "More Applications/Games/Arcade" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kblackbox.desktop "More Applications/Games/Boards" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kmahjongg.desktop "More Applications/Games/Boards" 
@@ -215,30 +193,19 @@ mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kreversi.d
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kshisen.desktop "More Applications/Games/Boards" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kwin4.desktop "More Applications/Games/Boards" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kpat.desktop "More Applications/Games/Cards" 
-mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kpoker.desktop "More Applications/Games/Cards" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/lskat.desktop "More Applications/Games/Cards" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/ktuberling.desktop "More Applications/Games/Cards" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/katomic.desktop "More Applications/Games/Strategy" 
-mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kjumpingcube.desktop "More Applications/Games/Strategy"
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/klines.desktop  "More Applications/Games/Strategy" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/kmines.desktop "More Applications/Games/Strategy" 
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/konquest.desktop "More Applications/Games/Strategy"
 mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/ksame.desktop "More Applications/Games/Strategy" 
-mandriva-add-xdg-categories.pl %buildroot/%_datadir/applications/kde4/ksokoban.desktop "More Applications/Games/Strategy" 
 
 
 
 
 install -d %buildroot/%_iconsdir/mini/
 install -d %buildroot/%_iconsdir/large/
-install -m 644 %SOURCE1 %buildroot/%_iconsdir/mini/kfouleggs.xpm
-install -m 644 %SOURCE2 %buildroot/%_iconsdir/kfouleggs.xpm
-install -m 644 %SOURCE3 %buildroot/%_iconsdir/large/kfouleggs.xpm
-
-install -m 644 %SOURCE4 %buildroot/%_iconsdir/mini/klickety.png
-install -m 644 %SOURCE5 %buildroot/%_iconsdir/klickety.png
-install -m 644 %SOURCE6 %buildroot/%_iconsdir/large/klickety.png
-
 
 %post
 /sbin/ldconfig
@@ -271,33 +238,23 @@ rm -fr %buildroot
 #
 #
 %attr(0755,root,root) %_bindir/kbounce
-%attr(0755,root,root) %_bindir/kenolaba
-%attr(0755,root,root) %_bindir/kasteroids
 %attr(0755,root,root) %_bindir/katomic
 %attr(0755,root,root) %_bindir/kbackgammon
 %attr(0755,root,root) %_bindir/kbattleship
 %attr(0755,root,root) %_bindir/kblackbox
-%attr(0755,root,root) %_bindir/kfouleggs
-%attr(0755,root,root) %_bindir/kjumpingcube
 %attr(0755,root,root) %_bindir/klines
 %attr(0755,root,root) %_bindir/kmahjongg
 %attr(0755,root,root) %_bindir/kmines
 %attr(0755,root,root) %_bindir/konquest
 %attr(0755,root,root) %_bindir/kpat
-%attr(0755,root,root) %_bindir/kpoker
 %attr(0755,root,root) %_bindir/kwin4proc
 %attr(0755,root,root) %_bindir/kreversi
 %attr(0755,root,root) %_bindir/ksame
 %attr(0755,root,root) %_bindir/kshisen
-%attr(0755,root,root) %_bindir/ksnake
-%attr(0755,root,root) %_bindir/ksokoban
 %attr(0755,root,root) %_bindir/kspaceduel
-%attr(0755,root,root) %_bindir/ktron
 %attr(0755,root,root) %_bindir/ktuberling
 %attr(0755,root,root) %_bindir/kwin4
 %attr(0755,root,root) %_bindir/lskat
-%attr(0755,root,root) %_bindir/atlantik
-%attr(0755,root,root) %_bindir/klickety
 %attr(0755,root,root) %_bindir/kolf
 %attr(0755,root,root) %_bindir/kgoldrunner
 %attr(0755,root,root) %_bindir/knetwalk
@@ -329,12 +286,6 @@ rm -fr %buildroot
 %_datadir/apps/ksquares/ksquaresui.rc
 
 
-%_iconsdir/crystalsvg/128x128/apps/knetwalk.png
-%_iconsdir/crystalsvg/16x16/apps/knetwalk.png
-%_iconsdir/crystalsvg/22x22/apps/knetwalk.png
-%_iconsdir/crystalsvg/32x32/apps/knetwalk.png
-%_iconsdir/crystalsvg/48x48/apps/knetwalk.png
-%_iconsdir/crystalsvg/64x64/apps/knetwalk.png
 %_iconsdir/hicolor/scalable/actions/*.svgz
 
 #
@@ -398,10 +349,6 @@ rm -fr %buildroot
 %_datadir/apps/carddecks/decks/*.png
 #
 #
-%dir %_datadir/apps/kenolaba/
-%_datadir/apps/kenolaba/*.rc
-%dir %_datadir/apps/kenolaba/pics/
-%_datadir/apps/kenolaba/pics/*.xpm
 
 #
 %dir %_datadir/apps/kbounce/
@@ -412,42 +359,6 @@ rm -fr %buildroot
 %_datadir/apps/kbounce/sounds/*.au
 %dir %_datadir/apps/kbounce/pics/
 %_datadir/apps/kbounce/pics/default_theme.svgz
-#
-%dir %_datadir/apps/kasteroids/
-%_datadir/apps/kasteroids/*.rc
-#
-%dir %_datadir/apps/kasteroids/sounds/
-%_datadir/apps/kasteroids/sounds/*.wav
-#
-%dir %_datadir/apps/kasteroids/sprites/
-%_datadir/apps/kasteroids/sprites/*.png
-#
-%dir %_datadir/apps/kasteroids/sprites/bits/
-%_datadir/apps/kasteroids/sprites/bits/*.png
-#
-%dir %_datadir/apps/kasteroids/sprites/exhaust/
-%_datadir/apps/kasteroids/sprites/exhaust/*.png
-#
-%dir %_datadir/apps/kasteroids/sprites/missile/
-%_datadir/apps/kasteroids/sprites/missile/*.png
-#
-%dir %_datadir/apps/kasteroids/sprites/powerups/
-%_datadir/apps/kasteroids/sprites/powerups/*.png
-#
-%dir %_datadir/apps/kasteroids/sprites/rock1/
-%_datadir/apps/kasteroids/sprites/rock1/*.png
-#
-%dir %_datadir/apps/kasteroids/sprites/rock2/
-%_datadir/apps/kasteroids/sprites/rock2/*.png
-#
-%dir %_datadir/apps/kasteroids/sprites/rock3/
-%_datadir/apps/kasteroids/sprites/rock3/*.png
-#
-%dir %_datadir/apps/kasteroids/sprites/shield/
-%_datadir/apps/kasteroids/sprites/shield/*.png
-#
-%dir %_datadir/apps/kasteroids/sprites/ship/
-%_datadir/apps/kasteroids/sprites/ship/*.png
 #
 #
 %dir %_datadir/apps/katomic/
@@ -472,8 +383,6 @@ rm -fr %buildroot
 %dir %_datadir/apps/kbattleship/
 %_datadir/apps/kbattleship/*.rc
 #
-%dir %_datadir/apps/kbattleship/pictures/
-%_datadir/apps/kbattleship/pictures/*.png
 #
 %dir %_datadir/apps/kbattleship/sounds/
 %_datadir/apps/kbattleship/sounds/*.ogg
@@ -488,17 +397,7 @@ rm -fr %buildroot
 %dir %_datadir/apps/kdegames/pics/
 %_datadir/apps/kdegames/pics/*.png
 #
-#
-%dir %_datadir/apps/kfouleggs/
-%_datadir/apps/kfouleggs/*.rc
-#
-#
-%dir %_datadir/apps/kjumpingcube/
-%_datadir/apps/kjumpingcube/*.rc
-#
-#
 %dir %_datadir/apps/klines/
-%_datadir/apps/klines/*.jpg
 %_datadir/apps/klines/*.rc
 #
 #
@@ -522,14 +421,6 @@ rm -fr %buildroot
 %_datadir/apps/kpat/*.rc
 #
 #
-%dir %_datadir/apps/kpoker/
-%_datadir/apps/kpoker/*.rc
-#
-%dir %_datadir/apps/kpoker/sounds/
-%_datadir/apps/kpoker/sounds/*.wav
-#
-#
-#
 %dir %_datadir/apps/ksame/
 %_datadir/apps/ksame/*.rc
 #
@@ -544,36 +435,11 @@ rm -fr %buildroot
 
 #
 #
-%dir %_datadir/apps/ksnake/
-%_datadir/apps/ksnake/highScores
-%_datadir/apps/ksnake/*.rc
-#
-%dir %_datadir/apps/ksnake/backgrounds/
-%_datadir/apps/ksnake/backgrounds/*.png
-#
-%dir %_datadir/apps/ksnake/levels/
-%_datadir/apps/ksnake/levels/room*
-#
-%dir %_datadir/apps/ksnake/pics/
-%_datadir/apps/ksnake/pics/*.png
-#
 #
 %dir %_datadir/apps/kspaceduel/
 %_datadir/apps/kspaceduel/*.rc
 #
 %dir %_datadir/apps/kspaceduel/icons/
-%dir %_datadir/apps/kspaceduel/icons/crystalsvg/
-%dir %_datadir/apps/kspaceduel/icons/crystalsvg/16x16/
-%dir %_datadir/apps/kspaceduel/icons/crystalsvg/16x16/actions/
-%_datadir/apps/kspaceduel/icons/crystalsvg/16x16/actions/*.png
-#
-%dir %_datadir/apps/kspaceduel/icons/crystalsvg/22x22/
-%dir %_datadir/apps/kspaceduel/icons/crystalsvg/22x22/actions/
-%_datadir/apps/kspaceduel/icons/crystalsvg/22x22/actions/*.png
-#
-%dir %_datadir/apps/kspaceduel/icons/crystalsvg/32x32/
-%dir %_datadir/apps/kspaceduel/icons/crystalsvg/32x32/actions/
-%_datadir/apps/kspaceduel/icons/crystalsvg/32x32/actions/*.png
 %dir %_datadir/apps/kspaceduel/icons/locolor/
 %dir %_datadir/apps/kspaceduel/icons/locolor/16x16/
 %dir %_datadir/apps/kspaceduel/icons/locolor/16x16/actions/
@@ -584,10 +450,6 @@ rm -fr %buildroot
 %_datadir/apps/kgoldrunner/system/*.txt
 %_datadir/apps/knetwalk/all.svgz
 
-#
-%dir %_datadir/apps/ktron/
-%_datadir/apps/ktron/*.rc
-#
 #
 %dir %_datadir/apps/ktuberling/
 %_datadir/apps/ktuberling/ktuberlingui.rc
@@ -626,13 +488,6 @@ rm -fr %buildroot
 %dir %_datadir/apps/lskat/
 %_datadir/apps/lskat/*.rc
 #
-%dir %_datadir/apps/lskat/grafix/
-%_datadir/apps/lskat/grafix/*.png
-#
-
- 
-
-
 
 %dir %_datadir/apps/kgoldrunner/
 %_datadir/apps/kgoldrunner/*.rc
@@ -640,39 +495,6 @@ rm -fr %buildroot
 %_datadir/apps/kgoldrunner/system/*.dat
 
 #
-%dir %_datadir/apps/atlantik/
-%_datadir/apps/atlantik/*.rc
-
-%dir %_datadir/apps/atlantik/themes/
-%dir %_datadir/apps/atlantik/themes/default/
-%dir %_datadir/apps/atlantik/themes/default/tokens/
-%_datadir/apps/atlantik/themes/default/tokens/*.png
-
-%dir %_datadir/apps/atlantik/pics/
-%_datadir/apps/atlantik/pics/*.png
-
-%dir %_datadir/apps/atlantik/icons/
-%dir %_datadir/apps/atlantik/icons/crystalsvg/
-%dir %_datadir/apps/atlantik/icons/crystalsvg/16x16/
-%dir %_datadir/apps/atlantik/icons/crystalsvg/16x16/actions/
-%_datadir/apps/atlantik/icons/crystalsvg/16x16/actions/*.png
-
-%dir %_datadir/apps/atlantik/icons/crystalsvg/22x22/
-%dir %_datadir/apps/atlantik/icons/crystalsvg/22x22/actions/
-%_datadir/apps/atlantik/icons/crystalsvg/22x22/actions/*.png
-
-%dir %_datadir/apps/atlantik/icons/crystalsvg/32x32/
-%dir %_datadir/apps/atlantik/icons/crystalsvg/32x32/actions/
-%_datadir/apps/atlantik/icons/crystalsvg/32x32/actions/*.png
-
-%dir %_datadir/apps/atlantik/icons/locolor/
-%dir %_datadir/apps/atlantik/icons/locolor/16x16/
-%dir %_datadir/apps/atlantik/icons/locolor/16x16/actions/
-%_datadir/apps/atlantik/icons/locolor/16x16/actions/*.png
-
-%dir %_datadir/apps/klickety/
-%_datadir/apps/klickety/*.rc
-
 %dir %_datadir/apps/kolf/
 %_datadir/apps/kolf/intro
 %_datadir/apps/kolf/*.rc
@@ -689,11 +511,6 @@ rm -fr %buildroot
 
 
 
-%dir %_datadir/kde4/services/
-%_datadir/kde4/services/*.protocol
-
-
-%_datadir/apps/atlantik/atlantik.notifyrc
 %dir %_datadir/apps/carddecks/SVG-cards-2.0/
 %_datadir/apps/carddecks/SVG-cards-2.0/*
 %dir %_datadir/apps/carddecks/svg-classic/
@@ -708,13 +525,7 @@ rm -fr %buildroot
 %_datadir/apps/carddecks/svg-nicu-white/*
 
 
-%dir %_datadir/apps/kasteroids/sprites/bits/
-%_datadir/apps/kasteroids/sprites/bits/*
-%_datadir/apps/kasteroids/sprites/*
 %_datadir/apps/katomic/pics/default_theme.svgz
-%_datadir/apps/kbattleship/kbattleship.notifyrc
-%_datadir/apps/kfouleggs/kfouleggs.notifyrc
-%_datadir/apps/klickety/klickety.notifyrc
 %_datadir/apps/kmahjongg/pics/*
 %dir %_datadir/apps/kmahjongglib/backgrounds/
 %_datadir/apps/kmahjongglib/backgrounds/*
@@ -734,7 +545,6 @@ rm -fr %buildroot
 %_datadir/apps/kreversi/sounds/*.wav
 %_datadir/apps/ksame/pics/default_theme.svgz
 %_datadir/apps/ksirtet/ksirtet.notifyrc
-%_datadir/apps/ksokoban/ksokobanui.rc
 
 
 #
@@ -750,7 +560,6 @@ rm -fr %buildroot
 %_iconsdir/large/*.png
 #
 
-%_datadir/apps/zeroconf/*._tcp
 
 %dir %_datadir/apps/knetwalk/
 %_datadir/apps/knetwalk/knetwalkui.rc
@@ -758,23 +567,6 @@ rm -fr %buildroot
 %dir %_datadir/apps/knetwalk/sounds/
 %_datadir/apps/knetwalk/sounds/*.wav
 
-%_iconsdir/crystalsvg/16x16/actions/endturn.png
-%_iconsdir/crystalsvg/16x16/actions/highscore.png
-%_iconsdir/crystalsvg/16x16/actions/lastmoves.png
-%_iconsdir/crystalsvg/16x16/actions/legalmoves.png
-%_iconsdir/crystalsvg/16x16/actions/roll.png
-%_iconsdir/crystalsvg/22x22/actions/lastmoves.png
-%_iconsdir/crystalsvg/22x22/actions/legalmoves.png
-%_iconsdir/crystalsvg/22x22/actions/roll.png
-%_iconsdir/crystalsvg/32x32/actions/endturn.png
-%_iconsdir/crystalsvg/32x32/actions/highscore.png
-%_iconsdir/crystalsvg/32x32/actions/lastmoves.png
-%_iconsdir/crystalsvg/32x32/actions/legalmoves.png
-%_iconsdir/crystalsvg/32x32/actions/roll.png
-%_iconsdir/crystalsvg/48x48/actions/lastmoves.png
-%_iconsdir/crystalsvg/48x48/actions/legalmoves.png
-%_iconsdir/crystalsvg/scalable/actions/lastmoves.svgz
-%_iconsdir/crystalsvg/scalable/actions/legalmoves.svgz
 %_iconsdir/hicolor/128x128/apps/*.png
 %_iconsdir/hicolor/16x16/apps/*.png
 %_iconsdir/hicolor/22x22/apps/*.png
@@ -782,13 +574,46 @@ rm -fr %buildroot
 %_iconsdir/hicolor/48x48/apps/*.png
 %_iconsdir/hicolor/64x64/apps/*.png
 
-%dir %_docdir/HTML/en/atlantik/
-%doc %_docdir/HTML/en/atlantik/*.bz2
-%doc %_docdir/HTML/en/atlantik/*.docbook
-%dir %_docdir/HTML/en/kasteroids/
-%doc %_docdir/HTML/en/kasteroids/*.png
-%doc %_docdir/HTML/en/kasteroids/*.bz2
-%doc %_docdir/HTML/en/kasteroids/*.docbook
+
+%_datadir/apps/carddecks/decks/deck25_dondorf.svgz
+%_datadir/apps/carddecks/decks/deck26_ornamental.svg
+%_datadir/apps/carddecks/decks/deck27_classic.svgz
+
+%_datadir/apps/klines/default.desktop
+
+%_datadir/apps/kmines/themes/classic.desktop
+%_datadir/apps/kmines/themes/classic_preview.png
+%_datadir/apps/kmines/themes/default.desktop
+%_datadir/apps/kmines/themes/default_preview.png
+%_datadir/apps/kspaceduel/icons/oxygen/16x16/actions/spnewgame.png
+%_datadir/apps/kspaceduel/icons/oxygen/16x16/actions/spnewround.png
+%_datadir/apps/kspaceduel/icons/oxygen/16x16/actions/sppausegame.png
+%_datadir/apps/kspaceduel/icons/oxygen/22x22/actions/spnewgame.png
+%_datadir/apps/kspaceduel/icons/oxygen/22x22/actions/spnewround.png
+%_datadir/apps/kspaceduel/icons/oxygen/22x22/actions/sppausegame.png
+%_datadir/apps/kspaceduel/icons/oxygen/32x32/actions/spnewgame.png
+%_datadir/apps/kspaceduel/icons/oxygen/32x32/actions/spnewround.png
+%_datadir/apps/kspaceduel/icons/oxygen/32x32/actions/sppausegame.png
+
+%_datadir/apps/lskat/grafix/default.rc
+%_datadir/apps/lskat/grafix/default.svg
+
+%_iconsdir/hicolor/scalable/apps/knetwalk.svgz
+%_iconsdir/oxygen/16x16/actions/endturn.png
+%_iconsdir/oxygen/16x16/actions/highscore.png
+%_iconsdir/oxygen/16x16/actions/lastmoves.png
+%_iconsdir/oxygen/16x16/actions/legalmoves.png
+%_iconsdir/oxygen/22x22/actions/lastmoves.png
+%_iconsdir/oxygen/22x22/actions/legalmoves.png
+%_iconsdir/oxygen/32x32/actions/endturn.png
+%_iconsdir/oxygen/32x32/actions/highscore.png
+%_iconsdir/oxygen/32x32/actions/lastmoves.png
+%_iconsdir/oxygen/32x32/actions/legalmoves.png
+%_iconsdir/oxygen/48x48/actions/lastmoves.png
+%_iconsdir/oxygen/48x48/actions/legalmoves.png
+%_iconsdir/oxygen/scalable/actions/lastmoves.svgz
+%_iconsdir/oxygen/scalable/actions/legalmoves.svgz
+
 %dir %_docdir/HTML/en/katomic/
 %doc %_docdir/HTML/en/katomic/*.bz2
 %doc %_docdir/HTML/en/katomic/*.docbook
@@ -807,25 +632,10 @@ rm -fr %buildroot
 %doc %_docdir/HTML/en/kbounce/*.bz2
 %doc %_docdir/HTML/en/kbounce/*.docbook
 %doc %_docdir/HTML/en/kbounce/*.png
-%dir %_docdir/HTML/en/kenolaba/
-%doc %_docdir/HTML/en/kenolaba/*.bz2
-%doc %_docdir/HTML/en/kenolaba/*.docbook
-%doc %_docdir/HTML/en/kenolaba/*.png
-%dir %_docdir/HTML/en/kfouleggs/
-%doc %_docdir/HTML/en/kfouleggs/*.png
-%doc %_docdir/HTML/en/kfouleggs/*.bz2
-%doc %_docdir/HTML/en/kfouleggs/*.docbook
 %dir %_docdir/HTML/en/kgoldrunner/
 %doc %_docdir/HTML/en/kgoldrunner/*.bz2
 %doc %_docdir/HTML/en/kgoldrunner/*.docbook
 %doc %_docdir/HTML/en/kgoldrunner/*.png
-%dir %_docdir/HTML/en/kjumpingcube/
-%doc %_docdir/HTML/en/kjumpingcube/*.bz2
-%doc %_docdir/HTML/en/kjumpingcube/*.docbook
-%dir %_docdir/HTML/en/klickety/
-%doc %_docdir/HTML/en/klickety/*.bz2
-%doc %_docdir/HTML/en/klickety/*.docbook
-%doc %_docdir/HTML/en/klickety/*.png
 %dir %_docdir/HTML/en/klines/
 %doc %_docdir/HTML/en/klines/*.bz2
 %doc %_docdir/HTML/en/klines/*.docbook
@@ -847,10 +657,6 @@ rm -fr %buildroot
 %doc %_docdir/HTML/en/kpat/*.png
 %doc %_docdir/HTML/en/kpat/*.bz2
 %doc %_docdir/HTML/en/kpat/*.docbook
-%dir %_docdir/HTML/en/kpoker/
-%doc %_docdir/HTML/en/kpoker/*.bz2
-%doc %_docdir/HTML/en/kpoker/*.docbook
-%doc %_docdir/HTML/en/kpoker/*.png
 %dir %_docdir/HTML/en/kreversi/
 %doc %_docdir/HTML/en/kreversi/*.bz2
 %doc %_docdir/HTML/en/kreversi/*.docbook
@@ -865,19 +671,10 @@ rm -fr %buildroot
 %dir %_docdir/HTML/en/ksirtet/
 %doc %_docdir/HTML/en/ksirtet/*.bz2
 %doc %_docdir/HTML/en/ksirtet/*.docbook
-%dir %_docdir/HTML/en/ksnake/
-%doc %_docdir/HTML/en/ksnake/*.bz2
-%doc %_docdir/HTML/en/ksnake/*.docbook
-%dir %_docdir/HTML/en/ksokoban/
-%doc %_docdir/HTML/en/ksokoban/*.bz2
-%doc %_docdir/HTML/en/ksokoban/*.docbook
 %dir %_docdir/HTML/en/kspaceduel/
 %doc %_docdir/HTML/en/kspaceduel/*.bz2
 %doc %_docdir/HTML/en/kspaceduel/*.docbook
 %doc %_docdir/HTML/en/kspaceduel/*.png
-%dir %_docdir/HTML/en/ktron/
-%doc %_docdir/HTML/en/ktron/*.bz2
-%doc %_docdir/HTML/en/ktron/*.docbook
 %dir %_docdir/HTML/en/ktuberling/
 %doc %_docdir/HTML/en/ktuberling/*.png
 %doc %_docdir/HTML/en/ktuberling/*.bz2
@@ -888,7 +685,12 @@ rm -fr %buildroot
 %dir %_docdir/HTML/en/ksquares/
 %doc %_docdir/HTML/en/ksquares/index.cache.bz2
 %doc %_docdir/HTML/en/ksquares/index.docbook
-
+%dir %_docdir/HTML/en/kiriki/
+%doc %_docdir/HTML/en/kiriki/*.bz2
+%doc %_docdir/HTML/en/kiriki/*.docbook
+%dir %_docdir/HTML/en/lskat/
+%doc %_docdir/HTML/en/lskat/*.bz2
+%doc %_docdir/HTML/en/lskat/*.docbook
 
 
 %files -n %lib_name
@@ -897,12 +699,6 @@ rm -fr %buildroot
 #
 %_libdir/libkdegames.so.*
 #
-%_libdir/libatlantic.so.*
-%_libdir/libatlantikclient.so.*
-%_libdir/libatlantikui.so.*
-#
-%_libdir/kde4/kio_atlantik.so
-
 %_libdir/libkmahjongglib.so.*
 %_libdir/libkolflib.so.*
 %_libdir/libksirtetlib.so.*
@@ -923,13 +719,6 @@ rm -fr %buildroot
 
 %dir %_includedir/kgame/
 %_includedir/kgame/*.h
-
-%dir %_includedir/atlantic/
-%_includedir/atlantic/*.h
-
-%dir %_includedir/atlantik/
-%dir %_includedir/atlantik/ui
-%_includedir/atlantik/ui/*.h
 
 %_includedir/KDE/KCardDialog
 %_includedir/KDE/KChat
@@ -952,10 +741,10 @@ rm -fr %buildroot
 %_includedir/digits/kgamesvgdigits.h
 
 %_libdir/libkdegames.so
-%_libdir/libatlantic.so
-%_libdir/libatlantikclient.so
-%_libdir/libatlantikui.so
 
 %dir %_datadir/config.kcfg/
 %_datadir/config.kcfg/*.kcfg
+
+
+
 
