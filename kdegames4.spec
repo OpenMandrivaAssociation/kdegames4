@@ -454,12 +454,6 @@ rm -fr %buildroot
 %dir %_datadir/apps/ktuberling/
 %_datadir/apps/ktuberling/ktuberlingui.rc
 #
-%dir %_datadir/apps/ktuberling/museum/
-%_datadir/apps/ktuberling/museum/*.tuberling
-#
-%dir %_datadir/apps/ktuberling/pics/
-%_datadir/apps/ktuberling/pics/*.xml 
-%_datadir/apps/ktuberling/pics/*.png
 #
 %dir %_datadir/apps/ktuberling/sounds/
 %dir %_datadir/apps/ktuberling/sounds/en/
@@ -562,6 +556,11 @@ rm -fr %buildroot
 %_iconsdir/hicolor/48x48/apps/*.png
 %_iconsdir/hicolor/64x64/apps/*.png
 
+
+%_datadir/apps/ktuberling/pics/default_theme.svg
+%_datadir/apps/ktuberling/pics/layout.xml
+%_datadir/apps/ktuberling/pics/potato-game.svg
+%_datadir/config/kmines.knsrc
 
 %_datadir/apps/carddecks/decks/deck25_dondorf.svgz
 %_datadir/apps/carddecks/decks/deck26_ornamental.svg
@@ -698,6 +697,7 @@ rm -fr %buildroot
 
 %_datadir/apps/cmake/modules/FindLibKDEGames.cmake
 %_datadir/apps/cmake/modules/GGZ.cmake
+%_datadir/apps/cmake/modules/FindLibKSirtet.cmake
 
 %_libdir/libkmahjongglib.so
 %_libdir/libkolflib.so
@@ -707,6 +707,15 @@ rm -fr %buildroot
 
 %dir %_includedir/kgame/
 %_includedir/kgame/*.h
+
+%dir %_includedir/libksirtet/base/
+%_includedir/libksirtet/base/*.h
+%dir %_includedir/libksirtet/common/
+%_includedir/libksirtet/common/*.h
+%dir %_includedir/libksirtet/lib/
+%_includedir/libksirtet/lib/*.h
+%dir %_includedir/libksirtet/
+%_includedir/libksirtet/libksirtet_export.h
 
 %_includedir/KDE/KCardDialog
 %_includedir/KDE/KChat
@@ -724,7 +733,6 @@ rm -fr %buildroot
 %_includedir/KDE/KHighscore
 %_includedir/KDE/KScoreDialog
 %_includedir/KDE/KStandardGameAction
-%_includedir/KDE/KZoomMainWindow
 %dir %_includedir/digits/
 %_includedir/digits/kgamesvgdigits.h
 
@@ -732,7 +740,4 @@ rm -fr %buildroot
 
 %dir %_datadir/config.kcfg/
 %_datadir/config.kcfg/*.kcfg
-
-
-
 
