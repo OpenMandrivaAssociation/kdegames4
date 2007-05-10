@@ -41,7 +41,7 @@
 
 Name:		kdegames4
 Summary:	KDE - Games
-Version:    	3.80.3
+Version:    ·   %version
 Release: 	%mkrel 0.%branch_date.3
 Epoch:		1
 Group:		Graphical desktop/KDE
