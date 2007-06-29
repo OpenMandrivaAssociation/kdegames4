@@ -80,6 +80,27 @@ This is a compilation of various games for KDE project
 %files
 %defattr(-,root,root)
 %_kde_appsdir/kdegames/pics/star.png
+%_kde_appsdir/carddecks/*
+%_kde_appsdir/carddecks/decks/*
+%_kde_appsdir/carddecks/cards-aisleriot/*
+%_kde_appsdir/carddecks/cards-default/*
+%_kde_appsdir/carddecks/cards-dondorf-whist-b/*
+%_kde_appsdir/carddecks/cards-gdkcard-bonded/*
+%_kde_appsdir/carddecks/cards-hard-a-port/*
+%_kde_appsdir/carddecks/cards-konqi-modern/*
+%_kde_appsdir/carddecks/cards-penguins/*
+%_kde_appsdir/carddecks/cards-spaced/*
+%_kde_appsdir/carddecks/cards-warwick/*
+%_kde_appsdir/carddecks/cards-xskat-french/*
+%_kde_appsdir/carddecks/cards-xskat-german/*
+%_kde_appsdir/carddecks/svg-classic/*
+%_kde_appsdir/carddecks/svg-dondorf/*
+%_kde_appsdir/carddecks/svg-gm-paris/*
+%_kde_appsdir/carddecks/svg-nicu-ornamental/*
+%_kde_appsdir/carddecks/svg-nicu-white/*
+%_kde_iconsdir/oxygen/*/actions/endturn.png
+%_kde_iconsdir/oxygen/*/actions/lastmoves.png
+%_kde_iconsdir/oxygen/*/actions/legalmoves.png
 
 #--------------------------------------------------------------------
 
@@ -340,6 +361,7 @@ Headers files needed to build applications based on kdegames applications.
 %files -n kde4-kspaceduel
 %defattr(-,root,root)
 %_kde_bindir/kspaceduel
+%_kde_datadir/applications/kde4/kspaceduel.desktop
 %_kde_appsdir/kspaceduel/icons
 %_kde_appsdir/kspaceduel/icons/locolor
 %_kde_appsdir/kspaceduel/icons/locolor/16x16
@@ -487,6 +509,8 @@ Headers files needed to build applications based on kdegames applications.
 %defattr(-,root,root)
 %_kde_bindir/ksame
 %_kde_appsdir/ksame/ksameui.rc
+%_kde_datadir/applications/kde4/ksame.desktop
+%_kde_appsdir/ksame/pics/default_theme.svgz
 %dir %_kde_docdir/HTML/en/ksame
 %doc %_kde_docdir/HTML/en/ksame/index.cache.bz2
 %doc %_kde_docdir/HTML/en/ksame/index.docbook
