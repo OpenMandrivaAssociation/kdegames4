@@ -27,7 +27,6 @@
 %define lib_name_orig libkdegames4
 %define lib_name %mklibname kdegames4 %{lib_major}
 
-
 Name:		kdegames4
 Summary:	KDE - Games
 Version:	3.91
