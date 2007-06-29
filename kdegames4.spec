@@ -56,8 +56,6 @@ Requires(postun): desktop-file-utils
 %description
 Games for the K Desktop Environment.
 This is a compilation of various games for KDE project
-	- atlantik: Monopoly-like board games
-	- kabalone: board game: move 6 pieces from your opponent over the edge
 	- katomic: build complex atoms with a minimal amount of moves
 	- kbackgammon: play backgammon against a local human player, via a
                game server or against GNU Backgammon (not included)
@@ -74,13 +72,11 @@ This is a compilation of various games for KDE project
 	- ksame: collect pieces of the same color
 	- kshisen: patience game where you take away all pieces
 	- ksirtet: very known if spelt this backwards
-	- ksmiletris: another Tetris-like game
 	- kspaceduel: two player game with shooting spaceships flying around a sun
 	- ktuberling: kids game: make your own potato (NO french fries!)
 	- kwin4: place 4 pieces in a row
 	- libkdegames: KDE game library used by many of these programs
 	- lskat: lieutnant skat
-	- megami: blackjack card game
 
 %files
 %defattr(-,root,root)
