@@ -34,10 +34,7 @@ Release: 	%mkrel 0.%revision.1
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPL
-Packager:	Mandriva Linux KDE Team <kde@mandriva.com>
-
 URL:		ftp://ftp.kde.org/pub/kde/stable/%version/src/
-
 %if %branch
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.%revision.tar.bz2
 %else
@@ -45,10 +42,8 @@ Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 %endif
 Patch2:		kdegames-3.5.0-add-support-avahi.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
-
 BuildRequires: kdelibs4-devel
 BuildRequires: libxml2-utils
-
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils
 
@@ -208,26 +203,18 @@ Requires:       kdegames4-core
 Provides:       kbackgammon4
 
 %description -n kde4-kbackgammon
-Headers files needed to build applications based on kdegames applications.
-
+kbackgammon: play backgammon against a local human player, via a
+               game server or against GNU Backgammon (not included)
 
 %files -n kde4-kbackgammon
 %defattr(-,root,root)
 %_kde_bindir/kbackgammon
 %_kde_datadir/applications/kde4/kbackgammon.desktop
-%_kde_docdir/HTML/en/kbackgammon/board.png
-%_kde_docdir/HTML/en/kbackgammon/index.cache.bz2
-%_kde_docdir/HTML/en/kbackgammon/index.docbook
-%_kde_iconsdir/hicolor/128x128/apps/kbackgammon.png
-%_kde_iconsdir/hicolor/16x16/apps/kbackgammon.png
-%_kde_iconsdir/hicolor/16x16/apps/kbackgammon_engine.png
-%_kde_iconsdir/hicolor/22x22/apps/kbackgammon.png
-%_kde_iconsdir/hicolor/32x32/apps/kbackgammon.png
-%_kde_iconsdir/hicolor/32x32/apps/kbackgammon_engine.png
-%_kde_iconsdir/hicolor/48x48/apps/kbackgammon.png
-%_kde_iconsdir/hicolor/48x48/apps/kbackgammon_engine.png
-%_kde_iconsdir/hicolor/64x64/apps/kbackgammon.png
-%_kde_iconsdir/hicolor/64x64/apps/kbackgammon_engine.png
+%dir %_kde_docdir/HTML/en/kbackgammon
+%doc %_kde_docdir/HTML/en/kbackgammon/board.png
+%doc %_kde_docdir/HTML/en/kbackgammon/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kbackgammon/index.docbook
+%_kde_iconsdir/hicolor/*/apps/kbackgammon*
 %_kde_appsdir/kbackgammon/kbackgammonui.rc
 %_kde_appsdir/kbackgammon/pics/*
 %dir %_kde_appsdir/kbackgammon/sounds
@@ -251,7 +238,7 @@ katomic: build complex atoms with a minimal amount of moves
 %_kde_bindir/katomic
 %_kde_datadir/applications/kde4/katomic.desktop
 %doc %_kde_docdir/HTML/en/katomic/index.cache.bz2
-%doc%_kde_docdir/HTML/en/katomic/index.docbook
+%doc%doc %_kde_docdir/HTML/en/katomic/index.docbook
 %_kde_iconsdir/hicolor/*/apps/katomic.png
 %_kde_appsdir/katomic/levels/*
 %_kde_appsdir/katomic/pics/default_theme.svgz
@@ -267,8 +254,7 @@ Requires:       kdegames4-core
 Provides:       kblackbox4
 
 %description -n kde4-kblackbox
-Headers files needed to build applications based on kdegames applications.
-
+kblackbox: find atoms in a grid by shooting electrons
 
 %files -n kde4-kblackbox
 %defattr(-,root,root)
@@ -276,15 +262,11 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_datadir/applications/kde4/kblackbox.desktop
 %_kde_appsdir/kblackbox/kblackboxui.rc
 %_kde_appsdir/kblackbox/pics/kblackbox.svgz
-%_kde_docdir/HTML/en/kblackbox/index.cache.bz2
-%_kde_docdir/HTML/en/kblackbox/index.docbook
-%_kde_docdir/HTML/en/kblackbox/kblackboxtbar.png
-%_kde_iconsdir/hicolor/128x128/apps/kblackbox.png
-%_kde_iconsdir/hicolor/16x16/apps/kblackbox.png
-%_kde_iconsdir/hicolor/22x22/apps/kblackbox.png
-%_kde_iconsdir/hicolor/32x32/apps/kblackbox.png
-%_kde_iconsdir/hicolor/48x48/apps/kblackbox.png
-%_kde_iconsdir/hicolor/64x64/apps/kblackbox.png
+%dir %_kde_docdir/HTML/en/kblackbox
+%doc %_kde_docdir/HTML/en/kblackbox/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kblackbox/index.docbook
+%doc %_kde_docdir/HTML/en/kblackbox/kblackboxtbar.png
+%_kde_iconsdir/hicolor/*/apps/kblackbox.png
 
 #-----------------------------------------------------------------------------
 
@@ -312,10 +294,10 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/ktuberling/pics/potato-game.svg
 %_kde_appsdir/ktuberling/pics/potato-game.theme
 %dir %_kde_docdir/HTML/en/ktuberling
-%_kde_docdir/HTML/en/ktuberling/*.png
-%_kde_docdir/HTML/en/ktuberling/index.cache.bz2
-%_kde_docdir/HTML/en/ktuberling/index.docbook
-%_kde_docdir/HTML/en/ktuberling/technical-reference.docbook
+%doc %_kde_docdir/HTML/en/ktuberling/*.png
+%doc %_kde_docdir/HTML/en/ktuberling/index.cache.bz2
+%doc %_kde_docdir/HTML/en/ktuberling/index.docbook
+%doc %_kde_docdir/HTML/en/ktuberling/technical-reference.docbook
 %_kde_iconsdir/hicolor/*/apps/ktuberling.png
 
 #-----------------------------------------------------------------------------
@@ -328,8 +310,7 @@ Requires:       kdegames4-core
 Provides:       kbounce4
 
 %description -n kde4-kbounce
-Headers files needed to build applications based on kdegames applications.
-
+kbounce: claim areas and don't get disturbed
 
 %files -n kde4-kbounce
 %defattr(-,root,root)
@@ -339,11 +320,11 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/kbounce/themes/*
 %dir %_kde_datadir/apps/kbounce/sounds
 %_kde_datadir/apps/kbounce/sounds/*.au
-%_kde_docdir/HTML/en/kbounce/index.cache.bz2
-%_kde_docdir/HTML/en/kbounce/index.docbook
-%_kde_docdir/HTML/en/kbounce/jezball_corridor1.png
-%_kde_docdir/HTML/en/kbounce/jezball_corridor2.png
-%_kde_docdir/HTML/en/kbounce/jezball_newWall.png
+%doc %_kde_docdir/HTML/en/kbounce/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kbounce/index.docbook
+%doc %_kde_docdir/HTML/en/kbounce/jezball_corridor1.png
+%doc %_kde_docdir/HTML/en/kbounce/jezball_corridor2.png
+%doc %_kde_docdir/HTML/en/kbounce/jezball_newWall.png
 
 #-----------------------------------------------------------------------------
 
@@ -355,8 +336,7 @@ Requires:       kdegames4-core
 Provides:       kspaceduel4
 
 %description -n kde4-kspaceduel
-Headers files needed to build applications based on kdegames applications.
-
+kspaceduel: two player game with shooting spaceships flying around a sun
 
 %files -n kde4-kspaceduel
 %defattr(-,root,root)
@@ -374,9 +354,9 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/kspaceduel/sprites/default_theme.svgz
 %_kde_appsdir/kspaceduel/kspaceduelui.rc
 %_kde_datadir/config.kcfg/kspaceduel.kcfg
-%_kde_docdir/HTML/en/kspaceduel/index.cache.bz2
-%_kde_docdir/HTML/en/kspaceduel/index.docbook
-%_kde_docdir/HTML/en/kspaceduel/kspaceduel3.png
+%doc %_kde_docdir/HTML/en/kspaceduel/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kspaceduel/index.docbook
+%doc %_kde_docdir/HTML/en/kspaceduel/kspaceduel3.png
 %_kde_iconsdir/hicolor/*/apps/kspaceduel.png
 
 #-----------------------------------------------------------------------------
@@ -389,8 +369,7 @@ Requires:       kdegames4-core
 Provides:       kreversi4
 
 %description -n kde4-kreversi
-Headers files needed to build applications based on kdegames applications.
-
+kreversi: the old reversi board game, also known as othello
 
 %files -n kde4-kreversi
 %defattr(-,root,root)
@@ -419,8 +398,7 @@ Requires:       kdegames4-core
 Provides:       kolf4
 
 %description -n kde4-kolf
-Headers files needed to build applications based on kdegames applications.
-
+kolf: a golf game
 
 %files -n kde4-kolf
 %defattr(-,root,root)
@@ -453,8 +431,8 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/kolf/sounds/wall.wav
 %_kde_appsdir/kolf/tutorial.kolf
 %_kde_appsdir/kolf/tutorial.kolfgame
-%_kde_docdir/HTML/en/kolf/index.cache.bz2
-%_kde_docdir/HTML/en/kolf/index.docbook
+%doc %_kde_docdir/HTML/en/kolf/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kolf/index.docbook
 %_kde_datadir/icons/hicolor/*/apps/kolf.png
 
 #-----------------------------------------------------------------------------
@@ -467,8 +445,7 @@ Requires:       kdegames4-core
 Provides:       konquest4
 
 %description -n kde4-konquest
-Headers files needed to build applications based on kdegames applications.
-
+konquest: conquer the planets of your enemy
 
 %files -n kde4-konquest
 %defattr(-,root,root)
@@ -477,18 +454,9 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/konquest/konquestui.rc
 %_kde_appsdir/konquest/pics
 %_kde_appsdir/konquest/pics/konquest-splash.png
-%_kde_appsdir/konquest/pics/planet1.xpm
-%_kde_appsdir/konquest/pics/planet2.xpm
-%_kde_appsdir/konquest/pics/planet3.xpm
-%_kde_appsdir/konquest/pics/planet4.xpm
-%_kde_appsdir/konquest/pics/planet5.xpm
-%_kde_appsdir/konquest/pics/planet6.xpm
-%_kde_appsdir/konquest/pics/planet7.xpm
-%_kde_appsdir/konquest/pics/planet8.xpm
-%_kde_appsdir/konquest/pics/planet9.xpm
-%_kde_appsdir/konquest/pics/ruler.xpm
-%_kde_docdir/HTML/en/konquest/index.cache.bz2
-%_kde_docdir/HTML/en/konquest/index.docbook
+%_kde_appsdir/konquest/pics/*
+%doc %_kde_docdir/HTML/en/konquest/index.cache.bz2
+%doc %_kde_docdir/HTML/en/konquest/index.docbook
 %_kde_datadir/icons/hicolor/*/apps/konquest.png
 
 
@@ -502,8 +470,7 @@ Requires:       kdegames4-core
 Provides:       ksame4
 
 %description -n kde4-ksame
-Headers files needed to build applications based on kdegames applications.
-
+ksame: collect pieces of the same color
 
 %files -n kde4-ksame
 %defattr(-,root,root)
@@ -526,8 +493,7 @@ Requires:       kdegames4-core
 Provides:       kmahjongg4
 
 %description -n kde4-kmahjongg
-Headers files needed to build applications based on kdegames applications.
-
+mahjongg: a tile laying patience
 
 %files -n kde4-kmahjongg
 %defattr(-,root,root)
@@ -554,21 +520,15 @@ Requires:       kdegames4-core
 Provides:       kbattleship4
 
 %description -n kde4-kbattleship
-Headers files needed to build applications based on kdegames applications.
-
+kbattleship: battleship game with built-in game server
 
 %files -n kde4-kbattleship
 %defattr(-,root,root)
 %_kde_bindir/kbattleship
 %_kde_datadir/applications/kde4/kbattleship.desktop
-%_kde_docdir/HTML/en/kbattleship/index.cache.bz2
-%_kde_docdir/HTML/en/kbattleship/index.docbook
-%_kde_iconsdir/hicolor/128x128/apps/kbattleship.png
-%_kde_iconsdir/hicolor/16x16/apps/kbattleship.png
-%_kde_iconsdir/hicolor/22x22/apps/kbattleship.png
-%_kde_iconsdir/hicolor/32x32/apps/kbattleship.png
-%_kde_iconsdir/hicolor/48x48/apps/kbattleship.png
-%_kde_iconsdir/hicolor/64x64/apps/kbattleship.png
+%doc %_kde_docdir/HTML/en/kbattleship/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kbattleship/index.docbook
+%_kde_iconsdir/hicolor/*/apps/kbattleship.png
 %_kde_appsdir/kbattleship/kbattleshipui.rc
 %_kde_appsdir/kbattleship/pictures/default_theme.svgz
 %_kde_appsdir/kbattleship/sounds/*
@@ -590,14 +550,9 @@ Headers files needed to build applications based on kdegames applications.
 %defattr(-,root,root)
 %_kde_bindir/kiriki
 %_kde_datadir/applications/kde4/kiriki.desktop
-%_kde_docdir/HTML/en/kiriki/index.cache.bz2
-%_kde_docdir/HTML/en/kiriki/index.docbook
-%_kde_iconsdir/hicolor/128x128/apps/kiriki.png
-%_kde_iconsdir/hicolor/16x16/apps/kiriki.png
-%_kde_iconsdir/hicolor/22x22/apps/kiriki.png
-%_kde_iconsdir/hicolor/32x32/apps/kiriki.png
-%_kde_iconsdir/hicolor/48x48/apps/kiriki.png
-%_kde_iconsdir/hicolor/64x64/apps/kiriki.png
+%doc %_kde_docdir/HTML/en/kiriki/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kiriki/index.docbook
+%_kde_iconsdir/hicolor/*/apps/kiriki.png
 %_kde_appsdir/kiriki/images/*
 %_kde_appsdir/kiriki/kirikiui.rc
 
@@ -628,11 +583,9 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/ksudoku/XSudoku.xml
 %_kde_appsdir/ksudoku/ksudokuui.rc
 %_kde_datadir/config/ksudokurc
-%_kde_docdir/HTML/en/ksudoku/index.cache.bz2
-%_kde_docdir/HTML/en/ksudoku/index.docbook
-%_kde_iconsdir/hicolor/128x128/apps/ksudoku.png
-%_kde_iconsdir/hicolor/16x16/apps/ksudoku.png
-%_kde_iconsdir/hicolor/32x32/apps/ksudoku.png
+%doc %_kde_docdir/HTML/en/ksudoku/index.cache.bz2
+%doc %_kde_docdir/HTML/en/ksudoku/index.docbook
+%_kde_iconsdir/hicolor/*/apps/ksudoku.png
 
 #-----------------------------------------------------------------------------
 
@@ -660,8 +613,8 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/bovo/themes/scribble/themerc
 %_kde_appsdir/bovo/themes/spacy/theme.svg
 %_kde_appsdir/bovo/themes/spacy/themerc
-%_kde_docdir/HTML/en/bovo/index.cache.bz2
-%_kde_docdir/HTML/en/bovo/index.docbook
+%doc %_kde_docdir/HTML/en/bovo/index.cache.bz2
+%doc %_kde_docdir/HTML/en/bovo/index.docbook
 
 #-----------------------------------------------------------------------------
 
@@ -683,14 +636,9 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/kjumpingcube/kjumpingcubeui.rc
 %_kde_appsdir/kjumpingcube/pics/default.desktop
 %_kde_appsdir/kjumpingcube/pics/default.svg
-%_kde_docdir/HTML/en/kjumpingcube/index.cache.bz2
-%_kde_docdir/HTML/en/kjumpingcube/index.docbook
-%_kde_iconsdir/hicolor/128x128/apps/kjumpingcube.png
-%_kde_iconsdir/hicolor/16x16/apps/kjumpingcube.png
-%_kde_iconsdir/hicolor/22x22/apps/kjumpingcube.png
-%_kde_iconsdir/hicolor/32x32/apps/kjumpingcube.png
-%_kde_iconsdir/hicolor/48x48/apps/kjumpingcube.png
-%_kde_iconsdir/hicolor/64x64/apps/kjumpingcube.png
+%doc %_kde_docdir/HTML/en/kjumpingcube/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kjumpingcube/index.docbook
+%_kde_iconsdir/hicolor/*/apps/kjumpingcube.png
 
 #-----------------------------------------------------------------------------
 
@@ -702,8 +650,7 @@ Requires:       kdegames4-core
 Provides:       klines4
 
 %description -n kde4-klines
-Headers files needed to build applications based on kdegames applications.
-
+klines: place 5 equal pieces together, but wait, there are 3 new ones
 
 %files -n kde4-klines
 %defattr(-,root,root)
@@ -712,14 +659,9 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/klines/klinesui.rc
 %_kde_appsdir/klines/themes/default.desktop
 %_kde_appsdir/klines/themes/klines.svgz
-%_kde_docdir/HTML/en/klines/index.cache.bz2
-%_kde_docdir/HTML/en/klines/index.docbook
-%_kde_iconsdir/hicolor/128x128/apps/klines.png
-%_kde_iconsdir/hicolor/16x16/apps/klines.png
-%_kde_iconsdir/hicolor/22x22/apps/klines.png
-%_kde_iconsdir/hicolor/32x32/apps/klines.png
-%_kde_iconsdir/hicolor/48x48/apps/klines.png
-%_kde_iconsdir/hicolor/64x64/apps/klines.png
+%doc %_kde_docdir/HTML/en/klines/index.cache.bz2
+%doc %_kde_docdir/HTML/en/klines/index.docbook
+%_kde_iconsdir/hicolor/*/apps/klines.png
 
 #-----------------------------------------------------------------------------
 
@@ -731,8 +673,7 @@ Requires:       kdegames4-core
 Provides:       kmines4
 
 %description -n kde4-kmines
-Headers files needed to build applications based on kdegames applications.
-
+kmines: the classical mine sweeper
 
 %files -n kde4-kmines
 %defattr(-,root,root)
@@ -747,16 +688,11 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/kmines/themes/kmines_classic.svgz
 %_kde_appsdir/kmines/themes/kmines_oxygen.svgz
 %_kde_datadir/config/kmines.knsrc
-%_kde_docdir/HTML/en/kmines/index.cache.bz2
-%_kde_docdir/HTML/en/kmines/index.docbook
-%_kde_docdir/HTML/en/kmines/kmines1.png
-%_kde_docdir/HTML/en/kmines/kmines2.png
-%_kde_iconsdir/hicolor/128x128/apps/kmines.png
-%_kde_iconsdir/hicolor/16x16/apps/kmines.png
-%_kde_iconsdir/hicolor/22x22/apps/kmines.png
-%_kde_iconsdir/hicolor/32x32/apps/kmines.png
-%_kde_iconsdir/hicolor/48x48/apps/kmines.png
-%_kde_iconsdir/hicolor/64x64/apps/kmines.png
+%doc %_kde_docdir/HTML/en/kmines/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kmines/index.docbook
+%doc %_kde_docdir/HTML/en/kmines/kmines1.png
+%doc %_kde_docdir/HTML/en/kmines/kmines2.png
+%_kde_iconsdir/hicolor/*/apps/kmines.png
 
 #-----------------------------------------------------------------------------
 
@@ -783,13 +719,7 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/knetwalk/sounds/start.wav
 %_kde_appsdir/knetwalk/sounds/turn.wav
 %_kde_appsdir/knetwalk/sounds/win.wav
-%_kde_iconsdir/hicolor/128x128/apps/knetwalk.png
-%_kde_iconsdir/hicolor/16x16/apps/knetwalk.png
-%_kde_iconsdir/hicolor/22x22/apps/knetwalk.png
-%_kde_iconsdir/hicolor/32x32/apps/knetwalk.png
-%_kde_iconsdir/hicolor/48x48/apps/knetwalk.png
-%_kde_iconsdir/hicolor/64x64/apps/knetwalk.png
-%_kde_iconsdir/hicolor/scalable/apps/knetwalk.svgz
+%_kde_iconsdir/hicolor/*/apps/knetwalk.png
 
 #-----------------------------------------------------------------------------
 
@@ -801,8 +731,7 @@ Requires:       kdegames4-core
 Provides:       kpat4
 
 %description -n kde4-kpat
-Headers files needed to build applications based on kdegames applications.
-
+kpat: several patience card games
 
 %files -n kde4-kpat
 %defattr(-,root,root)
@@ -812,14 +741,14 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/kpat/kpatui.rc
 %_kde_appsdir/kpat/pile.svg
 %_kde_appsdir/kpat/won.svg
-%_kde_docdir/HTML/en/kpat/clubs.png
-%_kde_docdir/HTML/en/kpat/diamonds.png
-%_kde_docdir/HTML/en/kpat/hearts.png
-%_kde_docdir/HTML/en/kpat/index.cache.bz2
-%_kde_docdir/HTML/en/kpat/index.docbook
-%_kde_docdir/HTML/en/kpat/man-kpat.6.docbook
-%_kde_docdir/HTML/en/kpat/playfield.png
-%_kde_docdir/HTML/en/kpat/spades.png
+%doc %_kde_docdir/HTML/en/kpat/clubs.png
+%doc %_kde_docdir/HTML/en/kpat/diamonds.png
+%doc %_kde_docdir/HTML/en/kpat/hearts.png
+%doc %_kde_docdir/HTML/en/kpat/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kpat/index.docbook
+%doc %_kde_docdir/HTML/en/kpat/man-kpat.6.docbook
+%doc %_kde_docdir/HTML/en/kpat/playfield.png
+%doc %_kde_docdir/HTML/en/kpat/spades.png
 %_kde_iconsdir/hicolor/128x128/apps/kpat.png
 %_kde_iconsdir/hicolor/16x16/apps/kpat.png
 %_kde_iconsdir/hicolor/22x22/apps/kpat.png
@@ -837,18 +766,17 @@ Requires:       kdegames4-core
 Provides:       kshisen4
 
 %description -n kde4-kshisen
-Headers files needed to build applications based on kdegames applications.
-
+kshisen: patience game where you take away all pieces
 
 %files -n kde4-kshisen
 %defattr(-,root,root)
 %_kde_bindir/kshisen
 %_kde_datadir/applications/kde4/kshisen.desktop
 %_kde_appsdir/kshisen/kshisenui.rc
-%_kde_docdir/HTML/en/kshisen/index.cache.bz2
-%_kde_docdir/HTML/en/kshisen/index.docbook
-%_kde_docdir/HTML/en/kshisen/kshisen-configuration.png
-%_kde_docdir/HTML/en/kshisen/score-formula.png
+%doc %_kde_docdir/HTML/en/kshisen/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kshisen/index.docbook
+%doc %_kde_docdir/HTML/en/kshisen/kshisen-configuration.png
+%doc %_kde_docdir/HTML/en/kshisen/score-formula.png
 %_kde_iconsdir/hicolor/128x128/apps/kshisen.png
 %_kde_iconsdir/hicolor/16x16/apps/kshisen.png
 %_kde_iconsdir/hicolor/22x22/apps/kshisen.png
@@ -874,14 +802,10 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_bindir/ksquares
 %_kde_datadir/applications/kde4/ksquares.desktop
 %_kde_appsdir/ksquares/ksquaresui.rc
-%_kde_docdir/HTML/en/ksquares/index.cache.bz2
-%_kde_docdir/HTML/en/ksquares/index.docbook
-%_kde_iconsdir/hicolor/128x128/apps/ksquares.png
-%_kde_iconsdir/hicolor/16x16/apps/ksquares.png
-%_kde_iconsdir/hicolor/22x22/apps/ksquares.png
-%_kde_iconsdir/hicolor/32x32/apps/ksquares.png
-%_kde_iconsdir/hicolor/48x48/apps/ksquares.png
-%_kde_iconsdir/hicolor/64x64/apps/ksquares.png
+%dir %_kde_docdir/HTML/en/ksquares
+%doc %_kde_docdir/HTML/en/ksquares/index.cache.bz2
+%doc %_kde_docdir/HTML/en/ksquares/index.docbook
+%_kde_iconsdir/hicolor/*/apps/ksquares.png
 %_kde_iconsdir/hicolor/scalable/actions/ksquares_ai.svgz
 %_kde_iconsdir/hicolor/scalable/actions/ksquares_display.svgz
 
@@ -895,8 +819,7 @@ Requires:       kdegames4-core
 Provides:       kwin44
 
 %description -n kde4-kwin4
-Headers files needed to build applications based on kdegames applications.
-
+kwin4: place 4 pieces in a row
 
 %files -n kde4-kwin4
 %defattr(-,root,root)
@@ -909,14 +832,10 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/kwin4/grafix/yellow.rc
 %_kde_appsdir/kwin4/grafix/yellow.svg
 %_kde_appsdir/kwin4/kwin4ui.rc
-%_kde_docdir/HTML/en/kwin4/index.cache.bz2
-%_kde_docdir/HTML/en/kwin4/index.docbook
-%_kde_iconsdir/hicolor/128x128/apps/kwin4.png
-%_kde_iconsdir/hicolor/16x16/apps/kwin4.png
-%_kde_iconsdir/hicolor/22x22/apps/kwin4.png
-%_kde_iconsdir/hicolor/32x32/apps/kwin4.png
-%_kde_iconsdir/hicolor/48x48/apps/kwin4.png
-%_kde_iconsdir/hicolor/64x64/apps/kwin4.png
+%dir %_kde_docdir/HTML/en/kwin4
+%doc %_kde_docdir/HTML/en/kwin4/index.cache.bz2
+%doc %_kde_docdir/HTML/en/kwin4/index.docbook
+%_kde_iconsdir/hicolor/*/apps/kwin4.png
 
 #-----------------------------------------------------------------------------
 
@@ -928,8 +847,7 @@ Requires:       kdegames4-core
 Provides:       lskat4
 
 %description -n kde4-lskat
-Headers files needed to build applications based on kdegames applications.
-
+lskat: lieutnant skat
 
 %files -n kde4-lskat
 %defattr(-,root,root)
@@ -938,14 +856,10 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_appsdir/lskat/grafix/default.rc
 %_kde_appsdir/lskat/grafix/default.svg
 %_kde_appsdir/lskat/lskatui.rc
-%_kde_docdir/HTML/en/lskat/index.cache.bz2
-%_kde_docdir/HTML/en/lskat/index.docbook
-%_kde_iconsdir/hicolor/128x128/apps/lskat.png
-%_kde_iconsdir/hicolor/16x16/apps/lskat.png
-%_kde_iconsdir/hicolor/22x22/apps/lskat.png
-%_kde_iconsdir/hicolor/32x32/apps/lskat.png
-%_kde_iconsdir/hicolor/48x48/apps/lskat.png
-%_kde_iconsdir/hicolor/64x64/apps/lskat.png
+%dir %_kde_docdir/HTML/en/lskat
+%doc %_kde_docdir/HTML/en/lskat/index.cache.bz2
+%doc %_kde_docdir/HTML/en/lskat/index.docbook
+%_kde_iconsdir/hicolor/*/apps/lskat.png
 
 #-----------------------------------------------------------------------------
 
@@ -957,22 +871,17 @@ Requires:       kdegames4-core
 Provides:       ksirtet4
 
 %description -n kde4-ksirtet
-Headers files needed to build applications based on kdegames applications.
-
+ksirtet: very known if spelt this backwards
 
 %files -n kde4-ksirtet
 %defattr(-,root,root)
 %_kde_datadir/applications/kde4/ksirtet.desktop
 %_kde_appsdir/ksirtet/ksirtet.notifyrc
 %_kde_appsdir/ksirtet/ksirtetui.rc
-%_kde_docdir/HTML/en/ksirtet/index.cache.bz2
-%_kde_docdir/HTML/en/ksirtet/index.docbook
-%_kde_iconsdir/hicolor/128x128/apps/ksirtet.png
-%_kde_iconsdir/hicolor/16x16/apps/ksirtet.png
-%_kde_iconsdir/hicolor/22x22/apps/ksirtet.png
-%_kde_iconsdir/hicolor/32x32/apps/ksirtet.png
-%_kde_iconsdir/hicolor/48x48/apps/ksirtet.png
-%_kde_iconsdir/hicolor/64x64/apps/ksirtet.png
+%dir %_kde_docdir/HTML/en/ksirtet
+%doc %_kde_docdir/HTML/en/ksirtet/index.cache.bz2
+%doc %_kde_docdir/HTML/en/ksirtet/index.docbook
+%_kde_iconsdir/hicolor/*/apps/ksirtet.png
 
 #-----------------------------------------------------------------------------
 
