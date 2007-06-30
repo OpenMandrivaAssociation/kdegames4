@@ -73,7 +73,7 @@ This is a compilation of various games for KDE project
 	- Ksudoku: Play, create and solve sudoku grids
 	- KGoldrunner: a game of action and puzzle solving.
 	- KTuberling: "potato editor" game
-	- Kiriki: a dice game
+	- Kiriki: Close of Yahtzee
 	- Kjumpingcube: a tactical game for number-crunchers
 	- Bovo: classic pen and paper game
 	- KSquares: an implementation of the popular paper based game squares
@@ -683,7 +683,7 @@ kbattleship: battleship game with built-in game server
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kiriki
-Summary:        
+Summary:        Kiriki: Close of Yahtzee 
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
