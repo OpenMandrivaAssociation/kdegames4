@@ -169,14 +169,13 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kgoldrunner
-Summary:        Headers files for kdegames
+Summary:        
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
 Provides:       kgoldrunner4
 
 %description -n kde4-kgoldrunner
-Headers files needed to build applications based on kdegames applications.
 
 
 %files -n kde4-kgoldrunner
@@ -196,7 +195,7 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kbackgammon
-Summary:        Headers files for kdegames
+Summary:        Backgammon Game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -224,7 +223,7 @@ kbackgammon: play backgammon against a local human player, via a
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-katomic
-Summary:        Headers files for kdegames
+Summary:        Build complex atoms with a minimal amount of moves
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -247,7 +246,7 @@ katomic: build complex atoms with a minimal amount of moves
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kblackbox
-Summary:        Headers files for kdegames
+Summary:        Find atoms in a grid by shooting electrons
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -271,14 +270,13 @@ kblackbox: find atoms in a grid by shooting electrons
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-ktuberling
-Summary:        Headers files for kdegames
+Summary:        
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
 Provides:       ktuberling4
 
 %description -n kde4-ktuberling
-Headers files needed to build applications based on kdegames applications.
 
 
 %files -n kde4-ktuberling
@@ -303,7 +301,7 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kbounce
-Summary:        Headers files for kdegames
+Summary:        Claim areas and don't get disturbed
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -329,7 +327,7 @@ kbounce: claim areas and don't get disturbed
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kspaceduel
-Summary:        Headers files for kdegames
+Summary:        Two player game with shooting spaceships flying around a sun
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -362,7 +360,7 @@ kspaceduel: two player game with shooting spaceships flying around a sun
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kreversi
-Summary:        Headers files for kdegames
+Summary:        Old reversi board game, also known as othello
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -391,7 +389,7 @@ kreversi: the old reversi board game, also known as othello
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kolf
-Summary:        Headers files for kdegames
+Summary:        A golf game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -438,7 +436,7 @@ kolf: a golf game
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-konquest
-Summary:        Headers files for kdegames
+Summary:        Conquer the planets of your enemy
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -463,7 +461,7 @@ konquest: conquer the planets of your enemy
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-ksame
-Summary:        Headers files for kdegames
+Summary:        Collect pieces of the same color
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -486,7 +484,7 @@ ksame: collect pieces of the same color
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kmahjongg
-Summary:        Headers files for kdegames
+Summary:        A tile laying patience
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -513,7 +511,7 @@ mahjongg: a tile laying patience
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kbattleship
-Summary:        Headers files for kdegames
+Summary:        Battleship game with built-in game server
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -536,14 +534,13 @@ kbattleship: battleship game with built-in game server
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kiriki
-Summary:        Headers files for kdegames
+Summary:        
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
 Provides:       kiriki4
 
 %description -n kde4-kiriki
-Headers files needed to build applications based on kdegames applications.
 
 
 %files -n kde4-kiriki
@@ -559,14 +556,13 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-ksudoku
-Summary:        Headers files for kdegames
+Summary:        
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
 Provides:       ksudoku4
 
 %description -n kde4-ksudoku
-Headers files needed to build applications based on kdegames applications.
 
 
 %files -n kde4-ksudoku
@@ -590,14 +586,13 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-bovo
-Summary:        Headers files for kdegames
+Summary:        
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
 Provides:       bovo4
 
 %description -n kde4-bovo
-Headers files needed to build applications based on kdegames applications.
 
 
 %files -n kde4-bovo
@@ -619,14 +614,13 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kjumpingcube
-Summary:        Headers files for kdegames
+Summary:        
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
 Provides:       kjumpingcube4
 
 %description -n kde4-kjumpingcube
-Headers files needed to build applications based on kdegames applications.
 
 
 %files -n kde4-kjumpingcube
@@ -643,7 +637,7 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-klines
-Summary:        Headers files for kdegames
+Summary:        Place 5 equal pieces together, but wait, there are 3 new ones
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -666,7 +660,7 @@ klines: place 5 equal pieces together, but wait, there are 3 new ones
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kmines
-Summary:        Headers files for kdegames
+Summary:        The classical mine sweeper
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -697,14 +691,13 @@ kmines: the classical mine sweeper
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-knetwalk
-Summary:        Headers files for kdegames
+Summary:        
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
 Provides:       knetwalk4
 
 %description -n kde4-knetwalk
-Headers files needed to build applications based on kdegames applications.
 
 
 %files -n kde4-knetwalk
@@ -724,7 +717,7 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kpat
-Summary:        Headers files for kdegames
+Summary:        Several patience card games
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -759,7 +752,7 @@ kpat: several patience card games
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kshisen
-Summary:        Headers files for kdegames
+Summary:        Patience game where you take away all pieces
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -787,14 +780,13 @@ kshisen: patience game where you take away all pieces
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-ksquares
-Summary:        Headers files for kdegames
+Summary:        
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
 Provides:       ksquares4
 
 %description -n kde4-ksquares
-Headers files needed to build applications based on kdegames applications.
 
 
 %files -n kde4-ksquares
@@ -812,7 +804,7 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kwin4
-Summary:        Headers files for kdegames
+Summary:        Place 4 pieces in a row
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -840,7 +832,7 @@ kwin4: place 4 pieces in a row
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-lskat
-Summary:        Headers files for kdegames
+Summary:        Lieutnant skat
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -864,7 +856,7 @@ lskat: lieutnant skat
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-ksirtet
-Summary:        Headers files for kdegames
+Summary:        Very known if spelt this backwards
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
