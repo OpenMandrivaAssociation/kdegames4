@@ -112,6 +112,8 @@ This is a compilation of various games for KDE project
 %_kde_iconsdir/oxygen/*/actions/lastmoves.png
 %_kde_iconsdir/oxygen/*/actions/legalmoves.png
 
+#--------------------------------------------------------------------
+
 %package -n %lib_name-devel
 Summary:	Headers files for kdegames
 Group:		Development/KDE and Qt
@@ -190,7 +192,7 @@ Headers files needed to build applications based on kdegames applications.
 Summary:        KGoldrunner, a game of action and puzzle solving.
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kgoldrunner4
 
 %description -n kde4-kgoldrunner
@@ -230,7 +232,7 @@ all the gold and climb up to the next level.
 Summary:        Backgammon Game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kbackgammon4
 
 %description -n kde4-kbackgammon
@@ -267,7 +269,7 @@ kbackgammon: play backgammon against a local human player, via a
 Summary:        Build complex atoms with a minimal amount of moves
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       katomic4
 
 %description -n kde4-katomic
@@ -301,7 +303,7 @@ katomic: build complex atoms with a minimal amount of moves
 Summary:        Find atoms in a grid by shooting electrons
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kblackbox4
 
 %description -n kde4-kblackbox
@@ -336,7 +338,7 @@ kblackbox: find atoms in a grid by shooting electrons
 Summary:        KTuberling: "potato editor" game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       ktuberling4
 
 %description -n kde4-ktuberling
@@ -381,7 +383,7 @@ faces you can.
 Summary:        Claim areas and don't get disturbed
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kbounce4
 
 %description -n kde4-kbounce
@@ -407,7 +409,7 @@ kbounce: claim areas and don't get disturbed
 Summary:        Two player game with shooting spaceships flying around a sun
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kspaceduel4
 
 %description -n kde4-kspaceduel
@@ -450,7 +452,7 @@ kspaceduel: two player game with shooting spaceships flying around a sun
 Summary:        Old reversi board game, also known as othello
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kreversi4
 
 %description -n kde4-kreversi
@@ -489,7 +491,7 @@ kreversi: the old reversi board game, also known as othello
 Summary:        A golf game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kolf4
 
 %description -n kde4-kolf
@@ -546,7 +548,7 @@ kolf: a golf game
 Summary:        Conquer the planets of your enemy
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       konquest4
 
 %description -n kde4-konquest
@@ -581,7 +583,7 @@ konquest: conquer the planets of your enemy
 Summary:        Collect pieces of the same color
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       ksame4
 
 %description -n kde4-ksame
@@ -614,7 +616,7 @@ ksame: collect pieces of the same color
 Summary:        A tile laying patience
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kmahjongg4
 
 %description -n kde4-kmahjongg
@@ -651,7 +653,7 @@ Kmahjongg: a tile laying patience
 Summary:        Battleship game with built-in game server
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kbattleship4
 
 %description -n kde4-kbattleship
@@ -684,7 +686,7 @@ kbattleship: battleship game with built-in game server
 Summary:        
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kiriki4
 
 %description -n kde4-kiriki
@@ -718,7 +720,7 @@ It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 Summary:        KSudoku - Play, create and solve sudoku grids 
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       ksudoku4
 
 %description -n kde4-ksudoku
@@ -776,7 +778,7 @@ More information at http://en.wikipedia.org/wiki/Sudoku
 Summary:        Bovo: classic pen and paper game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       bovo4
 
 %description -n kde4-bovo
@@ -806,7 +808,7 @@ where you try to connect five in a row prior to your opponent.
 Summary:        kjumpingcube: a tactical game for number-crunchers
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kjumpingcube4
 
 %description -n kde4-kjumpingcube
@@ -842,7 +844,7 @@ this you can gain more fields and finally win the board over.
 Summary:        Place 5 equal pieces together, but wait, there are 3 new ones
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       klines4
 
 %description -n kde4-klines
@@ -875,7 +877,7 @@ klines: place 5 equal pieces together, but wait, there are 3 new ones
 Summary:        The classical mine sweeper
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kmines4
 
 %description -n kde4-kmines
@@ -916,7 +918,7 @@ kmines: the classical mine sweeper
 Summary:        Turn the board pieces to get all computers connected. 
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       knetwalk4
 
 %description -n kde4-knetwalk
@@ -953,7 +955,7 @@ Turn the board pieces to get all computers connected.
 Summary:        Several patience card games
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kpat4
 
 %description -n kde4-kpat
@@ -993,7 +995,7 @@ kpat: several patience card games
 Summary:        Patience game where you take away all pieces
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kshisen4
 
 %description -n kde4-kshisen
@@ -1026,7 +1028,7 @@ Kshisen: patience game where you take away all pieces
 Summary:        KSquares: an implementation of the popular paper based game squares
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       ksquares4
 
 %description -n kde4-ksquares
@@ -1064,7 +1066,7 @@ quares wins.
 Summary:        Place 4 pieces in a row
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       kwin44
 
 %description -n kde4-kwin4
@@ -1102,7 +1104,7 @@ kwin4: place 4 pieces in a row
 Summary:        Lieutnant skat
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       lskat4
 
 %description -n kde4-lskat
@@ -1136,7 +1138,7 @@ lskat: lieutnant skat
 Summary:        Ksirtet: clone of the well known Tetris game family
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-
+Conflicts:      kdegames4 < 3.91
 Provides:       ksirtet4
 
 %description -n kde4-ksirtet
@@ -1170,8 +1172,9 @@ game.
 %define libkdegames %mklibname kdegames 5
 
 %package -n %libkdegames
-Summary: KDE 4 library
-Group: System/Libraries
+Summary:    KDE 4 library
+Group:      System/Libraries
+Conflicts:  %{_lib}kdegames4 < 3.91
 
 %description -n %libkdegames
 KDE 4 library.
@@ -1190,6 +1193,7 @@ KDE 4 library.
 %package -n %libkmahjongglib
 Summary: KDE 4 library
 Group: System/Libraries
+Conflicts:  %{_lib}kdegames4 < 3.91
 
 %description -n %libkmahjongglib
 KDE 4 library.
@@ -1208,6 +1212,7 @@ KDE 4 library.
 %package -n %libkolflib
 Summary: KDE 4 library
 Group: System/Libraries
+Conflicts:  %{_lib}kdegames4 < 3.91
 
 %description -n %libkolflib
 KDE 4 library.
@@ -1226,6 +1231,7 @@ KDE 4 library.
 %package -n %libksirtetlib
 Summary: KDE 4 library
 Group: System/Libraries
+Conflicts:  %{_lib}kdegames4 < 3.91
 
 %description -n %libksirtetlib
 KDE 4 library.
