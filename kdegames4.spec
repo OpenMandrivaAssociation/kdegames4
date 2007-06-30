@@ -78,6 +78,15 @@ This is a compilation of various games for KDE project
 	- Bovo: classic pen and paper game
 	- KSquares: an implementation of the popular paper based game squares
 	- Knetwalk: Turn the board pieces to get all computers connected²
+
+%post
+/sbin/ldconfig
+%update_icon_cache oxygen
+
+%postun
+/sbin/ldconfig
+%clean_icon_cache oxygen
+
 %files
 %defattr(-,root,root)
 %_kde_appsdir/kdegames/pics/star.png
@@ -103,8 +112,6 @@ This is a compilation of various games for KDE project
 %_kde_iconsdir/oxygen/*/actions/lastmoves.png
 %_kde_iconsdir/oxygen/*/actions/legalmoves.png
 
-#--------------------------------------------------------------------
-
 %package -n %lib_name-devel
 Summary:	Headers files for kdegames
 Group:		Development/KDE and Qt
@@ -116,6 +123,11 @@ Requires:	kdelibs4-devel >= %version-%mini_release
 
 %description -n %lib_name-devel
 Headers files needed to build applications based on kdegames applications.
+
+%post -n %lib_name-devel -p /sbin/ldconfig
+
+%postun -n %lib_name-devel -p /sbin/ldconfig
+
 
 %files -n %lib_name-devel
 %defattr(-,root,root,-)
@@ -187,6 +199,17 @@ KGoldrunner, a game of action and puzzle solving.
 Run through the maze, dodge your enemies, collect 
 all the gold and climb up to the next level.
 
+%post -n kde4-kgoldrunner
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kgoldrunner
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
+
 %files -n kde4-kgoldrunner
 %defattr(-,root,root)
 %attr(0755,root,root) %_kde_bindir/kgoldrunner
@@ -213,6 +236,15 @@ Provides:       kbackgammon4
 %description -n kde4-kbackgammon
 kbackgammon: play backgammon against a local human player, via a
                game server or against GNU Backgammon (not included)
+
+%post -n kde4-kbackgammon
+/sbin/ldconfig
+%update_icon_cache hicolor
+
+%postun -n kde4-kbackgammon
+/sbin/ldconfig
+%clean_icon_cache hicolor
+
 
 %files -n kde4-kbackgammon
 %defattr(-,root,root)
@@ -241,6 +273,17 @@ Provides:       katomic4
 %description -n kde4-katomic
 katomic: build complex atoms with a minimal amount of moves
 
+%post -n kde4-katomic
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-katomic
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
+
 %files -n kde4-katomic
 %defattr(-,root,root)
 %_kde_bindir/katomic
@@ -263,6 +306,17 @@ Provides:       kblackbox4
 
 %description -n kde4-kblackbox
 kblackbox: find atoms in a grid by shooting electrons
+
+%post -n kde4-kblackbox
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kblackbox
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
 
 %files -n kde4-kblackbox
 %defattr(-,root,root)
@@ -291,6 +345,16 @@ KTuberling is a "potato editor" game intended for small
 children and adults who remain young at heart. The game 
 has no winner; the only purpose is to make the funniest 
 faces you can.
+
+%post -n kde4-ktuberling
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-ktuberling
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
 
 %files -n kde4-ktuberling
 %defattr(-,root,root)
@@ -349,6 +413,16 @@ Provides:       kspaceduel4
 %description -n kde4-kspaceduel
 kspaceduel: two player game with shooting spaceships flying around a sun
 
+%post -n kde4-kspaceduel
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kspaceduel
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
 %files -n kde4-kspaceduel
 %defattr(-,root,root)
 %_kde_bindir/kspaceduel
@@ -382,6 +456,16 @@ Provides:       kreversi4
 %description -n kde4-kreversi
 kreversi: the old reversi board game, also known as othello
 
+%post -n kde4-kreversi
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kreversi
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
 %files -n kde4-kreversi
 %defattr(-,root,root)
 %_kde_bindir/kreversi
@@ -410,6 +494,16 @@ Provides:       kolf4
 
 %description -n kde4-kolf
 kolf: a golf game
+
+%post -n kde4-kolf
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kolf
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
 
 %files -n kde4-kolf
 %defattr(-,root,root)
@@ -458,6 +552,16 @@ Provides:       konquest4
 %description -n kde4-konquest
 konquest: conquer the planets of your enemy
 
+%post -n kde4-konquest
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-konquest
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
 %files -n kde4-konquest
 %defattr(-,root,root)
 %_kde_bindir/konquest
@@ -483,6 +587,16 @@ Provides:       ksame4
 %description -n kde4-ksame
 ksame: collect pieces of the same color
 
+%post -n kde4-ksame
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-ksame
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
 %files -n kde4-ksame
 %defattr(-,root,root)
 %_kde_bindir/ksame
@@ -504,7 +618,17 @@ Requires:       kdegames4-core
 Provides:       kmahjongg4
 
 %description -n kde4-kmahjongg
-mahjongg: a tile laying patience
+Kmahjongg: a tile laying patience
+
+%post -n kde4-kmahjongg
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kmahjongg
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
 
 %files -n kde4-kmahjongg
 %defattr(-,root,root)
@@ -533,6 +657,16 @@ Provides:       kbattleship4
 %description -n kde4-kbattleship
 kbattleship: battleship game with built-in game server
 
+%post -n kde4-kbattleship
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kbattleship
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
 %files -n kde4-kbattleship
 %defattr(-,root,root)
 %_kde_bindir/kbattleship
@@ -557,6 +691,16 @@ Provides:       kiriki4
 
 Kiriki is a dice game, written for KDE 4. 
 It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
+
+%post -n kde4-kiriki
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kiriki
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
 
 %files -n kde4-kiriki
 %defattr(-,root,root)
@@ -597,6 +741,16 @@ cells with 16 cols, rows and subsquares! (if normal sudoku are not enough for
 you).
 
 More information at http://en.wikipedia.org/wiki/Sudoku
+
+%post-n kde4-ksudoku
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun-n kde4-ksudoku
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
 
 %files -n kde4-ksudoku
 %defattr(-,root,root)
@@ -661,6 +815,16 @@ KJumpingCube is a tactical one or two-player game. The playing field
 consists of squares that contains points which can be increased. By 
 this you can gain more fields and finally win the board over.
 
+%post -n kde4-kjumpingcube
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kjumpingcube
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
 %files -n kde4-kjumpingcube
 %defattr(-,root,root)
 %_kde_bindir/kjumpingcube
@@ -684,6 +848,16 @@ Provides:       klines4
 %description -n kde4-klines
 klines: place 5 equal pieces together, but wait, there are 3 new ones
 
+%post -n kde4-klines
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-klines
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
 %files -n kde4-klines
 %defattr(-,root,root)
 %_kde_bindir/klines
@@ -706,6 +880,16 @@ Provides:       kmines4
 
 %description -n kde4-kmines
 kmines: the classical mine sweeper
+
+%post -n kde4-kmines
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kmines
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
 
 %files -n kde4-kmines
 %defattr(-,root,root)
@@ -739,6 +923,16 @@ Provides:       knetwalk4
 
 Turn the board pieces to get all computers connected.
 
+%post -n kde4-knetwalk
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-knetwalk
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
 %files -n kde4-knetwalk
 %defattr(-,root,root)
 %_kde_bindir/knetwalk
@@ -765,6 +959,16 @@ Provides:       kpat4
 %description -n kde4-kpat
 kpat: several patience card games
 
+%post -n kde4-kpat
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kpat
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
 %files -n kde4-kpat
 %defattr(-,root,root)
 %_kde_bindir/kpat
@@ -781,12 +985,7 @@ kpat: several patience card games
 %doc %_kde_docdir/HTML/en/kpat/man-kpat.6.docbook
 %doc %_kde_docdir/HTML/en/kpat/playfield.png
 %doc %_kde_docdir/HTML/en/kpat/spades.png
-%_kde_iconsdir/hicolor/128x128/apps/kpat.png
-%_kde_iconsdir/hicolor/16x16/apps/kpat.png
-%_kde_iconsdir/hicolor/22x22/apps/kpat.png
-%_kde_iconsdir/hicolor/32x32/apps/kpat.png
-%_kde_iconsdir/hicolor/48x48/apps/kpat.png
-%_kde_iconsdir/hicolor/64x64/apps/kpat.png
+%_kde_iconsdir/hicolor/*/apps/kpat.png
 
 #-----------------------------------------------------------------------------
 
@@ -798,7 +997,17 @@ Requires:       kdegames4-core
 Provides:       kshisen4
 
 %description -n kde4-kshisen
-kshisen: patience game where you take away all pieces
+Kshisen: patience game where you take away all pieces
+
+%post -n kde4-kshisen
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kshisen
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
 
 %files -n kde4-kshisen
 %defattr(-,root,root)
@@ -809,12 +1018,7 @@ kshisen: patience game where you take away all pieces
 %doc %_kde_docdir/HTML/en/kshisen/index.docbook
 %doc %_kde_docdir/HTML/en/kshisen/kshisen-configuration.png
 %doc %_kde_docdir/HTML/en/kshisen/score-formula.png
-%_kde_iconsdir/hicolor/128x128/apps/kshisen.png
-%_kde_iconsdir/hicolor/16x16/apps/kshisen.png
-%_kde_iconsdir/hicolor/22x22/apps/kshisen.png
-%_kde_iconsdir/hicolor/32x32/apps/kshisen.png
-%_kde_iconsdir/hicolor/48x48/apps/kshisen.png
-%_kde_iconsdir/hicolor/64x64/apps/kshisen.png
+%_kde_iconsdir/hicolor/*/apps/kshisen.png
 
 #-----------------------------------------------------------------------------
 
@@ -829,6 +1033,18 @@ Provides:       ksquares4
 KSquares is an implementation of the popular paper based game squares. 
 You must draw lines to complete squares, the player with the most s
 quares wins.
+
+%post -n kde4-ksquares
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+%update_icon_cache scalable
+
+%postun -n kde4-ksquares
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+%clean_icon_cache scalable
 
 %files -n kde4-ksquares
 %defattr(-,root,root)
@@ -853,6 +1069,16 @@ Provides:       kwin44
 
 %description -n kde4-kwin4
 kwin4: place 4 pieces in a row
+
+%post -n kde4-kwin4
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-kwin4
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
 
 %files -n kde4-kwin4
 %defattr(-,root,root)
@@ -882,6 +1108,16 @@ Provides:       lskat4
 %description -n kde4-lskat
 lskat: lieutnant skat
 
+%post -n kde4-lskat
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-lskat
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
+
 %files -n kde4-lskat
 %defattr(-,root,root)
 %_kde_bindir/lskat
@@ -908,6 +1144,16 @@ KSirtet is a clone of the well known Tetris game family. The game
 allows multiplayer duels including games against a computer player.
 Everybody knowing Tetris should immediately feel at home with this
 game.
+
+%post -n kde4-ksirtet
+/sbin/ldconfig
+%{update_desktop_database}
+%update_icon_cache hicolor
+
+%postun -n kde4-ksirtet
+/sbin/ldconfig
+%{clean_desktop_database}
+%clean_icon_cache hicolor
 
 %files -n kde4-ksirtet
 %defattr(-,root,root)
@@ -1014,7 +1260,6 @@ cd $RPM_BUILD_DIR/kdegames
 
 %make
 
-
 %install
 rm -fr %buildroot
 
@@ -1026,27 +1271,6 @@ export DONT_STRIP=1
 %endif
 
 make install DESTDIR=%buildroot 
-
-
-
-install -d %buildroot/%_iconsdir/mini/
-install -d %buildroot/%_iconsdir/large/
-
-%post
-/sbin/ldconfig
-%{update_desktop_database}
-%update_icon_cache crystalsvg
-%update_icon_cache hicolor
-
-%postun
-/sbin/ldconfig
-%{clean_desktop_database}
-%clean_icon_cache crystalsvg
-%clean_icon_cache hicolor
-
-%post -n %lib_name-devel -p /sbin/ldconfig
-
-%postun -n %lib_name-devel -p /sbin/ldconfig
 
 %clean
 rm -fr %buildroot
