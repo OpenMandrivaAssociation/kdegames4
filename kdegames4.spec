@@ -291,7 +291,7 @@ katomic: build complex atoms with a minimal amount of moves
 %_kde_bindir/katomic
 %_kde_datadir/applications/kde4/katomic.desktop
 %doc %_kde_docdir/HTML/en/katomic/index.cache.bz2
-%doc%doc %_kde_docdir/HTML/en/katomic/index.docbook
+%doc %_kde_docdir/HTML/en/katomic/index.docbook
 %_kde_iconsdir/hicolor/*/apps/katomic.png
 %_kde_appsdir/katomic/levels/*
 %_kde_appsdir/katomic/pics/default_theme.svgz
