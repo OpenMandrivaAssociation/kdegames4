@@ -65,13 +65,19 @@ This is a compilation of various games for KDE project
 	- kreversi: the old reversi board game, also known as othello
 	- ksame: collect pieces of the same color
 	- kshisen: patience game where you take away all pieces
-	- ksirtet: very known if spelt this backwards
+	- ksirtet: Ksirtet: clone of the well known Tetris game family
 	- kspaceduel: two player game with shooting spaceships flying around a sun
 	- ktuberling: kids game: make your own potato (NO french fries!)
 	- kwin4: place 4 pieces in a row
-	- libkdegames: KDE game library used by many of these programs
-	- lskat: lieutnant skat
-
+	- Lskat: lieutnant skat
+	- Ksudoku: Play, create and solve sudoku grids
+	- KGoldrunner: a game of action and puzzle solving.
+	- KTuberling: "potato editor" game
+	- Kiriki: a dice game
+	- Kjumpingcube: a tactical game for number-crunchers
+	- Bovo: classic pen and paper game
+	- KSquares: an implementation of the popular paper based game squares
+	- Knetwalk: Turn the board pieces to get all computers connected²
 %files
 %defattr(-,root,root)
 %_kde_appsdir/kdegames/pics/star.png
@@ -169,7 +175,7 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kgoldrunner
-Summary:        
+Summary:        KGoldrunner, a game of action and puzzle solving.
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -177,6 +183,9 @@ Provides:       kgoldrunner4
 
 %description -n kde4-kgoldrunner
 
+KGoldrunner, a game of action and puzzle solving. 
+Run through the maze, dodge your enemies, collect 
+all the gold and climb up to the next level.
 
 %files -n kde4-kgoldrunner
 %defattr(-,root,root)
@@ -270,7 +279,7 @@ kblackbox: find atoms in a grid by shooting electrons
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-ktuberling
-Summary:        
+Summary:        KTuberling: "potato editor" game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -278,6 +287,10 @@ Provides:       ktuberling4
 
 %description -n kde4-ktuberling
 
+KTuberling is a "potato editor" game intended for small 
+children and adults who remain young at heart. The game 
+has no winner; the only purpose is to make the funniest 
+faces you can.
 
 %files -n kde4-ktuberling
 %defattr(-,root,root)
@@ -542,6 +555,8 @@ Provides:       kiriki4
 
 %description -n kde4-kiriki
 
+Kiriki is a dice game, written for KDE 4. 
+It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 
 %files -n kde4-kiriki
 %defattr(-,root,root)
@@ -556,7 +571,7 @@ Provides:       kiriki4
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-ksudoku
-Summary:        
+Summary:        KSudoku - Play, create and solve sudoku grids 
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -564,6 +579,24 @@ Provides:       ksudoku4
 
 %description -n kde4-ksudoku
 
+The word Sudoku means "single number in an alloted place" in Japanese. These
+are the basic rules. Every sudoku Sudoku is a square of 81 cells divided into
+9 columns and 9 rows and in 9 subsquares (3x3) of 9 cells each. Solving takes
+usually from 10 to 30 minutes, depending on puzzle level, your skill and
+experience.
+
+Some cells are filled with a number at the beginnning: the remaining are to
+be filled by the player using numbers from 1 to 9, without repeating a number
+twice on each column, row or subsuquare (each of them must contain only
+one 1, one 2, one 3, and so on). The game requires logic and patience.
+The numerals in Sudoku puzzles are used for convenience (for example in 16x16
+board we use letters): arithmetic relationships between numbers are irrelevant.
+
+This program supports also 16x16 games with numbers from 1 to 16 and 256
+cells with 16 cols, rows and subsquares! (if normal sudoku are not enough for
+you).
+
+More information at http://en.wikipedia.org/wiki/Sudoku
 
 %files -n kde4-ksudoku
 %defattr(-,root,root)
@@ -586,7 +619,7 @@ Provides:       ksudoku4
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-bovo
-Summary:        
+Summary:        Bovo: classic pen and paper game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -594,6 +627,8 @@ Provides:       bovo4
 
 %description -n kde4-bovo
 
+Bovo is a KDE 4 game, modeled upon a classic pen and paper game, 
+where you try to connect five in a row prior to your opponent.
 
 %files -n kde4-bovo
 %defattr(-,root,root)
@@ -614,7 +649,7 @@ Provides:       bovo4
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kjumpingcube
-Summary:        
+Summary:        kjumpingcube: a tactical game for number-crunchers
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -622,6 +657,9 @@ Provides:       kjumpingcube4
 
 %description -n kde4-kjumpingcube
 
+KJumpingCube is a tactical one or two-player game. The playing field 
+consists of squares that contains points which can be increased. By 
+this you can gain more fields and finally win the board over.
 
 %files -n kde4-kjumpingcube
 %defattr(-,root,root)
@@ -691,7 +729,7 @@ kmines: the classical mine sweeper
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-knetwalk
-Summary:        
+Summary:        Turn the board pieces to get all computers connected. 
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
@@ -699,6 +737,7 @@ Provides:       knetwalk4
 
 %description -n kde4-knetwalk
 
+Turn the board pieces to get all computers connected.
 
 %files -n kde4-knetwalk
 %defattr(-,root,root)
@@ -780,14 +819,16 @@ kshisen: patience game where you take away all pieces
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-ksquares
-Summary:        
+Summary:        KSquares: an implementation of the popular paper based game squares
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
 Provides:       ksquares4
 
 %description -n kde4-ksquares
-
+KSquares is an implementation of the popular paper based game squares. 
+You must draw lines to complete squares, the player with the most s
+quares wins.
 
 %files -n kde4-ksquares
 %defattr(-,root,root)
@@ -856,14 +897,17 @@ lskat: lieutnant skat
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-ksirtet
-Summary:        Very known if spelt this backwards
+Summary:        Ksirtet: clone of the well known Tetris game family
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 
 Provides:       ksirtet4
 
 %description -n kde4-ksirtet
-ksirtet: very known if spelt this backwards
+KSirtet is a clone of the well known Tetris game family. The game
+allows multiplayer duels including games against a computer player.
+Everybody knowing Tetris should immediately feel at home with this
+game.
 
 %files -n kde4-ksirtet
 %defattr(-,root,root)
