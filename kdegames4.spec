@@ -108,9 +108,9 @@ This is a compilation of various games for KDE project
 %_kde_appsdir/carddecks/svg-gm-paris/*
 %_kde_appsdir/carddecks/svg-nicu-ornamental/*
 %_kde_appsdir/carddecks/svg-nicu-white/*
-%_kde_iconsdir/oxygen/*/actions/endturn.png
-%_kde_iconsdir/oxygen/*/actions/lastmoves.png
-%_kde_iconsdir/oxygen/*/actions/legalmoves.png
+%_kde_iconsdir/oxygen/*/actions/endturn.*
+%_kde_iconsdir/oxygen/*/actions/lastmoves.*
+%_kde_iconsdir/oxygen/*/actions/legalmoves.*
 
 #--------------------------------------------------------------------
 
@@ -947,7 +947,7 @@ Turn the board pieces to get all computers connected.
 %_kde_appsdir/knetwalk/sounds/start.wav
 %_kde_appsdir/knetwalk/sounds/turn.wav
 %_kde_appsdir/knetwalk/sounds/win.wav
-%_kde_iconsdir/hicolor/*/apps/knetwalk.png
+%_kde_iconsdir/hicolor/*/apps/knetwalk.*
 
 #-----------------------------------------------------------------------------
 
@@ -1040,13 +1040,11 @@ quares wins.
 /sbin/ldconfig
 %{update_desktop_database}
 %update_icon_cache hicolor
-%update_icon_cache scalable
 
 %postun -n kde4-ksquares
 /sbin/ldconfig
 %{clean_desktop_database}
 %clean_icon_cache hicolor
-%clean_icon_cache scalable
 
 %files -n kde4-ksquares
 %defattr(-,root,root)
