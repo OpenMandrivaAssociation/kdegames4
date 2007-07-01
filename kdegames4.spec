@@ -30,7 +30,7 @@
 Name:		kdegames4
 Summary:	KDE - Games
 Version:	3.91
-Release: 	%mkrel 0.%revision.1
+Release: 	%mkrel 0.%revision.2
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPL
@@ -46,6 +46,35 @@ BuildRequires: kdelibs4-devel
 BuildRequires: libxml2-utils
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils
+
+Requires: kde4-katomic
+Requires: kde4-kbackgammon
+Requires: kde4-kbattleship
+Requires: kde4-kblackbox
+Requires: kde4-kbounce
+Requires: kde4-klines
+Requires: kde4-kmahjongg
+Requires: kde4-kmines
+Requires: kde4-kolf
+Requires: kde4-konquest
+Requires: kde4-kpat
+Requires: kde4-kreversi
+Requires: kde4-ksame
+Requires: kde4-kshisen
+Requires: kde4-kshisen
+Requires: kde4-ksirtet
+Requires: kde4-kspaceduel
+Requires: kde4-ktuberling
+Requires: kde4-kwin4
+Requires: kde4-lskat
+Requires: kde4-ksudoku
+Requires: kde4-kgoldrunner
+Requires: kde4-ktuberling
+Requires: kde4-kiriki
+Requires: kde4-kjumpingcube
+Requires: kde4-bovo
+Requires: kde4-ksquares
+Requires: kde4-knetwalk
 
 %description
 Games for the K Desktop Environment.
@@ -77,17 +106,32 @@ This is a compilation of various games for KDE project
 	- Kjumpingcube: a tactical game for number-crunchers
 	- Bovo: classic pen and paper game
 	- KSquares: an implementation of the popular paper based game squares
-	- Knetwalk: Turn the board pieces to get all computers connected²
+	- Knetwalk: Turn the board pieces to get all computers connected
 
-%post
+%files
+%defattr(-,root,root)
+
+#--------------------------------------------------------------------
+
+%package -n %name-core
+
+Summary:        Common files needed by Kdegames4 packages
+Group:          Graphical desktop/KDE
+
+
+%description -n %name-core
+
+Common files needed by Kdegames4 packages
+
+%post -n %name-core
 /sbin/ldconfig
 %update_icon_cache oxygen
 
-%postun
+%postun -n %name-core
 /sbin/ldconfig
 %clean_icon_cache oxygen
 
-%files
+%files -n %name-core
 %defattr(-,root,root)
 %_kde_appsdir/kdegames/pics/star.png
 %_kde_appsdir/carddecks/*
