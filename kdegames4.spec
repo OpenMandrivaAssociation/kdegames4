@@ -61,7 +61,6 @@ Requires: kde4-kpat
 Requires: kde4-kreversi
 Requires: kde4-ksame
 Requires: kde4-kshisen
-Requires: kde4-kshisen
 Requires: kde4-ksirtet
 Requires: kde4-kspaceduel
 Requires: kde4-ktuberling
