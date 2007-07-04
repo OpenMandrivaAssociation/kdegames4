@@ -1287,11 +1287,11 @@ KDE 4 library.
 #-----------------------------------------------------------------------------
 
 %prep
-%setup -q -n kdegames
+%setup -q -n kdegames-%version
 
 %build
 
-cd $RPM_BUILD_DIR/kdegames
+cd $RPM_BUILD_DIR/kdegames-%version
 
 %cmake_kde4 \
 %if %use_enable_final
@@ -1310,7 +1310,7 @@ cd $RPM_BUILD_DIR/kdegames
 %install
 rm -fr %buildroot
 
-cd $RPM_BUILD_DIR/kdegames/build
+cd $RPM_BUILD_DIR/kdegames-%version/build
 
 # David - 2.2-0.alpha2.3mdk - Don't strip when we are not in final release
 %if %unstable
