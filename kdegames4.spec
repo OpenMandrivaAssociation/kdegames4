@@ -1,6 +1,6 @@
 %define _requires_exceptions devel\(libdns_sd\(.*\)\\|devel\(libdns_sd\)
 
-%define revision 681524
+%define revision 682394
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
