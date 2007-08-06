@@ -1,4 +1,4 @@
-%define revision 693322
+%define revision 696866
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
@@ -22,7 +22,7 @@
 
 Name:		kdegames4
 Summary:	KDE - Games
-Version:	3.92
+Version: 3.92.0
 Release: 	%mkrel 0.%revision.1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -741,15 +741,8 @@ kwin4: place 4 pieces in a row
 %_kde_bindir/kwin4
 %_kde_bindir/kwin4proc
 %_kde_datadir/applications/kde4/kwin4.desktop
-%_kde_appsdir/kwin4/grafix/default.rc
-%_kde_appsdir/kwin4/grafix/default.svg
-%_kde_appsdir/kwin4/grafix/index.desktop
-%_kde_appsdir/kwin4/grafix/yellow.rc
-%_kde_appsdir/kwin4/grafix/yellow.svg
-%_kde_appsdir/kwin4/kwin4ui.rc
-%dir %_kde_docdir/HTML/en/kwin4
-%doc %_kde_docdir/HTML/en/kwin4/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kwin4/index.docbook
+%_kde_appsdir/kwin4
+%_kde_docdir/HTML/en/kwin4
 %_kde_iconsdir/hicolor/*/apps/kwin4.png
 
 #-----------------------------------------------------------------------------
