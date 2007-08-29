@@ -1,4 +1,4 @@
-%define revision 696866
+%define revision 705994
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
@@ -115,7 +115,6 @@ Common files needed by Kdegames4 packages
 %_kde_iconsdir/oxygen/*/actions/lastmoves.*
 %_kde_iconsdir/oxygen/*/actions/legalmoves.*
 %_kde_datadir/config.kcfg/*
-%exclude %_kde_docdir/HTML/en/ksirtet
 
 #--------------------------------------------------------------------
 
@@ -230,9 +229,7 @@ kblackbox: find atoms in a grid by shooting electrons
 %_kde_appsdir/kblackbox/kblackboxui.rc
 %_kde_appsdir/kblackbox/pics/kblackbox.svgz
 %dir %_kde_docdir/HTML/en/kblackbox
-%doc %_kde_docdir/HTML/en/kblackbox/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kblackbox/index.docbook
-%doc %_kde_docdir/HTML/en/kblackbox/kblackboxtbar.png
+%doc %_kde_docdir/HTML/en/kblackbox/*
 %_kde_iconsdir/hicolor/*/apps/kblackbox.png
 
 #-----------------------------------------------------------------------------
@@ -665,14 +662,7 @@ kpat: several patience card games
 %_kde_appsdir/kpat/kpatui.rc
 %_kde_appsdir/kpat/pile.svg
 %_kde_appsdir/kpat/won.svg
-%doc %_kde_docdir/HTML/en/kpat/clubs.png
-%doc %_kde_docdir/HTML/en/kpat/diamonds.png
-%doc %_kde_docdir/HTML/en/kpat/hearts.png
-%doc %_kde_docdir/HTML/en/kpat/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kpat/index.docbook
-%doc %_kde_docdir/HTML/en/kpat/man-kpat.6.docbook
-%doc %_kde_docdir/HTML/en/kpat/playfield.png
-%doc %_kde_docdir/HTML/en/kpat/spades.png
+%doc %_kde_docdir/HTML/en/kpat
 %_kde_iconsdir/hicolor/*/apps/kpat.png
 
 #-----------------------------------------------------------------------------
@@ -761,12 +751,9 @@ lskat: lieutnant skat
 %defattr(-,root,root)
 %_kde_bindir/lskat
 %_kde_datadir/applications/kde4/lskat.desktop
-%_kde_appsdir/lskat/grafix/default.rc
-%_kde_appsdir/lskat/grafix/default.svg
-%_kde_appsdir/lskat/lskatui.rc
+%_kde_appsdir/lskat
 %dir %_kde_docdir/HTML/en/lskat
-%doc %_kde_docdir/HTML/en/lskat/index.cache.bz2
-%doc %_kde_docdir/HTML/en/lskat/index.docbook
+%doc %_kde_docdir/HTML/en/lskat
 %_kde_iconsdir/hicolor/*/apps/lskat.png
 
 #-----------------------------------------------------------------------------
