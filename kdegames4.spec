@@ -1,4 +1,4 @@
-%define revision 706247
+%define revision 706624
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
