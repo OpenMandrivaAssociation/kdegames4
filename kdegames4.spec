@@ -1,4 +1,4 @@
-%define revision 706624
+%define revision 707981
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
@@ -22,7 +22,7 @@
 
 Name:		kdegames4
 Summary:	KDE - Games
-Version: 3.92.0
+Version: 3.93.0
 Release: 	%mkrel 0.%revision.1
 Epoch:		1
 Group:		Graphical desktop/KDE
