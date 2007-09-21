@@ -1,4 +1,4 @@
-%define revision 711178
+%define revision 714146
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
@@ -124,7 +124,7 @@ Group:		Development/KDE and Qt
 Provides:   %lib_name_orig-devel = %epoch:%version-%release
 Provides:   %lib_name-devel = %epoch:%version-%release
 Requires:	kdelibs4-devel 
-Obsoletes:  %lib_name-devel
+Obsoletes:  %lib_name-devel < 1:3.93.0-0.714146.1
 
 %description devel
 Headers files needed to build applications based on kdegames applications.
@@ -411,7 +411,7 @@ Kmahjongg: a tile laying patience
 %_kde_bindir/kmahjongg
 %_kde_datadir/applications/kde4/kmahjongg.desktop
 %_kde_appsdir/kmahjongg/kmahjonggui.rc
-%_kde_appsdir/kmahjongg/pics/*
+%_kde_appsdir/kmahjongg/layouts/*
 %_kde_appsdir/kmahjongglib/backgrounds/*
 %_kde_appsdir/kmahjongglib/tilesets/*
 %dir %_kde_docdir/HTML/en/kmahjongg
@@ -753,7 +753,7 @@ lskat: lieutnant skat
 %_kde_datadir/applications/kde4/lskat.desktop
 %_kde_appsdir/lskat
 %dir %_kde_docdir/HTML/en/lskat
-%doc %_kde_docdir/HTML/en/lskat
+%doc %_kde_docdir/HTML/en/lskat/*
 %_kde_iconsdir/hicolor/*/apps/lskat.png
 
 #-----------------------------------------------------------------------------
@@ -764,7 +764,7 @@ lskat: lieutnant skat
 Summary:    KDE 4 library
 Group:      System/Libraries
 Conflicts:  %{_lib}kdegames4 < 3.91
-Obsoletes:  %{_lib}kdegames5
+Obsoletes:  %{_lib}kdegames5 < 1:3.93.0-0.714146.1
 
 %description -n %libkdegames
 KDE 4 library.
@@ -784,7 +784,7 @@ KDE 4 library.
 Summary: KDE 4 library
 Group: System/Libraries
 Conflicts:  %{_lib}kdegames4 < 3.91
-Obsoletes:  %{_lib}kmahjongglib5
+Obsoletes:  %{_lib}kmahjongglib5 < 1:3.93.0-0.714146.1
 
 %description -n %libkmahjongglib
 KDE 4 library.
@@ -804,7 +804,7 @@ KDE 4 library.
 Summary: KDE 4 library
 Group: System/Libraries
 Conflicts:  %{_lib}kdegames4 < 3.91
-Obsoletes: %{_lib}kolflib1.2.0
+Obsoletes: %{_lib}kolflib1.2.0 < 1:3.93.0-0.714146.1
 
 %description -n %libkolflib
 KDE 4 library.
