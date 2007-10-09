@@ -139,7 +139,7 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-kgoldrunner
-Summary:        KGoldrunner, a game of action and puzzle solving.
+Summary:        KGoldrunner, a game of action and puzzle solving
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
