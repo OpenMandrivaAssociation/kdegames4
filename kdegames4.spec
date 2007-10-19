@@ -1,4 +1,4 @@
-%define revision 714146
+%define revision 727095
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
@@ -22,7 +22,7 @@
 
 Name:		kdegames4
 Summary:	KDE - Games
-Version: 3.93.0
+Version:        3.94.0
 Release: 	%mkrel 0.%revision.1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -278,9 +278,7 @@ kbounce: claim areas and don't get disturbed
 %_kde_datadir/apps/kbounce/sounds/*.au
 %doc %_kde_docdir/HTML/en/kbounce/index.cache.bz2
 %doc %_kde_docdir/HTML/en/kbounce/index.docbook
-%doc %_kde_docdir/HTML/en/kbounce/jezball_corridor1.png
-%doc %_kde_docdir/HTML/en/kbounce/jezball_corridor2.png
-%doc %_kde_docdir/HTML/en/kbounce/jezball_newWall.png
+%doc %_kde_docdir/HTML/en/kbounce/*.png
 
 #-----------------------------------------------------------------------------
 
@@ -632,7 +630,6 @@ Turn the board pieces to get all computers connected.
 %defattr(-,root,root)
 %_kde_bindir/knetwalk
 %_kde_datadir/applications/kde4/knetwalk.desktop
-%_kde_appsdir/knetwalk/all.svgz
 %_kde_appsdir/knetwalk/knetwalk.notifyrc
 %_kde_appsdir/knetwalk/knetwalkui.rc
 %_kde_appsdir/knetwalk/sounds/click.wav
@@ -640,7 +637,13 @@ Turn the board pieces to get all computers connected.
 %_kde_appsdir/knetwalk/sounds/start.wav
 %_kde_appsdir/knetwalk/sounds/turn.wav
 %_kde_appsdir/knetwalk/sounds/win.wav
+%_kde_appsdir/knetwalk/themes/default.desktop
+%_kde_appsdir/knetwalk/themes/default.svgz
 %_kde_iconsdir/hicolor/*/apps/knetwalk.*
+
+%dir %_kde_docdir/HTML/en/knetwalk
+%doc %_kde_docdir/HTML/en/knetwalk/index.cache.bz2
+%doc %_kde_docdir/HTML/en/knetwalk/index.docbook
 
 #-----------------------------------------------------------------------------
 
