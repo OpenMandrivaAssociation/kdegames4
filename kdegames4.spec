@@ -1,4 +1,4 @@
-%define revision 727095
+%define revision 729193
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
@@ -22,7 +22,7 @@
 
 Name:		kdegames4
 Summary:	KDE - Games
-Version:        3.94.0
+Version:        3.94.1
 Release: 	%mkrel 0.%revision.1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -111,7 +111,6 @@ Common files needed by Kdegames4 packages
 %defattr(-,root,root)
 %_kde_appsdir/kdegames/pics/star.png
 %_kde_appsdir/carddecks
-%_kde_iconsdir/oxygen/*/actions/endturn.*
 %_kde_iconsdir/oxygen/*/actions/lastmoves.*
 %_kde_iconsdir/oxygen/*/actions/legalmoves.*
 %_kde_datadir/config.kcfg/*
