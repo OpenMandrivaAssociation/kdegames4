@@ -507,10 +507,15 @@ More information at http://en.wikipedia.org/wiki/Sudoku
 %_kde_appsdir/ksudoku/XSudoku.desktop
 %_kde_appsdir/ksudoku/XSudoku.xml
 %_kde_appsdir/ksudoku/ksudokuui.rc
+%_kde_appsdir/ksudoku/TinySamurai.desktop
+%_kde_appsdir/ksudoku/TinySamurai.xml
+%_kde_appsdir/ksudoku/icons
 %_kde_datadir/config/ksudokurc
+%_kde_iconsdir/hicolor/*/apps/ksudoku.png
+
+%dir %_kde_docdir/HTML/en/ksudoku
 %doc %_kde_docdir/HTML/en/ksudoku/index.cache.bz2
 %doc %_kde_docdir/HTML/en/ksudoku/index.docbook
-%_kde_iconsdir/hicolor/*/apps/ksudoku.png
 
 #-----------------------------------------------------------------------------
 
