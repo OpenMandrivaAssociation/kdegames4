@@ -23,7 +23,7 @@
 Name:		kdegames4
 Summary:	KDE - Games
 Version:        3.95.2
-Release: 	%mkrel 0.%revision.1
+Release: 	%mkrel 0.%revision.2
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPL
@@ -38,7 +38,6 @@ BuildRequires: kdelibs4-devel
 BuildRequires: libxml2-utils
 
 Requires: kde4-katomic
-Requires: kde4-kbackgammon
 Requires: kde4-kbattleship
 Requires: kde4-kblackbox
 Requires: kde4-kbounce
