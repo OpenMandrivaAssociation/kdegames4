@@ -1,4 +1,4 @@
-%define revision 731582
+%define revision 734589
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
@@ -22,7 +22,7 @@
 
 Name:		kdegames4
 Summary:	KDE - Games
-Version:        3.95.1
+Version:        3.95.2
 Release: 	%mkrel 0.%revision.1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -160,31 +160,6 @@ all the gold and climb up to the next level.
 %doc %_kde_docdir/HTML/en/kgoldrunner/index.docbook
 %doc %_kde_docdir/HTML/en/kgoldrunner/*.png
 %_kde_iconsdir/hicolor/*/apps/kgoldrunner.png
-
-#-----------------------------------------------------------------------------
-
-%package -n     kde4-kbackgammon
-Summary:        Backgammon Game
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kbackgammon4
-
-%description -n kde4-kbackgammon
-kbackgammon: play backgammon against a local human player, via a
-               game server or against GNU Backgammon (not included)
-
-%files -n kde4-kbackgammon
-%defattr(-,root,root)
-%_kde_bindir/kbackgammon
-%_kde_datadir/applications/kde4/kbackgammon.desktop
-%_kde_docdir/HTML/en/kbackgammon
-%_kde_iconsdir/hicolor/*/apps/kbackgammon*
-%_kde_appsdir/kbackgammon/kbackgammonui.rc
-%_kde_appsdir/kbackgammon/pics/*
-%dir %_kde_appsdir/kbackgammon/sounds
-%_kde_appsdir/kbackgammon/sounds/*
-%_kde_appsdir/kbackgammon/kbackgammon.notifyrc
 
 #-----------------------------------------------------------------------------
 
