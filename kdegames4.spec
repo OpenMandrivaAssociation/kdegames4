@@ -1,4 +1,4 @@
-%define revision 737137
+%define revision 740193
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
@@ -22,7 +22,7 @@
 
 Name:		kdegames4
 Summary:	KDE - Games
-Version:        3.96.0
+Version:        3.96.1
 Release: 	%mkrel 0.%revision.1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -112,7 +112,6 @@ Common files needed by Kdegames4 packages
 %_kde_appsdir/carddecks
 %_kde_iconsdir/oxygen/*/actions/lastmoves.*
 %_kde_iconsdir/oxygen/*/actions/legalmoves.*
-%_kde_datadir/config.kcfg/*
 
 #--------------------------------------------------------------------
 
@@ -260,6 +259,7 @@ Summary:        Two player game with shooting spaceships flying around a sun
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
+Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kspaceduel4
 
 %description -n kde4-kspaceduel
@@ -274,6 +274,7 @@ kspaceduel: two player game with shooting spaceships flying around a sun
 %doc %_kde_docdir/HTML/en/kspaceduel/index.docbook
 %doc %_kde_docdir/HTML/en/kspaceduel/kspaceduel3.png
 %_kde_iconsdir/hicolor/*/apps/kspaceduel.png
+%_kde_datadir/config.kcfg/kspaceduel.kcfg
 
 #-----------------------------------------------------------------------------
 
@@ -371,7 +372,8 @@ ksame: collect pieces of the same color
 Summary:        A tile laying patience
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
+Conflicts:      kdegames4 < 3.91i
+Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kmahjongg4
 
 %description -n kde4-kmahjongg
@@ -390,6 +392,7 @@ Kmahjongg: a tile laying patience
 %doc %_kde_docdir/HTML/en/kmahjongg/index.docbook
 %doc %_kde_docdir/HTML/en/kmahjongg/*.png
 %_kde_datadir/icons/hicolor/*/apps/kmahjongg.png
+%_kde_datadir/config.kcfg/kmahjongg.kcfg
 
 #-----------------------------------------------------------------------------
 
@@ -528,6 +531,7 @@ Summary:        kjumpingcube: a tactical game for number-crunchers
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
+Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kjumpingcube4
 
 %description -n kde4-kjumpingcube
@@ -543,6 +547,7 @@ this you can gain more fields and finally win the board over.
 %_kde_appsdir/kjumpingcube/kjumpingcubeui.rc
 %_kde_appsdir/kjumpingcube/pics/default.desktop
 %_kde_appsdir/kjumpingcube/pics/default.svg
+%_kde_datadir/config.kcfg/kjumpingcube.kcfg
 %doc %_kde_docdir/HTML/en/kjumpingcube/index.cache.bz2
 %doc %_kde_docdir/HTML/en/kjumpingcube/index.docbook
 %_kde_iconsdir/hicolor/*/apps/kjumpingcube.png
@@ -554,6 +559,7 @@ Summary:        Place 5 equal pieces together, but wait, there are 3 new ones
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
+Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       klines4
 
 %description -n kde4-klines
@@ -566,6 +572,7 @@ klines: place 5 equal pieces together, but wait, there are 3 new ones
 %_kde_appsdir/klines
 %_kde_docdir/HTML/en/klines
 %_kde_iconsdir/hicolor/*/apps/klines.png
+%_kde_datadir/config.kcfg/klines.kcfg
 
 #-----------------------------------------------------------------------------
 
@@ -574,6 +581,7 @@ Summary:        The classical mine sweeper
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
+Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kmines4
 
 %description -n kde4-kmines
@@ -653,6 +661,7 @@ Summary:        Patience game where you take away all pieces
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
+Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kshisen4
 
 %description -n kde4-kshisen
@@ -663,6 +672,7 @@ Kshisen: patience game where you take away all pieces
 %_kde_bindir/kshisen
 %_kde_datadir/applications/kde4/kshisen.desktop
 %_kde_appsdir/kshisen/kshisenui.rc
+%_kde_datadir/config.kcfg/kshisen.kcfg
 %doc %_kde_docdir/HTML/en/kshisen/index.cache.bz2
 %doc %_kde_docdir/HTML/en/kshisen/index.docbook
 %doc %_kde_docdir/HTML/en/kshisen/kshisen-configuration.png
@@ -676,6 +686,7 @@ Summary:        KSquares: an implementation of the popular paper based game squa
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
+Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       ksquares4
 
 %description -n kde4-ksquares
@@ -688,12 +699,14 @@ quares wins.
 %_kde_bindir/ksquares
 %_kde_datadir/applications/kde4/ksquares.desktop
 %_kde_appsdir/ksquares/ksquaresui.rc
-%dir %_kde_docdir/HTML/en/ksquares
-%doc %_kde_docdir/HTML/en/ksquares/index.cache.bz2
-%doc %_kde_docdir/HTML/en/ksquares/index.docbook
+%_kde_datadir/config.kcfg/ksquares.kcfg
 %_kde_iconsdir/hicolor/*/apps/ksquares.png
 %_kde_iconsdir/hicolor/scalable/actions/ksquares_ai.svgz
 %_kde_iconsdir/hicolor/scalable/actions/ksquares_display.svgz
+
+%dir %_kde_docdir/HTML/en/ksquares
+%doc %_kde_docdir/HTML/en/ksquares/index.cache.bz2
+%doc %_kde_docdir/HTML/en/ksquares/index.docbook
 
 #-----------------------------------------------------------------------------
 
@@ -702,6 +715,7 @@ Summary:        Place 4 pieces in a row
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
+Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kwin44
 
 %description -n kde4-kwin4
@@ -715,6 +729,7 @@ kwin4: place 4 pieces in a row
 %_kde_appsdir/kwin4
 %_kde_docdir/HTML/en/kwin4
 %_kde_iconsdir/hicolor/*/apps/kwin4.png
+%_kde_datadir/config.kcfg/kwin4.kcfg
 
 #-----------------------------------------------------------------------------
 
