@@ -1,4 +1,4 @@
-%define revision 742894
+%define revision 746784
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
@@ -22,7 +22,7 @@
 
 Name:		kdegames4
 Summary:	KDE - Games
-Version:        3.96.1
+Version:        3.97.1
 Release: 	%mkrel 0.%revision.1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -116,11 +116,11 @@ Common files needed by Kdegames4 packages
 #--------------------------------------------------------------------
 
 %package devel
-Summary:	Headers files for kdegames
-Group:		Development/KDE and Qt
+Summary:    Headers files for kdegames
+Group:	    Development/KDE and Qt
 Provides:   %lib_name_orig-devel = %epoch:%version-%release
 Provides:   %lib_name-devel = %epoch:%version-%release
-Requires:	kdelibs4-devel 
+Requires:   kdelibs4-devel 
 Obsoletes:  %lib_name-devel < 1:3.93.0-0.714146.1
 
 %description devel
@@ -701,8 +701,6 @@ quares wins.
 %_kde_appsdir/ksquares/ksquaresui.rc
 %_kde_datadir/config.kcfg/ksquares.kcfg
 %_kde_iconsdir/hicolor/*/apps/ksquares.png
-%_kde_iconsdir/hicolor/scalable/actions/ksquares_ai.svgz
-%_kde_iconsdir/hicolor/scalable/actions/ksquares_display.svgz
 
 %dir %_kde_docdir/HTML/en/ksquares
 %doc %_kde_docdir/HTML/en/ksquares/index.cache.bz2
@@ -794,23 +792,24 @@ KDE 4 library.
 
 #-----------------------------------------------------------------------------
 
-%define libkolflib %mklibname kolflib 1
+%define libkolfprivate %mklibname kolfprivate 4
 
-%package -n %libkolflib
+%package -n %libkolfprivate
 Summary: KDE 4 library
 Group: System/Libraries
 Conflicts:  %{_lib}kdegames4 < 3.91
 Obsoletes: %{_lib}kolflib1.2.0 < 1:3.93.0-0.714146.1
+Obsoletes: %{_lib}kolflib1 < 1:3.97.1-0.746784.1
 
-%description -n %libkolflib
+%description -n %libkolfprivate
 KDE 4 library.
 
-%post -n %libkolflib -p /sbin/ldconfig
-%postun -n %libkolflib -p /sbin/ldconfig
+%post -n %libkolfprivate -p /sbin/ldconfig
+%postun -n %libkolfprivate -p /sbin/ldconfig
 
-%files -n %libkolflib
+%files -n %libkolfprivate
 %defattr(-,root,root)
-%_kde_libdir/libkolflib.so.*
+%_kde_libdir/libkolfprivate.so.*
 
 #-----------------------------------------------------------------------------
 
