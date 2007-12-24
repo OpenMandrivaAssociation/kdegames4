@@ -1,4 +1,4 @@
-%define revision 746784
+%define revision 752247
 
 %define use_enable_final 0
 %{?_no_enable_final: %{expand: %%global use_enable_final 0}}
@@ -23,14 +23,15 @@
 Name:		kdegames4
 Summary:	KDE - Games
 Version:        3.97.1
-Release: 	%mkrel 0.%revision.1
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPL
 URL:		ftp://ftp.kde.org/pub/kde/stable/%version/src/
 %if %branch
+Release:        %mkrel 0.%revision.1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.%revision.tar.bz2
 %else
+Release:        %mkrel 1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 %endif
 BuildRequires: kdelibs4-devel
@@ -51,7 +52,7 @@ Requires: kde4-ksame
 Requires: kde4-kshisen
 Requires: kde4-kspaceduel
 Requires: kde4-ktuberling
-Requires: kde4-kwin4
+Requires: kde4-kfourinline
 Requires: kde4-lskat
 Requires: kde4-ksudoku
 Requires: kde4-kgoldrunner
@@ -82,7 +83,7 @@ This is a compilation of various games for KDE project
 	- kshisen: patience game where you take away all pieces
 	- kspaceduel: two player game with shooting spaceships flying around a sun
 	- ktuberling: kids game: make your own potato (NO french fries!)
-	- kwin4: place 4 pieces in a row
+	- kfourinline: place 4 pieces in a row
 	- Lskat: lieutnant skat
 	- Ksudoku: Play, create and solve sudoku grids
 	- KGoldrunner: a game of action and puzzle solving.
@@ -707,25 +708,26 @@ quares wins.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kwin4
+%package -n     kde4-kfourinline
 Summary:        Place 4 pieces in a row
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
-Provides:       kwin44
+Provides:       kfourinline4
+Obsoletes:      kde4-kwin4 < 3.97.1-0.752247.1
 
-%description -n kde4-kwin4
-kwin4: place 4 pieces in a row
+%description -n kde4-kfourinline
+kfourinline: place 4 pieces in a row
 
-%files -n kde4-kwin4
+%files -n kde4-kfourinline
 %defattr(-,root,root)
-%_kde_bindir/kwin4
-%_kde_bindir/kwin4proc
-%_kde_datadir/applications/kde4/kwin4.desktop
-%_kde_appsdir/kwin4
-%_kde_docdir/HTML/en/kwin4
-%_kde_iconsdir/hicolor/*/apps/kwin4.png
+%_kde_bindir/kfourinline
+%_kde_bindir/kfourinlineproc
+%_kde_datadir/applications/kde4/kfourinline.desktop
+%_kde_appsdir/kfourinline
+%_kde_docdir/HTML/en/kfourinline
+%_kde_iconsdir/hicolor/*/apps/kfourinline.png
 %_kde_datadir/config.kcfg/kwin4.kcfg
 
 #-----------------------------------------------------------------------------
