@@ -34,6 +34,7 @@ Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.%revisio
 Release:        %mkrel 1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 %endif
+BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel
 BuildRequires: libxml2-utils
 
