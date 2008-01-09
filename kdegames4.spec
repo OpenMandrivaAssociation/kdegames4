@@ -6,7 +6,7 @@
 %define unstable 1
 %{?_unstable: %{expand: %%global unstable 1}}
 
-%define branch 1
+%define branch 0
 %{?_branch: %{expand: %%global branch 1}}
 
 %define use_enable_pie 1
@@ -22,7 +22,7 @@
 
 Name:		kdegames4
 Summary:	KDE - Games
-Version:        3.97.1
+Version:    4.0.0
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPL
