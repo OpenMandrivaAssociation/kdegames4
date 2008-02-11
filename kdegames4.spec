@@ -1,43 +1,15 @@
-%define revision 752247
-
-%define use_enable_final 0
-%{?_no_enable_final: %{expand: %%global use_enable_final 0}}
-
-%define unstable 1
-%{?_unstable: %{expand: %%global unstable 1}}
-
-%define branch 0
-%{?_branch: %{expand: %%global branch 1}}
-
-%define use_enable_pie 1
-%{?_no_enable_pie: %{expand: %%global use_enable_pie 0}}
-
-%if %unstable
-%define dont_strip 1
-%endif
-
-%define lib_major 1
-%define lib_name_orig libkdegames4
-%define lib_name %mklibname kdegames4 %{lib_major}
-
-Name:		kdegames4
-Summary:	KDE - Games
-Version:    4.0.0
-Epoch:		1
-Group:		Graphical desktop/KDE
-License:	GPL
-URL:		ftp://ftp.kde.org/pub/kde/stable/%version/src/
-%if %branch
-Release:        %mkrel 0.%revision.1
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.%revision.tar.bz2
-%else
+Name: kdegames4
+Summary: KDE - Games
+Version: 4.0.1
+Epoch: 1
+Group: Graphical desktop/KDE
+License: GPL
+URL: ftp://ftp.kde.org/pub/kde/stable/%version/src/
 Release:        %mkrel 1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
-%endif
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel
 BuildRequires: libxml2-utils
-
 Requires: kde4-katomic
 Requires: kde4-kbattleship
 Requires: kde4-kblackbox
@@ -119,10 +91,7 @@ Common files needed by Kdegames4 packages
 %package devel
 Summary:    Headers files for kdegames
 Group:	    Development/KDE and Qt
-Provides:   %lib_name_orig-devel = %epoch:%version-%release
-Provides:   %lib_name-devel = %epoch:%version-%release
 Requires:   kdelibs4-devel 
-Obsoletes:  %lib_name-devel < 1:3.93.0-0.714146.1
 
 %description devel
 Headers files needed to build applications based on kdegames applications.
@@ -154,10 +123,7 @@ all the gold and climb up to the next level.
 %attr(0755,root,root) %_kde_bindir/kgoldrunner
 %_kde_datadir/applications/kde4/KGoldrunner.desktop
 %_kde_appsdir/kgoldrunner
-%dir %_kde_docdir/HTML/en/kgoldrunner
-%doc %_kde_docdir/HTML/en/kgoldrunner/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kgoldrunner/index.docbook
-%doc %_kde_docdir/HTML/en/kgoldrunner/*.png
+%_kde_docdir/*/*/kgoldrunner
 %_kde_iconsdir/hicolor/*/apps/kgoldrunner.png
 
 #-----------------------------------------------------------------------------
@@ -176,8 +142,7 @@ katomic: build complex atoms with a minimal amount of moves
 %defattr(-,root,root)
 %_kde_bindir/katomic
 %_kde_datadir/applications/kde4/katomic.desktop
-%doc %_kde_docdir/HTML/en/katomic/index.cache.bz2
-%doc %_kde_docdir/HTML/en/katomic/index.docbook
+%_kde_docdir/*/*/katomic
 %_kde_iconsdir/hicolor/*/apps/katomic.png
 %_kde_appsdir/katomic/levels/*
 %_kde_appsdir/katomic/pics/default_theme.svgz
@@ -201,8 +166,7 @@ kblackbox: find atoms in a grid by shooting electrons
 %_kde_datadir/applications/kde4/kblackbox.desktop
 %_kde_appsdir/kblackbox/kblackboxui.rc
 %_kde_appsdir/kblackbox/pics/kblackbox.svgz
-%dir %_kde_docdir/HTML/en/kblackbox
-%doc %_kde_docdir/HTML/en/kblackbox/*
+%_kde_docdir/*/*/kblackbox
 %_kde_iconsdir/hicolor/*/apps/kblackbox.png
 
 #-----------------------------------------------------------------------------
@@ -226,7 +190,7 @@ faces you can.
 %_kde_bindir/ktuberling
 %_kde_datadir/applications/kde4/ktuberling.desktop
 %_kde_appsdir/ktuberling
-%_kde_docdir/HTML/en/ktuberling
+%_kde_docdir/*/*/ktuberling
 %_kde_iconsdir/hicolor/*/apps/ktuberling.png
 
 #-----------------------------------------------------------------------------
@@ -249,9 +213,7 @@ kbounce: claim areas and don't get disturbed
 %_kde_appsdir/kbounce/themes/*
 %dir %_kde_datadir/apps/kbounce/sounds
 %_kde_datadir/apps/kbounce/sounds/*.au
-%doc %_kde_docdir/HTML/en/kbounce/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kbounce/index.docbook
-%doc %_kde_docdir/HTML/en/kbounce/*.png
+%_kde_docdir/*/*/kbounce
 
 #-----------------------------------------------------------------------------
 
@@ -271,9 +233,7 @@ kspaceduel: two player game with shooting spaceships flying around a sun
 %_kde_bindir/kspaceduel
 %_kde_datadir/applications/kde4/kspaceduel.desktop
 %_kde_appsdir/kspaceduel
-%doc %_kde_docdir/HTML/en/kspaceduel/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kspaceduel/index.docbook
-%doc %_kde_docdir/HTML/en/kspaceduel/kspaceduel3.png
+%_kde_docdir/*/*/kspaceduel
 %_kde_iconsdir/hicolor/*/apps/kspaceduel.png
 %_kde_datadir/config.kcfg/kspaceduel.kcfg
 
@@ -295,11 +255,7 @@ kreversi: the old reversi board game, also known as othello
 %_kde_datadir/applications/kde4/kreversi.desktop
 %_kde_appsdir/kreversi
 %_kde_iconsdir/hicolor/*/apps/kreversi.png
-%dir %_kde_docdir/HTML/en/kreversi
-%doc %_kde_docdir/HTML/en/kreversi/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kreversi/index.docbook
-%doc %_kde_docdir/HTML/en/kreversi/kreversi-configuration.png
-%doc %_kde_docdir/HTML/en/kreversi/kreversi1.png
+%_kde_docdir/*/*/kreversi
 
 #-----------------------------------------------------------------------------
 
@@ -318,8 +274,7 @@ kolf: a golf game
 %_kde_bindir/kolf
 %_kde_datadir/applications/kde4/kolf.desktop
 %_kde_appsdir/kolf
-%doc %_kde_docdir/HTML/en/kolf/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kolf/index.docbook
+%_kde_docdir/*/*/kolf
 %_kde_datadir/icons/hicolor/*/apps/kolf.png
 
 #-----------------------------------------------------------------------------
@@ -339,8 +294,7 @@ konquest: conquer the planets of your enemy
 %_kde_bindir/konquest
 %_kde_datadir/applications/kde4/konquest.desktop
 %_kde_appsdir/konquest
-%doc %_kde_docdir/HTML/en/konquest/index.cache.bz2
-%doc %_kde_docdir/HTML/en/konquest/index.docbook
+%_kde_docdir/*/*/konquest
 %_kde_datadir/icons/hicolor/*/apps/konquest.png
 
 
@@ -362,9 +316,7 @@ ksame: collect pieces of the same color
 %_kde_appsdir/ksame/ksameui.rc
 %_kde_datadir/applications/kde4/ksame.desktop
 %_kde_appsdir/ksame/pics/default_theme.svgz
-%dir %_kde_docdir/HTML/en/ksame
-%doc %_kde_docdir/HTML/en/ksame/index.cache.bz2
-%doc %_kde_docdir/HTML/en/ksame/index.docbook
+%_kde_docdir/*/*/ksame
 %_kde_datadir/icons/hicolor/*/apps/ksame.png
 
 #-----------------------------------------------------------------------------
@@ -388,10 +340,7 @@ Kmahjongg: a tile laying patience
 %_kde_appsdir/kmahjongg/layouts/*
 %_kde_appsdir/kmahjongglib/backgrounds/*
 %_kde_appsdir/kmahjongglib/tilesets/*
-%dir %_kde_docdir/HTML/en/kmahjongg
-%doc %_kde_docdir/HTML/en/kmahjongg/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kmahjongg/index.docbook
-%doc %_kde_docdir/HTML/en/kmahjongg/*.png
+%_kde_docdir/*/*/kmahjongg
 %_kde_datadir/icons/hicolor/*/apps/kmahjongg.png
 %_kde_datadir/config.kcfg/kmahjongg.kcfg
 
@@ -411,8 +360,7 @@ kbattleship: battleship game with built-in game server
 %defattr(-,root,root)
 %_kde_bindir/kbattleship
 %_kde_datadir/applications/kde4/kbattleship.desktop
-%doc %_kde_docdir/HTML/en/kbattleship/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kbattleship/index.docbook
+%_kde_docdir/*/*/kbattleship
 %_kde_iconsdir/hicolor/*/apps/kbattleship.png
 %_kde_appsdir/kbattleship/kbattleshipui.rc
 %_kde_appsdir/kbattleship/pictures/default_theme.svgz
@@ -436,8 +384,7 @@ It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 %defattr(-,root,root)
 %_kde_bindir/kiriki
 %_kde_datadir/applications/kde4/kiriki.desktop
-%doc %_kde_docdir/HTML/en/kiriki/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kiriki/index.docbook
+%_kde_docdir/*/*/kiriki
 %_kde_iconsdir/hicolor/*/apps/kiriki.png
 %_kde_appsdir/kiriki/images/*
 %_kde_appsdir/kiriki/kirikiui.rc
@@ -490,10 +437,7 @@ More information at http://en.wikipedia.org/wiki/Sudoku
 %_kde_appsdir/ksudoku/icons
 %_kde_datadir/config/ksudokurc
 %_kde_iconsdir/hicolor/*/apps/ksudoku.png
-
-%dir %_kde_docdir/HTML/en/ksudoku
-%doc %_kde_docdir/HTML/en/ksudoku/index.cache.bz2
-%doc %_kde_docdir/HTML/en/ksudoku/index.docbook
+%_kde_docdir/*/*/ksudoku
 
 #-----------------------------------------------------------------------------
 
@@ -522,8 +466,7 @@ where you try to connect five in a row prior to your opponent.
 %_kde_appsdir/bovo/themes/scribble/themerc
 %_kde_appsdir/bovo/themes/spacy/theme.svg
 %_kde_appsdir/bovo/themes/spacy/themerc
-%doc %_kde_docdir/HTML/en/bovo/index.cache.bz2
-%doc %_kde_docdir/HTML/en/bovo/index.docbook
+%_kde_docdir/*/*/bovo
 
 #-----------------------------------------------------------------------------
 
@@ -549,8 +492,7 @@ this you can gain more fields and finally win the board over.
 %_kde_appsdir/kjumpingcube/pics/default.desktop
 %_kde_appsdir/kjumpingcube/pics/default.svg
 %_kde_datadir/config.kcfg/kjumpingcube.kcfg
-%doc %_kde_docdir/HTML/en/kjumpingcube/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kjumpingcube/index.docbook
+%_kde_docdir/*/*/kjumpingcube
 %_kde_iconsdir/hicolor/*/apps/kjumpingcube.png
 
 #-----------------------------------------------------------------------------
@@ -571,7 +513,7 @@ klines: place 5 equal pieces together, but wait, there are 3 new ones
 %_kde_bindir/klines
 %_kde_datadir/applications/kde4/klines.desktop
 %_kde_appsdir/klines
-%_kde_docdir/HTML/en/klines
+%_kde_docdir/*/*/klines
 %_kde_iconsdir/hicolor/*/apps/klines.png
 %_kde_datadir/config.kcfg/klines.kcfg
 
@@ -594,10 +536,7 @@ kmines: the classical mine sweeper
 %_kde_datadir/applications/kde4/kmines.desktop
 %_kde_appsdir/kmines
 %_kde_datadir/config/kmines.knsrc
-%doc %_kde_docdir/HTML/en/kmines/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kmines/index.docbook
-%doc %_kde_docdir/HTML/en/kmines/kmines1.png
-%doc %_kde_docdir/HTML/en/kmines/kmines2.png
+%_kde_docdir/*/*/kmines
 %_kde_iconsdir/hicolor/*/apps/kmines.png
 
 #-----------------------------------------------------------------------------
@@ -617,20 +556,10 @@ Turn the board pieces to get all computers connected.
 %defattr(-,root,root)
 %_kde_bindir/knetwalk
 %_kde_datadir/applications/kde4/knetwalk.desktop
-%_kde_appsdir/knetwalk/knetwalk.notifyrc
-%_kde_appsdir/knetwalk/knetwalkui.rc
-%_kde_appsdir/knetwalk/sounds/click.wav
-%_kde_appsdir/knetwalk/sounds/connect.wav
-%_kde_appsdir/knetwalk/sounds/start.wav
-%_kde_appsdir/knetwalk/sounds/turn.wav
-%_kde_appsdir/knetwalk/sounds/win.wav
-%_kde_appsdir/knetwalk/themes/default.desktop
-%_kde_appsdir/knetwalk/themes/default.svgz
+%_kde_appsdir/knetwalk
+%_kde_docdir/*/*/knetwalk
 %_kde_iconsdir/hicolor/*/apps/knetwalk.*
-
-%dir %_kde_docdir/HTML/en/knetwalk
-%doc %_kde_docdir/HTML/en/knetwalk/index.cache.bz2
-%doc %_kde_docdir/HTML/en/knetwalk/index.docbook
+%dir %_kde_docdir/*/*/knetwalk
 
 #-----------------------------------------------------------------------------
 
@@ -652,7 +581,7 @@ kpat: several patience card games
 %_kde_appsdir/kpat/kpatui.rc
 %_kde_appsdir/kpat/pile.svg
 %_kde_appsdir/kpat/won.svg
-%doc %_kde_docdir/HTML/en/kpat
+%_kde_docdir/*/*/kpat
 %_kde_iconsdir/hicolor/*/apps/kpat.png
 
 #-----------------------------------------------------------------------------
@@ -674,10 +603,7 @@ Kshisen: patience game where you take away all pieces
 %_kde_datadir/applications/kde4/kshisen.desktop
 %_kde_appsdir/kshisen/kshisenui.rc
 %_kde_datadir/config.kcfg/kshisen.kcfg
-%doc %_kde_docdir/HTML/en/kshisen/index.cache.bz2
-%doc %_kde_docdir/HTML/en/kshisen/index.docbook
-%doc %_kde_docdir/HTML/en/kshisen/kshisen-configuration.png
-%doc %_kde_docdir/HTML/en/kshisen/score-formula.png
+%_kde_docdir/*/*/kshisen
 %_kde_iconsdir/hicolor/*/apps/kshisen.png
 
 #-----------------------------------------------------------------------------
@@ -702,10 +628,7 @@ quares wins.
 %_kde_appsdir/ksquares/ksquaresui.rc
 %_kde_datadir/config.kcfg/ksquares.kcfg
 %_kde_iconsdir/hicolor/*/apps/ksquares.png
-
-%dir %_kde_docdir/HTML/en/ksquares
-%doc %_kde_docdir/HTML/en/ksquares/index.cache.bz2
-%doc %_kde_docdir/HTML/en/ksquares/index.docbook
+%_kde_docdir/*/*/ksquares
 
 #-----------------------------------------------------------------------------
 
@@ -727,7 +650,7 @@ kfourinline: place 4 pieces in a row
 %_kde_bindir/kfourinlineproc
 %_kde_datadir/applications/kde4/kfourinline.desktop
 %_kde_appsdir/kfourinline
-%_kde_docdir/HTML/en/kfourinline
+%_kde_docdir/*/*/kfourinline
 %_kde_iconsdir/hicolor/*/apps/kfourinline.png
 %_kde_datadir/config.kcfg/kwin4.kcfg
 
@@ -748,8 +671,7 @@ lskat: lieutnant skat
 %_kde_bindir/lskat
 %_kde_datadir/applications/kde4/lskat.desktop
 %_kde_appsdir/lskat
-%dir %_kde_docdir/HTML/en/lskat
-%doc %_kde_docdir/HTML/en/lskat/*
+%_kde_docdir/*/*/lskat
 %_kde_iconsdir/hicolor/*/apps/lskat.png
 
 #-----------------------------------------------------------------------------
