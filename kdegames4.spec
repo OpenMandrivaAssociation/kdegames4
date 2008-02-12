@@ -113,7 +113,6 @@ Conflicts:      kdegames4 < 3.91
 Provides:       kgoldrunner4
 
 %description -n kde4-kgoldrunner
-
 KGoldrunner, a game of action and puzzle solving. 
 Run through the maze, dodge your enemies, collect 
 all the gold and climb up to the next level.
@@ -179,7 +178,6 @@ Conflicts:      kdegames4 < 3.91
 Provides:       ktuberling4
 
 %description -n kde4-ktuberling
-
 KTuberling is a "potato editor" game intended for small 
 children and adults who remain young at heart. The game 
 has no winner; the only purpose is to make the funniest 
@@ -376,7 +374,6 @@ Conflicts:      kdegames4 < 3.91
 Provides:       kiriki4
 
 %description -n kde4-kiriki
-
 Kiriki is a dice game, written for KDE 4. 
 It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 
@@ -399,7 +396,6 @@ Conflicts:      kdegames4 < 3.91
 Provides:       ksudoku4
 
 %description -n kde4-ksudoku
-
 The word Sudoku means "single number in an alloted place" in Japanese. These
 are the basic rules. Every sudoku Sudoku is a square of 81 cells divided into
 9 columns and 9 rows and in 9 subsquares (3x3) of 9 cells each. Solving takes
@@ -449,7 +445,6 @@ Conflicts:      kdegames4 < 3.91
 Provides:       bovo4
 
 %description -n kde4-bovo
-
 Bovo is a KDE 4 game, modeled upon a classic pen and paper game, 
 where you try to connect five in a row prior to your opponent.
 
@@ -479,7 +474,6 @@ Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kjumpingcube4
 
 %description -n kde4-kjumpingcube
-
 KJumpingCube is a tactical one or two-player game. The playing field 
 consists of squares that contains points which can be increased. By 
 this you can gain more fields and finally win the board over.
@@ -549,7 +543,6 @@ Conflicts:      kdegames4 < 3.91
 Provides:       knetwalk4
 
 %description -n kde4-knetwalk
-
 Turn the board pieces to get all computers connected.
 
 %files -n kde4-knetwalk
