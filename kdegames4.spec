@@ -542,7 +542,7 @@ kmines: the classical mine sweeper
 #-----------------------------------------------------------------------------
 
 %package -n     kde4-knetwalk
-Summary:        Turn the board pieces to get all computers connected. 
+Summary:        Turn the board pieces to get all computers connected 
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
