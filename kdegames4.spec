@@ -1,6 +1,6 @@
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.0.3
+Version: 4.0.69
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -10,31 +10,31 @@ Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel
 BuildRequires: libxml2-utils
-Requires: kde4-katomic
-Requires: kde4-kbattleship
-Requires: kde4-kblackbox
-Requires: kde4-kbounce
-Requires: kde4-klines
-Requires: kde4-kmahjongg
-Requires: kde4-kmines
-Requires: kde4-kolf
-Requires: kde4-konquest
-Requires: kde4-kpat
-Requires: kde4-kreversi
-Requires: kde4-ksame
-Requires: kde4-kshisen
-Requires: kde4-kspaceduel
-Requires: kde4-ktuberling
-Requires: kde4-kfourinline
-Requires: kde4-lskat
-Requires: kde4-ksudoku
-Requires: kde4-kgoldrunner
-Requires: kde4-ktuberling
-Requires: kde4-kiriki
-Requires: kde4-kjumpingcube
-Requires: kde4-bovo
-Requires: kde4-ksquares
-Requires: kde4-knetwalk
+Requires: katomic
+Requires: kbattleship
+Requires: kblackbox
+Requires: kbounce
+Requires: klines
+Requires: kmahjongg
+Requires: kmines
+Requires: kolf
+Requires: konquest
+Requires: kpat
+Requires: kreversi
+Requires: ksame
+Requires: kshisen
+Requires: kspaceduel
+Requires: ktuberling
+Requires: kfourinline
+Requires: lskat
+Requires: ksudoku
+Requires: kgoldrunner
+Requires: ktuberling
+Requires: kiriki
+Requires: kjumpingcube
+Requires: bovo
+Requires: ksquares
+Requires: knetwalk
 
 %description
 Games for the K Desktop Environment.
@@ -105,19 +105,22 @@ Headers files needed to build applications based on kdegames applications.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kgoldrunner
+%package -n     kgoldrunner
 Summary:        KGoldrunner, a game of action and puzzle solving
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kgoldrunner4
+Obsoletes:      kde4-kgoldrunner < 1:4.0.68
+Provides:       kde4-kgoldrunner = %epoch:%version
 
-%description -n kde4-kgoldrunner
+
+%description -n kgoldrunner
 KGoldrunner, a game of action and puzzle solving. 
 Run through the maze, dodge your enemies, collect 
 all the gold and climb up to the next level.
 
-%files -n kde4-kgoldrunner
+%files -n kgoldrunner
 %defattr(-,root,root)
 %attr(0755,root,root) %_kde_bindir/kgoldrunner
 %_kde_datadir/applications/kde4/KGoldrunner.desktop
@@ -127,17 +130,19 @@ all the gold and climb up to the next level.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-katomic
+%package -n     katomic
 Summary:        Build complex atoms with a minimal amount of moves
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       katomic4
+Obsoletes:      kde4-katomic < 1:4.0.68
+Provides:       kde4-katomic = %epoch:%version
 
-%description -n kde4-katomic
+%description -n katomic
 katomic: build complex atoms with a minimal amount of moves
 
-%files -n kde4-katomic
+%files -n katomic
 %defattr(-,root,root)
 %_kde_bindir/katomic
 %_kde_datadir/applications/kde4/katomic.desktop
@@ -149,17 +154,19 @@ katomic: build complex atoms with a minimal amount of moves
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kblackbox
+%package -n     kblackbox
 Summary:        Find atoms in a grid by shooting electrons
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kblackbox4
+Obsoletes:      kde4-kblackbox < 1:4.0.68
+Provides:       kde4-kblackbox = %epoch:%version
 
-%description -n kde4-kblackbox
+%description -n kblackbox
 kblackbox: find atoms in a grid by shooting electrons
 
-%files -n kde4-kblackbox
+%files -n kblackbox
 %defattr(-,root,root)
 %_kde_bindir/kblackbox
 %_kde_datadir/applications/kde4/kblackbox.desktop
@@ -170,20 +177,22 @@ kblackbox: find atoms in a grid by shooting electrons
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-ktuberling
+%package -n     ktuberling
 Summary:        KTuberling: "potato editor" game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       ktuberling4
+Obsoletes:      kde4-ktuberling < 1:4.0.68
+Provides:       kde4-ktuberling = %epoch:%version
 
-%description -n kde4-ktuberling
+%description -n ktuberling
 KTuberling is a "potato editor" game intended for small 
 children and adults who remain young at heart. The game 
 has no winner; the only purpose is to make the funniest 
 faces you can.
 
-%files -n kde4-ktuberling
+%files -n ktuberling
 %defattr(-,root,root)
 %_kde_bindir/ktuberling
 %_kde_datadir/applications/kde4/ktuberling.desktop
@@ -193,17 +202,19 @@ faces you can.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kbounce
+%package -n     kbounce
 Summary:        Claim areas and don't get disturbed
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kbounce4
+Obsoletes:      kde4-kbounce < 1:4.0.68
+Provides:       kde4-kbounce = %epoch:%version
 
-%description -n kde4-kbounce
+%description -n kbounce
 kbounce: claim areas and don't get disturbed
 
-%files -n kde4-kbounce
+%files -n kbounce
 %defattr(-,root,root)
 %_kde_bindir/kbounce
 %_kde_datadir/applications/kde4/kbounce.desktop
@@ -215,18 +226,20 @@ kbounce: claim areas and don't get disturbed
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kspaceduel
+%package -n     kspaceduel
 Summary:        Two player game with shooting spaceships flying around a sun
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kspaceduel4
+Obsoletes:      kde4-kspaceduel < 1:4.0.68
+Provides:       kde4-kspaceduel = %epoch:%version
 
-%description -n kde4-kspaceduel
+%description -n kspaceduel
 kspaceduel: two player game with shooting spaceships flying around a sun
 
-%files -n kde4-kspaceduel
+%files -n kspaceduel
 %defattr(-,root,root)
 %_kde_bindir/kspaceduel
 %_kde_datadir/applications/kde4/kspaceduel.desktop
@@ -237,17 +250,19 @@ kspaceduel: two player game with shooting spaceships flying around a sun
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kreversi
+%package -n     kreversi
 Summary:        Old reversi board game, also known as othello
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kreversi4
+Obsoletes:      kde4-kreversi < 1:4.0.68
+Provides:       kde4-kreversi = %epoch:%version
 
-%description -n kde4-kreversi
+%description -n kreversi
 kreversi: the old reversi board game, also known as othello
 
-%files -n kde4-kreversi
+%files -n kreversi
 %defattr(-,root,root)
 %_kde_bindir/kreversi
 %_kde_datadir/applications/kde4/kreversi.desktop
@@ -257,17 +272,19 @@ kreversi: the old reversi board game, also known as othello
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kolf
+%package -n     kolf
 Summary:        A golf game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kolf4
+Obsoletes:      kde4-kolf < 1:4.0.68
+Provides:       kde4-kolf = %epoch:%version
 
-%description -n kde4-kolf
+%description -n kolf
 kolf: a golf game
 
-%files -n kde4-kolf
+%files -n kolf
 %defattr(-,root,root)
 %_kde_bindir/kolf
 %_kde_datadir/applications/kde4/kolf.desktop
@@ -277,17 +294,19 @@ kolf: a golf game
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-konquest
+%package -n     konquest
 Summary:        Conquer the planets of your enemy
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       konquest4
+Obsoletes:      kde4-konquest < 1:4.0.68
+Provides:       kde4-konquest = %epoch:%version
 
-%description -n kde4-konquest
+%description -n konquest
 konquest: conquer the planets of your enemy
 
-%files -n kde4-konquest
+%files -n konquest
 %defattr(-,root,root)
 %_kde_bindir/konquest
 %_kde_datadir/applications/kde4/konquest.desktop
@@ -298,17 +317,19 @@ konquest: conquer the planets of your enemy
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-ksame
+%package -n     ksame
 Summary:        Collect pieces of the same color
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       ksame4
+Obsoletes:      kde4-ksame < 1:4.0.68
+Provides:       kde4-ksame = %epoch:%version
 
-%description -n kde4-ksame
+%description -n ksame
 ksame: collect pieces of the same color
 
-%files -n kde4-ksame
+%files -n ksame
 %defattr(-,root,root)
 %_kde_bindir/ksame
 %_kde_appsdir/ksame/ksameui.rc
@@ -319,18 +340,20 @@ ksame: collect pieces of the same color
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kmahjongg
+%package -n     kmahjongg
 Summary:        A tile laying patience
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91i
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kmahjongg4
+Obsoletes:      kde4-kmahjongg < 1:4.0.68
+Provides:       kde4-kmahjongg = %epoch:%version
 
-%description -n kde4-kmahjongg
+%description -n kmahjongg
 Kmahjongg: a tile laying patience
 
-%files -n kde4-kmahjongg
+%files -n kmahjongg
 %defattr(-,root,root)
 %_kde_bindir/kmahjongg
 %_kde_datadir/applications/kde4/kmahjongg.desktop
@@ -344,17 +367,19 @@ Kmahjongg: a tile laying patience
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kbattleship
+%package -n     kbattleship
 Summary:        Battleship game with built-in game server
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kbattleship4
+Obsoletes:      kde4-kbattleship < 1:4.0.68
+Provides:       kde4-kbattleship = %epoch:%version
 
-%description -n kde4-kbattleship
+%description -n kbattleship
 kbattleship: battleship game with built-in game server
 
-%files -n kde4-kbattleship
+%files -n kbattleship
 %defattr(-,root,root)
 %_kde_bindir/kbattleship
 %_kde_datadir/applications/kde4/kbattleship.desktop
@@ -366,18 +391,20 @@ kbattleship: battleship game with built-in game server
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kiriki
+%package -n     kiriki
 Summary:        Kiriki: Close of Yahtzee 
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kiriki4
+Obsoletes:      kde4-kiriki < 1:4.0.68
+Provides:       kde4-kiriki = %epoch:%version
 
-%description -n kde4-kiriki
+%description -n kiriki
 Kiriki is a dice game, written for KDE 4. 
 It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 
-%files -n kde4-kiriki
+%files -n kiriki
 %defattr(-,root,root)
 %_kde_bindir/kiriki
 %_kde_datadir/applications/kde4/kiriki.desktop
@@ -388,14 +415,16 @@ It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-ksudoku
+%package -n     ksudoku
 Summary:        KSudoku - Play, create and solve sudoku grids 
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       ksudoku4
+Obsoletes:      kde4-ksudoku < 1:4.0.68
+Provides:       kde4-ksudoku = %epoch:%version
 
-%description -n kde4-ksudoku
+%description -n ksudoku
 The word Sudoku means "single number in an alloted place" in Japanese. These
 are the basic rules. Every sudoku Sudoku is a square of 81 cells divided into
 9 columns and 9 rows and in 9 subsquares (3x3) of 9 cells each. Solving takes
@@ -415,7 +444,7 @@ you).
 
 More information at http://en.wikipedia.org/wiki/Sudoku
 
-%files -n kde4-ksudoku
+%files -n ksudoku
 %defattr(-,root,root)
 %_kde_bindir/ksudoku
 %_kde_datadir/applications/kde4/ksudoku.desktop
@@ -437,18 +466,20 @@ More information at http://en.wikipedia.org/wiki/Sudoku
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-bovo
+%package -n     bovo
 Summary:        Bovo: classic pen and paper game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       bovo4
+Obsoletes:      kde4-bovo < 1:4.0.68
+Provides:       kde4-bovo = %epoch:%version
 
-%description -n kde4-bovo
+%description -n bovo
 Bovo is a KDE 4 game, modeled upon a classic pen and paper game, 
 where you try to connect five in a row prior to your opponent.
 
-%files -n kde4-bovo
+%files -n bovo
 %defattr(-,root,root)
 %_kde_bindir/bovo
 %_kde_datadir/applications/kde4/bovo.desktop
@@ -465,20 +496,23 @@ where you try to connect five in a row prior to your opponent.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kjumpingcube
+%package -n     kjumpingcube
 Summary:        kjumpingcube: a tactical game for number-crunchers
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kjumpingcube4
+Obsoletes:      kde4-kjumpingcube < 1:4.0.68
+Provides:       kde4-kjumpingcube = %epoch:%version
 
-%description -n kde4-kjumpingcube
+
+%description -n kjumpingcube
 KJumpingCube is a tactical one or two-player game. The playing field 
 consists of squares that contains points which can be increased. By 
 this you can gain more fields and finally win the board over.
 
-%files -n kde4-kjumpingcube
+%files -n kjumpingcube
 %defattr(-,root,root)
 %_kde_bindir/kjumpingcube
 %_kde_datadir/applications/kde4/kjumpingcube.desktop
@@ -491,18 +525,20 @@ this you can gain more fields and finally win the board over.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-klines
+%package -n     klines
 Summary:        Place 5 equal pieces together, but wait, there are 3 new ones
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       klines4
+Obsoletes:      kde4-klines < 1:4.0.68
+Provides:       kde4-klines = %epoch:%version
 
-%description -n kde4-klines
+%description -n klines
 klines: place 5 equal pieces together, but wait, there are 3 new ones
 
-%files -n kde4-klines
+%files -n klines
 %defattr(-,root,root)
 %_kde_bindir/klines
 %_kde_datadir/applications/kde4/klines.desktop
@@ -513,18 +549,20 @@ klines: place 5 equal pieces together, but wait, there are 3 new ones
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kmines
+%package -n     kmines
 Summary:        The classical mine sweeper
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kmines4
+Obsoletes:      kde4-kmines < 1:4.0.68
+Provides:       kde4-kmines = %epoch:%version
 
-%description -n kde4-kmines
+%description -n kmines
 kmines: the classical mine sweeper
 
-%files -n kde4-kmines
+%files -n kmines
 %defattr(-,root,root)
 %_kde_bindir/kmines
 %_kde_datadir/applications/kde4/kmines.desktop
@@ -535,17 +573,19 @@ kmines: the classical mine sweeper
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-knetwalk
+%package -n     knetwalk
 Summary:        Turn the board pieces to get all computers connected 
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       knetwalk4
+Obsoletes:      kde4-knetwalk < 1:4.0.68
+Provides:       kde4-knetwalk = %epoch:%version
 
-%description -n kde4-knetwalk
+%description -n knetwalk
 Turn the board pieces to get all computers connected.
 
-%files -n kde4-knetwalk
+%files -n knetwalk
 %defattr(-,root,root)
 %_kde_bindir/knetwalk
 %_kde_datadir/applications/kde4/knetwalk.desktop
@@ -556,17 +596,19 @@ Turn the board pieces to get all computers connected.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kpat
+%package -n     kpat
 Summary:        Several patience card games
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kpat4
+Obsoletes:      kde4-kpat < 1:4.0.68
+Provides:       kde4-kpat = %epoch:%version
 
-%description -n kde4-kpat
+%description -n kpat
 kpat: several patience card games
 
-%files -n kde4-kpat
+%files -n kpat
 %defattr(-,root,root)
 %_kde_bindir/kpat
 %_kde_datadir/applications/kde4/kpat.desktop
@@ -579,18 +621,20 @@ kpat: several patience card games
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kshisen
+%package -n     kshisen
 Summary:        Patience game where you take away all pieces
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kshisen4
+Obsoletes:      kde4-kshisen < 1:4.0.68
+Provides:       kde4-kshisen = %epoch:%version
 
-%description -n kde4-kshisen
+%description -n kshisen
 Kshisen: patience game where you take away all pieces
 
-%files -n kde4-kshisen
+%files -n kshisen
 %defattr(-,root,root)
 %_kde_bindir/kshisen
 %_kde_datadir/applications/kde4/kshisen.desktop
@@ -601,20 +645,22 @@ Kshisen: patience game where you take away all pieces
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-ksquares
+%package -n     ksquares
 Summary:        KSquares: an implementation of the popular paper based game squares
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       ksquares4
+Obsoletes:      kde4-ksquares < 1:4.0.68
+Provides:       kde4-ksquares = %epoch:%version
 
-%description -n kde4-ksquares
+%description -n ksquares
 KSquares is an implementation of the popular paper based game squares. 
 You must draw lines to complete squares, the player with the most s
 quares wins.
 
-%files -n kde4-ksquares
+%files -n ksquares
 %defattr(-,root,root)
 %_kde_bindir/ksquares
 %_kde_datadir/applications/kde4/ksquares.desktop
@@ -625,7 +671,7 @@ quares wins.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-kfourinline
+%package -n     kfourinline
 Summary:        Place 4 pieces in a row
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
@@ -633,11 +679,13 @@ Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
 Provides:       kfourinline4
 Obsoletes:      kde4-kwin4 < 3.97.1-0.752247.1
+Obsoletes:      kde4-kfourinline < 1:4.0.68
+Provides:       kde4-kfourinline = %epoch:%version
 
-%description -n kde4-kfourinline
+%description -n kfourinline
 kfourinline: place 4 pieces in a row
 
-%files -n kde4-kfourinline
+%files -n kfourinline
 %defattr(-,root,root)
 %_kde_bindir/kfourinline
 %_kde_bindir/kfourinlineproc
@@ -649,17 +697,19 @@ kfourinline: place 4 pieces in a row
 
 #-----------------------------------------------------------------------------
 
-%package -n     kde4-lskat
+%package -n     lskat
 Summary:        Lieutnant skat
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       lskat4
+Obsoletes:      kde4-lskat < 1:4.0.68
+Provides:       kde4-lskat = %epoch:%version
 
-%description -n kde4-lskat
+%description -n lskat
 lskat: lieutnant skat
 
-%files -n kde4-lskat
+%files -n lskat
 %defattr(-,root,root)
 %_kde_bindir/lskat
 %_kde_datadir/applications/kde4/lskat.desktop
