@@ -85,6 +85,7 @@ Common files needed by Kdegames4 packages
 %_kde_appsdir/carddecks
 %_kde_iconsdir/oxygen/*/actions/lastmoves.*
 %_kde_iconsdir/oxygen/*/actions/legalmoves.*
+%_sysconfdir/ggz.modules
 
 #--------------------------------------------------------------------
 
@@ -333,6 +334,7 @@ ksame: collect pieces of the same color
 %defattr(-,root,root)
 %_kde_bindir/ksame
 %_kde_appsdir/ksame/ksameui.rc
+%_kde_appsdir/ksame/pics/old_theme.svgz
 %_kde_datadir/applications/kde4/ksame.desktop
 %_kde_appsdir/ksame/pics/default_theme.svgz
 %_kde_docdir/*/*/ksame
@@ -460,6 +462,7 @@ More information at http://en.wikipedia.org/wiki/Sudoku
 %_kde_appsdir/ksudoku/TinySamurai.desktop
 %_kde_appsdir/ksudoku/TinySamurai.xml
 %_kde_appsdir/ksudoku/icons
+%_kde_appsdir/ksudoku/themes/ksudoku_sample.svg
 %_kde_datadir/config/ksudokurc
 %_kde_iconsdir/hicolor/*/apps/ksudoku.png
 %_kde_docdir/*/*/ksudoku
@@ -592,7 +595,6 @@ Turn the board pieces to get all computers connected.
 %_kde_appsdir/knetwalk
 %_kde_docdir/*/*/knetwalk
 %_kde_iconsdir/hicolor/*/apps/knetwalk.*
-%dir %_kde_docdir/*/*/knetwalk
 
 #-----------------------------------------------------------------------------
 
@@ -613,6 +615,7 @@ kpat: several patience card games
 %_kde_bindir/kpat
 %_kde_datadir/applications/kde4/kpat.desktop
 %_kde_appsdir/kpat/backgrounds/background.svg
+%_kde_appsdir/kconf_update/kpat_update_cardwidth.upd
 %_kde_appsdir/kpat/kpatui.rc
 %_kde_appsdir/kpat/pile.svg
 %_kde_appsdir/kpat/won.svg
@@ -716,6 +719,84 @@ lskat: lieutnant skat
 %_kde_appsdir/lskat
 %_kde_docdir/*/*/lskat
 %_kde_iconsdir/hicolor/*/apps/lskat.png
+
+#-----------------------------------------------------------------------------
+
+%package -n     kdiamond
+Summary:        Three-in-a-row game
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+Conflicts:      kdegames4 < 3.91
+Provides:       lskat4
+
+%description -n kdiamond
+KDiamond is a three-in-a-row game (much like Bejeweled) for the KDE 4 desktop.
+
+%files -n kdiamond
+%defattr(-,root,root)
+%_kde_bindir/kdiamond
+%_kde_datadir/applications/kde4/kdiamond.desktop
+%dir %_kde_appsdir/kdiamond
+%_kde_appsdir/kdiamond/kdiamond.kcfg                
+%_kde_appsdir/kdiamond/kdiamond.notifyrc            
+%_kde_appsdir/kdiamond/kdiamondui.rc
+%dir %_kde_appsdir/kdiamond/themes                
+%_kde_appsdir/kdiamond/themes/default.desktop       
+%_kde_appsdir/kdiamond/themes/default.png           
+%_kde_appsdir/kdiamond/themes/default.svgz          
+%_kde_datadir/config/kdiamond.knsrc
+%_kde_iconsdir/*/*/*/kdiamond.*
+%_kde_docdir/*/*/kdiamond
+
+#-----------------------------------------------------------------------------
+
+%package -n     kollision
+Summary:        A simple ball dodging game
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+Conflicts:      kdegames4 < 3.91
+Provides:       lskat4
+
+%description -n kollision
+A simple ball dodging game
+
+%files -n kollision
+%defattr(-,root,root)
+%_kde_bindir/kollision
+%_kde_datadir/applications/kde4/kollision.desktop
+%dir %_kde_appsdir/kollision
+%_kde_appsdir/kollision/kollisionui.rc     
+%dir %_kde_appsdir/kollision/pictures         
+%_kde_appsdir/kollision/pictures/theme.svgz  
+%dir %_kde_appsdir/kollision/sounds       
+%_kde_appsdir/kollision/sounds/ball_leaving.ogg     
+%_kde_appsdir/kollision/sounds/hit_wall.ogg         
+%_kde_appsdir/kollision/sounds/start.ogg            
+%_kde_appsdir/kollision/sounds/you_lose.ogg
+%_kde_iconsdir/*/*/apps/kollision.*
+%_kde_docdir/*/*/kollision
+
+
+#-----------------------------------------------------------------------------
+
+%package -n     kubrick
+Summary:        Game based on Rubik's Cube
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+Conflicts:      kdegames4 < 3.91
+Provides:       lskat4
+
+%description -n kubrick
+Kubrick, a game based on Rubik's Cube
+
+%files -n kubrick
+%defattr(-,root,root)
+%_kde_bindir/kubrick
+%_kde_datadir/applications/kde4/kubrick.desktop
+%_kde_appsdir/kubrick/kubrickui.rc
+%_kde_appsdir/kubrick/*.kbk
+%_kde_docdir/*/*/kubrick
+%_kde_iconsdir/hicolor/*/apps/kubrick.png
 
 #-----------------------------------------------------------------------------
 
