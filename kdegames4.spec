@@ -35,6 +35,9 @@ Requires: kjumpingcube
 Requires: bovo
 Requires: ksquares
 Requires: knetwalk
+Requires: kollision
+Requires: kubrick
+Requires: kdiamond
 
 %description
 Games for the K Desktop Environment.
