@@ -38,6 +38,7 @@ Requires: knetwalk
 Requires: kollision
 Requires: kubrick
 Requires: kdiamond
+Requires: kblocks
 
 %description
 Games for the K Desktop Environment.
@@ -453,19 +454,7 @@ More information at http://en.wikipedia.org/wiki/Sudoku
 %defattr(-,root,root)
 %_kde_bindir/ksudoku
 %_kde_datadir/applications/kde4/ksudoku.desktop
-%_kde_appsdir/ksudoku/4x4.desktop
-%_kde_appsdir/ksudoku/4x4.xml
-%_kde_appsdir/ksudoku/Jigsaw.desktop
-%_kde_appsdir/ksudoku/Jigsaw.xml
-%_kde_appsdir/ksudoku/Samurai.desktop
-%_kde_appsdir/ksudoku/Samurai.xml
-%_kde_appsdir/ksudoku/XSudoku.desktop
-%_kde_appsdir/ksudoku/XSudoku.xml
-%_kde_appsdir/ksudoku/ksudokuui.rc
-%_kde_appsdir/ksudoku/TinySamurai.desktop
-%_kde_appsdir/ksudoku/TinySamurai.xml
-%_kde_appsdir/ksudoku/icons
-%_kde_appsdir/ksudoku/themes/ksudoku_sample.svg
+%_kde_appsdir/ksudoku
 %_kde_datadir/config/ksudokurc
 %_kde_iconsdir/hicolor/*/apps/ksudoku.png
 %_kde_docdir/*/*/ksudoku
@@ -730,7 +719,7 @@ Summary:        Three-in-a-row game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
-Provides:       lskat4
+Provides:       kdiamond4
 
 %description -n kdiamond
 KDiamond is a three-in-a-row game (much like Bejeweled) for the KDE 4 desktop.
@@ -758,7 +747,7 @@ Summary:        A simple ball dodging game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
-Provides:       lskat4
+Provides:       kollision4
 
 %description -n kollision
 A simple ball dodging game
@@ -787,7 +776,7 @@ Summary:        Game based on Rubik's Cube
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
-Provides:       lskat4
+Provides:       kubrick4
 
 %description -n kubrick
 Kubrick, a game based on Rubik's Cube
@@ -796,10 +785,31 @@ Kubrick, a game based on Rubik's Cube
 %defattr(-,root,root)
 %_kde_bindir/kubrick
 %_kde_datadir/applications/kde4/kubrick.desktop
-%_kde_appsdir/kubrick/kubrickui.rc
-%_kde_appsdir/kubrick/*.kbk
+%_kde_appsdir/kubrick
 %_kde_docdir/*/*/kubrick
 %_kde_iconsdir/hicolor/*/apps/kubrick.png
+
+#-----------------------------------------------------------------------------
+
+%package -n     kblocks
+Summary:        Single player falling blocks puzzle game
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+Conflicts:      kdegames4 < 3.91
+Provides:       kblocks4
+
+%description -n kblocks
+Single player falling blocks puzzle game
+
+%files -n kblocks
+%defattr(-,root,root)
+%_kde_bindir/kblocks
+%_kde_datadir/applications/kde4/kblocks.desktop
+%_kde_appsdir/kblocks
+%_kde_datadir/config.kcfg/kblocks.kcfg
+%_kde_datadir/config/kblocks.knsrc
+%_kde_docdir/HTML/en/kblocks
+%_kde_iconsdir/hicolor/*/apps/kblocks.*
 
 #-----------------------------------------------------------------------------
 
