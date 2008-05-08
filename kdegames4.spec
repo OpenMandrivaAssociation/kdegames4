@@ -1,6 +1,6 @@
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.0.72
+Version: 4.0.73
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -10,7 +10,8 @@ Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel
 BuildRequires: libxml2-utils
-BuildRequires: ggz-client-libs-devel
+# Do not readd it because it creates /etc/ggz.modules which conflicts with freeciv-data
+#BuildRequires: ggz-client-libs-devel
 Requires: katomic
 Requires: kbattleship
 Requires: kblackbox
@@ -40,6 +41,8 @@ Requires: kollision
 Requires: kubrick
 Requires: kdiamond
 Requires: kblocks
+Requires: ksirk
+Requires: kbreakout 
 
 %description
 Games for the K Desktop Environment.
@@ -90,7 +93,6 @@ Common files needed by Kdegames4 packages
 %_kde_appsdir/carddecks
 %_kde_iconsdir/oxygen/*/actions/lastmoves.*
 %_kde_iconsdir/oxygen/*/actions/legalmoves.*
-%_sysconfdir/ggz.modules
 
 #--------------------------------------------------------------------
 
@@ -130,6 +132,7 @@ all the gold and climb up to the next level.
 %defattr(-,root,root)
 %attr(0755,root,root) %_kde_bindir/kgoldrunner
 %_kde_datadir/applications/kde4/KGoldrunner.desktop
+%_kde_datadir/config/kgoldrunner.knsrc
 %_kde_appsdir/kgoldrunner
 %_kde_docdir/*/*/kgoldrunner
 %_kde_iconsdir/hicolor/*/apps/kgoldrunner.png
@@ -224,10 +227,8 @@ kbounce: claim areas and don't get disturbed
 %defattr(-,root,root)
 %_kde_bindir/kbounce
 %_kde_datadir/applications/kde4/kbounce.desktop
-%_kde_appsdir/kbounce/kbounceui.rc
-%_kde_appsdir/kbounce/themes/*
-%dir %_kde_datadir/apps/kbounce/sounds
-%_kde_datadir/apps/kbounce/sounds/*.au
+%_kde_appsdir/kbounce
+%_kde_iconsdir/*/*/apps/kbounce*
 %_kde_docdir/*/*/kbounce
 
 #-----------------------------------------------------------------------------
@@ -811,6 +812,47 @@ Single player falling blocks puzzle game
 %_kde_datadir/config/kblocks.knsrc
 %_kde_docdir/HTML/en/kblocks
 %_kde_iconsdir/hicolor/*/apps/kblocks.*
+
+#-----------------------------------------------------------------------------
+
+%package -n     kbreakout
+Summary:        kbreakout
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+Conflicts:      kdegames4 < 3.91
+Provides:       kbreakout4
+
+%description -n kbreakout
+Single player falling blocks puzzle game
+
+%files -n kbreakout
+%defattr(-,root,root)
+%{_kde_bindir}/kbreakout
+%{_kde_datadir}/applications/kde4/kbreakout.desktop
+%{_kde_appsdir}/kbreakout
+%{_kde_iconsdir}/hicolor/*/apps/kbreakout.png
+%_kde_docdir/*/*/kbreakout
+
+#-----------------------------------------------------------------------------
+
+%package -n     ksirk
+Summary:        Single player falling blocks puzzle game
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+Conflicts:      kdegames4 < 3.91
+Provides:       ksirk4
+
+%description -n ksirk
+TODO
+
+%files -n ksirk
+%defattr(-,root,root)
+%{_kde_bindir}/ksirk
+%{_kde_datadir}/applications/kde4/ksirk.desktop
+%{_kde_datadir}/config.kcfg/ksirksettings.kcfg
+%{_kde_appsdir}/ksirk
+%{_kde_iconsdir}/*/*/apps/ksirk.png
+%_kde_docdir/*/*/ksirk
 
 #-----------------------------------------------------------------------------
 
