@@ -5,7 +5,7 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: ftp://ftp.kde.org/pub/kde/stable/%version/src/
-Release: %mkrel 1
+Release: %mkrel 3
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= %version
