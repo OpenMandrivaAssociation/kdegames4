@@ -5,51 +5,51 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: ftp://ftp.kde.org/pub/kde/stable/%version/src/
-Release: %mkrel 3
+Release: %mkrel 4
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= %version
 BuildRequires: libxml2-utils
 # Do not readd it because it creates /etc/ggz.modules which conflicts with freeciv-data
 #BuildRequires: ggz-client-libs-devel
-Requires: katomic
-Requires: kbattleship
-Requires: kblackbox
-Requires: kbounce
-Requires: klines
-Requires: kmahjongg
-Requires: kmines
-Requires: kolf
-Requires: konquest
-Requires: kpat
-Requires: kreversi
-Requires: ksame
-Requires: kshisen
-Requires: kspaceduel
-Requires: ktuberling
-Requires: kfourinline
-Requires: lskat
-Requires: ksudoku
-Requires: kgoldrunner
-Requires: ktuberling
-Requires: kiriki
-Requires: kjumpingcube
-Requires: bovo
-Requires: ksquares
-Requires: knetwalk
-Requires: kollision
-Requires: kubrick
-Requires: kdiamond
-Requires: kblocks
-Requires: ksirk
-Requires: kbreakout 
+Requires:   katomic
+Requires:   kbattleship
+Requires:   kblackbox
+Requires:   kbounce
+Requires:   klines
+Requires:   kmahjongg
+Requires:   kmines
+Requires:   kolf
+Requires:   konquest
+Requires:   kpat
+Requires:   kreversi
+Requires:   ksame
+Requires:   kshisen
+Requires:   kspaceduel
+Requires:   ktuberling
+Requires:   kfourinline
+Requires:   lskat
+Requires:   ksudoku
+Requires:   kgoldrunner
+Requires:   ktuberling
+Requires:   kiriki
+Requires:   kjumpingcube
+Requires:   bovo
+Requires:   ksquares
+Requires:   knetwalk
+Requires:   kollision
+Requires:   kubrick
+Requires:   kdiamond
+Requires:   kblocks
+Requires:   ksirk
+Requires:   kbreakout 
+
+Obsoletes:  kde4-kbackgammon < 1:4.0.74-4  
 
 %description
 Games for the K Desktop Environment.
 This is a compilation of various games for KDE project
 	- katomic: build complex atoms with a minimal amount of moves
-	- kbackgammon: play backgammon against a local human player, via a
-               game server or against GNU Backgammon (not included)
 	- kbattleship: battleship game with built-in game server
 	- kblackbox: find atoms in a grid by shooting electrons
 	- kbounce: claim areas and don't get disturbed
