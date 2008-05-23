@@ -5,7 +5,7 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: ftp://ftp.kde.org/pub/kde/stable/%version/src/
-Release: %mkrel 4
+Release: %mkrel 5
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= %version
@@ -89,7 +89,7 @@ Common files needed by Kdegames4 packages
 
 %files core
 %defattr(-,root,root)
-%_kde_appsdir/kdegames/pics/star.png
+%_kde_appsdir/kdegames
 %_kde_appsdir/carddecks
 %_kde_iconsdir/oxygen/*/actions/lastmoves.*
 %_kde_iconsdir/oxygen/*/actions/legalmoves.*
@@ -157,9 +157,7 @@ katomic: build complex atoms with a minimal amount of moves
 %_kde_datadir/applications/kde4/katomic.desktop
 %_kde_docdir/*/*/katomic
 %_kde_iconsdir/hicolor/*/apps/katomic.png
-%_kde_appsdir/katomic/levels/*
-%_kde_appsdir/katomic/pics/default_theme.svgz
-%_kde_appsdir/katomic/katomicui.rc
+%_kde_appsdir/katomic
 
 #-----------------------------------------------------------------------------
 
@@ -179,8 +177,7 @@ kblackbox: find atoms in a grid by shooting electrons
 %defattr(-,root,root)
 %_kde_bindir/kblackbox
 %_kde_datadir/applications/kde4/kblackbox.desktop
-%_kde_appsdir/kblackbox/kblackboxui.rc
-%_kde_appsdir/kblackbox/pics/kblackbox.svgz
+%_kde_appsdir/kblackbox
 %_kde_docdir/*/*/kblackbox
 %_kde_iconsdir/hicolor/*/apps/kblackbox.png
 
@@ -339,10 +336,8 @@ ksame: collect pieces of the same color
 %files -n ksame
 %defattr(-,root,root)
 %_kde_bindir/ksame
-%_kde_appsdir/ksame/ksameui.rc
-%_kde_appsdir/ksame/pics/old_theme.svgz
+%_kde_appsdir/ksame
 %_kde_datadir/applications/kde4/ksame.desktop
-%_kde_appsdir/ksame/pics/default_theme.svgz
 %_kde_docdir/*/*/ksame
 %_kde_datadir/icons/hicolor/*/apps/ksame.png
 
@@ -365,10 +360,7 @@ Kmahjongg: a tile laying patience
 %defattr(-,root,root)
 %_kde_bindir/kmahjongg
 %_kde_datadir/applications/kde4/kmahjongg.desktop
-%_kde_appsdir/kmahjongg/kmahjonggui.rc
-%_kde_appsdir/kmahjongg/layouts/*
-%_kde_appsdir/kmahjongglib/backgrounds/*
-%_kde_appsdir/kmahjongglib/tilesets/*
+%_kde_appsdir/kmahjongg
 %_kde_docdir/*/*/kmahjongg
 %_kde_datadir/icons/hicolor/*/apps/kmahjongg.png
 %_kde_datadir/config.kcfg/kmahjongg.kcfg
@@ -393,9 +385,7 @@ kbattleship: battleship game with built-in game server
 %_kde_datadir/applications/kde4/kbattleship.desktop
 %_kde_docdir/*/*/kbattleship
 %_kde_iconsdir/hicolor/*/apps/kbattleship.png
-%_kde_appsdir/kbattleship/kbattleshipui.rc
-%_kde_appsdir/kbattleship/pictures/default_theme.svgz
-%_kde_appsdir/kbattleship/sounds/*
+%_kde_appsdir/kbattleship
 
 #-----------------------------------------------------------------------------
 
@@ -418,8 +408,7 @@ It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 %_kde_datadir/applications/kde4/kiriki.desktop
 %_kde_docdir/*/*/kiriki
 %_kde_iconsdir/hicolor/*/apps/kiriki.png
-%_kde_appsdir/kiriki/images/*
-%_kde_appsdir/kiriki/kirikiui.rc
+%_kde_appsdir/kiriki
 
 #-----------------------------------------------------------------------------
 
@@ -480,15 +469,7 @@ where you try to connect five in a row prior to your opponent.
 %defattr(-,root,root)
 %_kde_bindir/bovo
 %_kde_datadir/applications/kde4/bovo.desktop
-%_kde_appsdir/bovo/bovoui.rc
-%_kde_appsdir/bovo/themes/gomoku/theme.svg
-%_kde_appsdir/bovo/themes/gomoku/themerc
-%_kde_appsdir/bovo/themes/highcontrast/theme.svg
-%_kde_appsdir/bovo/themes/highcontrast/themerc
-%_kde_appsdir/bovo/themes/scribble/theme.svg
-%_kde_appsdir/bovo/themes/scribble/themerc
-%_kde_appsdir/bovo/themes/spacy/theme.svg
-%_kde_appsdir/bovo/themes/spacy/themerc
+%_kde_appsdir/bovo
 %_kde_docdir/*/*/bovo
 
 #-----------------------------------------------------------------------------
@@ -513,9 +494,7 @@ this you can gain more fields and finally win the board over.
 %defattr(-,root,root)
 %_kde_bindir/kjumpingcube
 %_kde_datadir/applications/kde4/kjumpingcube.desktop
-%_kde_appsdir/kjumpingcube/kjumpingcubeui.rc
-%_kde_appsdir/kjumpingcube/pics/default.desktop
-%_kde_appsdir/kjumpingcube/pics/default.svg
+%_kde_appsdir/kjumpingcube
 %_kde_datadir/config.kcfg/kjumpingcube.kcfg
 %_kde_docdir/*/*/kjumpingcube
 %_kde_iconsdir/hicolor/*/apps/kjumpingcube.png
@@ -608,11 +587,8 @@ kpat: several patience card games
 %defattr(-,root,root)
 %_kde_bindir/kpat
 %_kde_datadir/applications/kde4/kpat.desktop
-%_kde_appsdir/kpat/backgrounds/background.svg
 %_kde_appsdir/kconf_update/kpat_update_cardwidth.upd
-%_kde_appsdir/kpat/kpatui.rc
-%_kde_appsdir/kpat/pile.svg
-%_kde_appsdir/kpat/won.svg
+%_kde_appsdir/kpat
 %_kde_docdir/*/*/kpat
 %_kde_iconsdir/hicolor/*/apps/kpat.png
 
@@ -635,7 +611,7 @@ Kshisen: patience game where you take away all pieces
 %defattr(-,root,root)
 %_kde_bindir/kshisen
 %_kde_datadir/applications/kde4/kshisen.desktop
-%_kde_appsdir/kshisen/kshisenui.rc
+%_kde_appsdir/kshisen
 %_kde_datadir/config.kcfg/kshisen.kcfg
 %_kde_docdir/*/*/kshisen
 %_kde_iconsdir/hicolor/*/apps/kshisen.png
@@ -661,7 +637,7 @@ quares wins.
 %defattr(-,root,root)
 %_kde_bindir/ksquares
 %_kde_datadir/applications/kde4/ksquares.desktop
-%_kde_appsdir/ksquares/ksquaresui.rc
+%_kde_appsdir/ksquares
 %_kde_datadir/config.kcfg/ksquares.kcfg
 %_kde_iconsdir/hicolor/*/apps/ksquares.png
 %_kde_docdir/*/*/ksquares
@@ -730,14 +706,7 @@ KDiamond is a three-in-a-row game (much like Bejeweled) for the KDE 4 desktop.
 %defattr(-,root,root)
 %_kde_bindir/kdiamond
 %_kde_datadir/applications/kde4/kdiamond.desktop
-%dir %_kde_appsdir/kdiamond
-%_kde_appsdir/kdiamond/kdiamond.kcfg                
-%_kde_appsdir/kdiamond/kdiamond.notifyrc            
-%_kde_appsdir/kdiamond/kdiamondui.rc
-%dir %_kde_appsdir/kdiamond/themes                
-%_kde_appsdir/kdiamond/themes/default.desktop       
-%_kde_appsdir/kdiamond/themes/default.png           
-%_kde_appsdir/kdiamond/themes/default.svgz          
+%_kde_appsdir/kdiamond
 %_kde_datadir/config/kdiamond.knsrc
 %_kde_iconsdir/*/*/*/kdiamond.*
 %_kde_docdir/*/*/kdiamond
@@ -758,15 +727,7 @@ A simple ball dodging game
 %defattr(-,root,root)
 %_kde_bindir/kollision
 %_kde_datadir/applications/kde4/kollision.desktop
-%dir %_kde_appsdir/kollision
-%_kde_appsdir/kollision/kollisionui.rc     
-%dir %_kde_appsdir/kollision/pictures         
-%_kde_appsdir/kollision/pictures/theme.svgz  
-%dir %_kde_appsdir/kollision/sounds       
-%_kde_appsdir/kollision/sounds/ball_leaving.ogg     
-%_kde_appsdir/kollision/sounds/hit_wall.ogg         
-%_kde_appsdir/kollision/sounds/start.ogg            
-%_kde_appsdir/kollision/sounds/you_lose.ogg
+%_kde_appsdir/kollision
 %_kde_iconsdir/*/*/apps/kollision.*
 %_kde_docdir/*/*/kollision
 
