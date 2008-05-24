@@ -1,11 +1,11 @@
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.0.74
+Version: 4.0.80
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: ftp://ftp.kde.org/pub/kde/stable/%version/src/
-Release: %mkrel 5
+Release: %mkrel 1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= %version
