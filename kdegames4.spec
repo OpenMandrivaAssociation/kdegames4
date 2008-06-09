@@ -829,8 +829,12 @@ Obsoletes:  %{_lib}kdegames5 < 1:3.93.0-0.714146.1
 %description -n %libkdegames
 KDE 4 library.
 
+%if %mdkversion < 200900
 %post -n %libkdegames -p /sbin/ldconfig
+%endif
+%if %mdkversion < 200900
 %postun -n %libkdegames -p /sbin/ldconfig
+%endif
 
 %files -n %libkdegames
 %defattr(-,root,root)
@@ -849,8 +853,12 @@ Obsoletes:  %{_lib}kmahjongglib5 < 1:3.93.0-0.714146.1
 %description -n %libkmahjongglib
 KDE 4 library.
 
+%if %mdkversion < 200900
 %post -n %libkmahjongglib -p /sbin/ldconfig
+%endif
+%if %mdkversion < 200900
 %postun -n %libkmahjongglib -p /sbin/ldconfig
+%endif
 
 %files -n %libkmahjongglib
 %defattr(-,root,root)
@@ -870,8 +878,12 @@ Obsoletes: %{_lib}kolflib1 < 1:3.97.1-0.746784.1
 %description -n %libkolfprivate
 KDE 4 library.
 
+%if %mdkversion < 200900
 %post -n %libkolfprivate -p /sbin/ldconfig
+%endif
+%if %mdkversion < 200900
 %postun -n %libkolfprivate -p /sbin/ldconfig
+%endif
 
 %files -n %libkolfprivate
 %defattr(-,root,root)
@@ -889,8 +901,12 @@ Conflicts:  %{_lib}kdegames4 < 3.91
 %description -n %libkggzgames
 KDE 4 library.
 
+%if %mdkversion < 200900
 %post -n %libkggzgames -p /sbin/ldconfig
+%endif
+%if %mdkversion < 200900
 %postun -n %libkggzgames -p /sbin/ldconfig
+%endif
 
 %files -n %libkggzgames
 %defattr(-,root,root)
@@ -908,8 +924,12 @@ Conflicts:  %{_lib}kdegames4 < 3.91
 %description -n %libkggzmod
 KDE 4 library.
 
+%if %mdkversion < 200900
 %post -n %libkggzmod -p /sbin/ldconfig
+%endif
+%if %mdkversion < 200900
 %postun -n %libkggzmod -p /sbin/ldconfig
+%endif
 
 %files -n %libkggzmod
 %defattr(-,root,root)
@@ -927,8 +947,12 @@ Conflicts:  %{_lib}kdegames4 < 3.91
 %description -n %libkggznet
 KDE 4 library.
 
+%if %mdkversion < 200900
 %post -n %libkggznet -p /sbin/ldconfig
+%endif
+%if %mdkversion < 200900
 %postun -n %libkggznet -p /sbin/ldconfig
+%endif
 
 %files -n %libkggznet
 %defattr(-,root,root)
