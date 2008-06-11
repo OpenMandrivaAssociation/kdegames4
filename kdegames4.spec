@@ -1,6 +1,6 @@
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.0.81
+Version: 4.0.82
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
