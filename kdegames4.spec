@@ -1,3 +1,6 @@
+%define with_ksudoku 0
+%{?_with_ksudoku: %{expand: %%global with_ksudoku 1}}
+
 Name: kdegames4
 Summary: KDE - Games
 Version: 4.0.83
@@ -5,13 +8,15 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: ftp://ftp.kde.org/pub/kde/stable/%version/src/
-Release: %mkrel 1
+Release: %mkrel 2
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
+Patch0: kdegames-4.0.83-underlink-from-svn.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= %version
 BuildRequires: libxml2-utils
-# Do not readd it because it creates /etc/ggz.modules which conflicts with freeciv-data
-#BuildRequires: ggz-client-libs-devel
+# Do not comment ggz. For now we're excluding /etc/ggz.modules, but freeciv package is wrong too.
+# read this if you have some doubt http://svn.ggzgamingzone.org/trac.cgi/browser/trunk/docs/ggz-project/packagers
+BuildRequires: ggz-client-libs-devel
 Requires:   katomic
 Requires:   kbattleship
 Requires:   kblackbox
@@ -29,7 +34,9 @@ Requires:   kspaceduel
 Requires:   ktuberling
 Requires:   kfourinline
 Requires:   lskat
+%if %{with_ksudoku}
 Requires:   ksudoku
+%endif
 Requires:   kgoldrunner
 Requires:   ktuberling
 Requires:   kiriki
@@ -66,7 +73,9 @@ This is a compilation of various games for KDE project
 	- ktuberling: kids game: make your own potato (NO french fries!)
 	- kfourinline: place 4 pieces in a row
 	- Lskat: lieutnant skat
+%if %{with_ksudoku}
 	- Ksudoku: Play, create and solve sudoku grids
+%endif
 	- KGoldrunner: a game of action and puzzle solving.
 	- KTuberling: "potato editor" game
 	- Kiriki: Close of Yahtzee
@@ -93,6 +102,7 @@ Common files needed by Kdegames4 packages
 %_kde_appsdir/carddecks
 %_kde_iconsdir/oxygen/*/actions/lastmoves.*
 %_kde_iconsdir/oxygen/*/actions/legalmoves.*
+%exclude %_sysconfdir/ggz.modules
 
 #--------------------------------------------------------------------
 
@@ -413,6 +423,7 @@ It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 
 #-----------------------------------------------------------------------------
 
+%if %{with_ksudoku}
 %package -n     ksudoku
 Summary:        KSudoku - Play, create and solve sudoku grids 
 Group:          Graphical desktop/KDE
@@ -450,6 +461,9 @@ More information at http://en.wikipedia.org/wiki/Sudoku
 %_kde_datadir/config/ksudokurc
 %_kde_iconsdir/hicolor/*/apps/ksudoku.png
 %_kde_docdir/*/*/ksudoku
+%else # with_ksudoku
+%exclude %_kde_docdir/*/*/ksudoku
+%endif # with_ksudoku
 
 #-----------------------------------------------------------------------------
 
@@ -962,9 +976,14 @@ KDE 4 library.
 
 %prep
 %setup -q -n kdegames-%version
+%patch0 -p0 -b .underlink
 
 %build
-%cmake_kde4 
+%if %{with_ksudoku}
+%cmake_kde4
+%else
+%cmake_kde4 -DBUILD_ksudoku=FALSE
+%endif
 
 %make
 
