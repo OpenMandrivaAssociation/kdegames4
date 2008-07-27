@@ -7,7 +7,7 @@ Version: 4.1.0
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
-URL: ftp://ftp.kde.org/pub/kde/stable/%version/src/
+URL: http://games.kde.org/
 Release: %mkrel 1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
@@ -125,6 +125,7 @@ Headers files needed to build applications based on kdegames applications.
 %package -n     kgoldrunner
 Summary:        KGoldrunner, a game of action and puzzle solving
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kgoldrunner
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kgoldrunner4
@@ -151,6 +152,7 @@ all the gold and climb up to the next level.
 %package -n     katomic
 Summary:        Build complex atoms with a minimal amount of moves
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=katomic
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       katomic4
@@ -173,6 +175,7 @@ katomic: build complex atoms with a minimal amount of moves
 %package -n     kblackbox
 Summary:        Find atoms in a grid by shooting electrons
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kblackbox
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kblackbox4
@@ -195,6 +198,7 @@ kblackbox: find atoms in a grid by shooting electrons
 %package -n     ktuberling
 Summary:        KTuberling: "potato editor" game
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=ktuberling
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       ktuberling4
@@ -220,6 +224,7 @@ faces you can.
 %package -n     kbounce
 Summary:        Claim areas and don't get disturbed
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kbounce
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kbounce4
@@ -242,6 +247,7 @@ kbounce: claim areas and don't get disturbed
 %package -n     kspaceduel
 Summary:        Two player game with shooting spaceships flying around a sun
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kspaceduel
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
@@ -266,6 +272,7 @@ kspaceduel: two player game with shooting spaceships flying around a sun
 %package -n     kreversi
 Summary:        Old reversi board game, also known as othello
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kreversi
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kreversi4
@@ -288,6 +295,7 @@ kreversi: the old reversi board game, also known as othello
 %package -n     kolf
 Summary:        A golf game
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kolf
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kolf4
@@ -295,7 +303,9 @@ Obsoletes:      kde4-kolf < 1:4.0.68
 Provides:       kde4-kolf = %epoch:%version
 
 %description -n kolf
-kolf: a golf game
+Kolf is a miniature golf game with 2d top-down view. Courses are dynamic,
+and up to 10 people can play at once in competition. Kolf comes equipped
+with a variety of playgrounds and tutorial courses.
 
 %files -n kolf
 %defattr(-,root,root)
@@ -310,6 +320,7 @@ kolf: a golf game
 %package -n     konquest
 Summary:        Conquer the planets of your enemy
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=konquest
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       konquest4
@@ -333,6 +344,7 @@ konquest: conquer the planets of your enemy
 %package -n     ksame
 Summary:        Collect pieces of the same color
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=ksame
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       ksame4
@@ -355,6 +367,7 @@ ksame: collect pieces of the same color
 %package -n     kmahjongg
 Summary:        A tile laying patience
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kmahjongg
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91i
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
@@ -380,6 +393,7 @@ Kmahjongg: a tile laying patience
 %package -n     kbattleship
 Summary:        Battleship game with built-in game server
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kbattleship
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kbattleship4
@@ -402,6 +416,7 @@ kbattleship: battleship game with built-in game server
 %package -n     kiriki
 Summary:        Kiriki: Close of Yahtzee 
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kiriki
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       kiriki4
@@ -426,6 +441,7 @@ It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 %package -n     ksudoku
 Summary:        KSudoku - Play, create and solve sudoku grids 
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=ksudoku
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       ksudoku4
@@ -469,6 +485,7 @@ More information at http://en.wikipedia.org/wiki/Sudoku
 %package -n     bovo
 Summary:        Bovo: classic pen and paper game
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=bovo
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       bovo4
@@ -491,6 +508,7 @@ where you try to connect five in a row prior to your opponent.
 %package -n     kjumpingcube
 Summary:        kjumpingcube: a tactical game for number-crunchers
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kjumpingcube
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
@@ -518,6 +536,7 @@ this you can gain more fields and finally win the board over.
 %package -n     klines
 Summary:        Place 5 equal pieces together, but wait, there are 3 new ones
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=klines
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
@@ -542,6 +561,7 @@ klines: place 5 equal pieces together, but wait, there are 3 new ones
 %package -n     kmines
 Summary:        The classical mine sweeper
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kmines
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
@@ -566,6 +586,7 @@ kmines: the classical mine sweeper
 %package -n     knetwalk
 Summary:        Turn the board pieces to get all computers connected 
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=knetwalk
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       knetwalk4
@@ -611,6 +632,7 @@ kpat: several patience card games
 %package -n     kshisen
 Summary:        Patience game where you take away all pieces
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kshisen
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
@@ -635,6 +657,7 @@ Kshisen: patience game where you take away all pieces
 %package -n     ksquares
 Summary:        KSquares: an implementation of the popular paper based game squares
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=ksquares
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
@@ -661,6 +684,7 @@ quares wins.
 %package -n     kfourinline
 Summary:        Place 4 pieces in a row
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=kfourinline
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
@@ -687,6 +711,7 @@ kfourinline: place 4 pieces in a row
 %package -n     lskat
 Summary:        Lieutnant skat
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=lskat
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       lskat4
@@ -813,12 +838,16 @@ Single player falling blocks puzzle game
 %package -n     ksirk
 Summary:        Single player falling blocks puzzle game
 Group:          Graphical desktop/KDE
+URL:		http://games.kde.org/game.php?game=ksirk
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       ksirk4
 
 %description -n ksirk
-TODO
+KsirK is a computerized version of a well known strategy board game.
+KsirK is a multi-player network-playable game with an AI. The goal
+of the game is simply to conquer the World... It is done by attacking
+your neighbours with your armies.
 
 %files -n ksirk
 %defattr(-,root,root)
