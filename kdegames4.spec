@@ -8,7 +8,7 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
-Release: %mkrel 1
+Release: %mkrel 2
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 4.0.83
@@ -91,6 +91,7 @@ This is a compilation of various games for KDE project
 %package core
 Summary:        Common files needed by Kdegames4 packages
 Group:          Graphical desktop/KDE
+Conflicts:	kdegames <  1:3.5.9-4mdv
 
 %description core
 Common files needed by Kdegames4 packages
