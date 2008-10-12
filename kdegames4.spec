@@ -867,13 +867,14 @@ your neighbours with your armies.
 
 #-----------------------------------------------------------------------------
 
-%define libkdegames %mklibname kdegames 4
+%define libkdegames %mklibname kdegames 5
 
 %package -n %libkdegames
 Summary:    KDE 4 library
 Group:      System/Libraries
 Conflicts:  %{_lib}kdegames4 < 3.91
 Obsoletes:  %{_lib}kdegames5 < 1:3.93.0-0.714146.1
+Obsoletes:  %{_lib}kdegames4 > 1:4.1.0
 
 %description -n %libkdegames
 KDE 4 library.
