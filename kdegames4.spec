@@ -104,29 +104,6 @@ Common files needed by Kdegames4 packages
 %_kde_iconsdir/oxygen/*/actions/legalmoves.*
 %exclude %_sysconfdir/ggz.modules
 
-#--------------------------------------------------------------------
-
-%package devel
-Summary:    Headers files for kdegames
-Group:	    Development/KDE and Qt
-Requires:   kdelibs4-devel
-Requires:   %libkdegames = %epoch:%version
-Requires:   %libkmahjongglib = %epoch:%version
-Requires:   %libkolfprivate = %epoch:%version
-Requires:   %libkggzgames = %epoch:%version
-Requires:   %libkggzmod = %epoch:%version
-Requires:   %libkggznet = %epoch:%version
-
-%description devel
-Headers files needed to build applications based on kdegames applications.
-
-%files devel
-%defattr(-,root,root,-)
-%_kde_datadir/apps/cmake/modules/FindLibKDEGames.cmake
-%_kde_datadir/apps/cmake/modules/GGZ.cmake
-%_kde_libdir/*.so
-%_kde_includedir/*
-
 #-----------------------------------------------------------------------------
 
 %package -n     kgoldrunner
@@ -1007,6 +984,29 @@ KDE 4 library.
 %files -n %libkggznet
 %defattr(-,root,root)
 %_kde_libdir/libkggznet.so.*
+
+#--------------------------------------------------------------------
+
+%package devel
+Summary:    Headers files for kdegames
+Group:      Development/KDE and Qt
+Requires:   kdelibs4-devel
+Requires:   %libkdegames = %epoch:%version
+Requires:   %libkmahjongglib = %epoch:%version
+Requires:   %libkolfprivate = %epoch:%version
+Requires:   %libkggzgames = %epoch:%version
+Requires:   %libkggzmod = %epoch:%version
+Requires:   %libkggznet = %epoch:%version
+
+%description devel
+Headers files needed to build applications based on kdegames applications.
+
+%files devel
+%defattr(-,root,root,-)
+%_kde_datadir/apps/cmake/modules/FindLibKDEGames.cmake
+%_kde_datadir/apps/cmake/modules/GGZ.cmake
+%_kde_libdir/*.so
+%_kde_includedir/*
 
 #-----------------------------------------------------------------------------
 
