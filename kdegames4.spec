@@ -8,7 +8,7 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
-Release: %mkrel 2
+Release: %mkrel 3
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 4.0.83
@@ -109,7 +109,13 @@ Common files needed by Kdegames4 packages
 %package devel
 Summary:    Headers files for kdegames
 Group:	    Development/KDE and Qt
-Requires:   kdelibs4-devel 
+Requires:   kdelibs4-devel
+Requires:   %libkdegames = %epoch:%version
+Requires:   %libkmahjongglib = %epoch:%version
+Requires:   %libkolfprivate = %epoch:%version
+Requires:   %libkggzgames = %epoch:%version
+Requires:   %libkggzmod = %epoch:%version
+Requires:   %libkggznet = %epoch:%version
 
 %description devel
 Headers files needed to build applications based on kdegames applications.
