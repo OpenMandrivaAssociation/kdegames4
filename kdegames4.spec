@@ -10,6 +10,7 @@ License: GPL
 URL: http://games.kde.org/
 Release: %mkrel 1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
+Patch0: kdegames-4.1.71-install-kapman-desktop.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 4.0.83
 BuildRequires: libxml2-utils
@@ -1057,6 +1058,7 @@ Headers files needed to build applications based on kdegames applications.
 
 %prep
 %setup -q -n kdegames-%version
+%patch0 -p0
 
 %build
 %if %{with_ksudoku}
