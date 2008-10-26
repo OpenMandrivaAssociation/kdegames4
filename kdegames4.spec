@@ -102,7 +102,6 @@ Common files needed by Kdegames4 packages
 %_kde_appsdir/carddecks
 %_kde_iconsdir/oxygen/*/actions/lastmoves.*
 %_kde_iconsdir/oxygen/*/actions/legalmoves.*
-%exclude %_sysconfdir/ggz.modules
 
 #-----------------------------------------------------------------------------
 
@@ -130,6 +129,27 @@ all the gold and climb up to the next level.
 %_kde_appsdir/kgoldrunner
 %_kde_docdir/*/*/kgoldrunner
 %_kde_iconsdir/hicolor/*/apps/kgoldrunner.png
+
+#-----------------------------------------------------------------------------
+
+%package -n     kapman
+Summary:        A Pac-Man clone
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+Provides:       kapman4
+Provides:       kde4-kapman = %epoch:%version
+
+%description -n kapman
+Kapman is a Pac-Man clone.
+
+%files -n kapman
+%defattr(-,root,root)
+%_kde_bindir/kapman
+%_kde_datadir/applications/kde4/kapman.desktop
+%_kde_appsdir/kapman
+%_kde_docdir/*/*/kapman
+%_kde_iconsdir/hicolor/*/apps/kapman.*
+%_kde_datadir/sounds/kapman
 
 #-----------------------------------------------------------------------------
 
@@ -225,6 +245,27 @@ kbounce: claim areas and don't get disturbed
 %_kde_appsdir/kbounce
 %_kde_iconsdir/*/*/apps/kbounce*
 %_kde_docdir/*/*/kbounce
+
+#-----------------------------------------------------------------------------
+
+%package -n     killbots
+Summary:        KDE port of the classic BSD console game robots
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+Provides:       kapman4
+Provides:       kde4-killbots = %epoch:%version
+
+%description -n killbots
+Killbots is a KDE port of the classic BSD console game robots.
+
+%files -n killbots
+%defattr(-,root,root)
+%_kde_bindir/killbots
+%_kde_datadir/applications/kde4/killbots.desktop
+%_kde_appsdir/killbots
+%_kde_datadir/config.kcfg/killbots.kcfg
+%_kde_docdir/*/*/killbots
+%_kde_iconsdir/hicolor/*/apps/killbots.*
 
 #-----------------------------------------------------------------------------
 
@@ -733,6 +774,7 @@ KDiamond is a three-in-a-row game (much like Bejeweled) for the KDE 4 desktop.
 %_kde_datadir/config/kdiamond.knsrc
 %_kde_iconsdir/*/*/*/kdiamond.*
 %_kde_docdir/*/*/kdiamond
+%_kde_datadir/sounds/KDiamond*
 
 #-----------------------------------------------------------------------------
 
@@ -835,10 +877,11 @@ your neighbours with your armies.
 
 %files -n ksirk
 %defattr(-,root,root)
-%{_kde_bindir}/ksirk
-%{_kde_datadir}/applications/kde4/ksirk.desktop
-%{_kde_datadir}/config.kcfg/ksirksettings.kcfg
-%{_kde_appsdir}/ksirk
+%{_kde_bindir}/ksirk*
+%{_kde_datadir}/applications/kde4/ksirk*.desktop
+%{_kde_datadir}/config.kcfg/ksirk*settings.kcfg
+%{_kde_datadir}/config/ksirk.knsrc
+%{_kde_appsdir}/ksirk*
 %{_kde_iconsdir}/*/*/apps/ksirk.png
 %_kde_docdir/*/*/ksirk
 
