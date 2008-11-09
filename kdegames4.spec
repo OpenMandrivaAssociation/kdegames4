@@ -94,6 +94,7 @@ This is a compilation of various games for KDE project
 %package core
 Summary:        Common files needed by Kdegames4 packages
 Group:          Graphical desktop/KDE
+Requires:       kdebase4-runtime
 Conflicts:	kdegames <  1:3.5.9-4mdv
 
 %description core
