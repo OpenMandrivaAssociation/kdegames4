@@ -3,14 +3,13 @@
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.1.71
+Version: 4.1.73
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
 Release: %mkrel 1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
-Patch0: kdegames-4.1.71-install-kapman-desktop.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 4.0.83
 BuildRequires: libxml2-utils
@@ -1032,6 +1031,28 @@ KDE 4 library.
 %defattr(-,root,root)
 %_kde_libdir/libkggznet.so.*
 
+#-----------------------------------------------------------------------------
+
+%define libiris_ksirk %mklibname iris_ksirk 2
+
+%package -n %libiris_ksirk
+Summary: KDE 4 library
+Group: System/Libraries
+Conflicts:  %{_lib}kdegames4 < 3.91
+
+%description -n %libiris_ksirk
+KDE 4 library.
+
+%if %mdkversion < 200900
+%post -n %libiris_ksirk -p /sbin/ldconfig
+%endif
+%if %mdkversion < 200900
+%postun -n %libiris_ksirk -p /sbin/ldconfig
+%endif
+
+%files -n %libiris_ksirk
+%defattr(-,root,root)
+%_kde_libdir/libiris_ksirk.so.*
 #--------------------------------------------------------------------
 
 %package devel
@@ -1044,6 +1065,7 @@ Requires:   %libkolfprivate = %epoch:%version
 Requires:   %libkggzgames = %epoch:%version
 Requires:   %libkggzmod = %epoch:%version
 Requires:   %libkggznet = %epoch:%version
+Requires:   %libiris_ksirk = %epoch:%version
 
 %description devel
 Headers files needed to build applications based on kdegames applications.
@@ -1059,7 +1081,6 @@ Headers files needed to build applications based on kdegames applications.
 
 %prep
 %setup -q -n kdegames-%version
-%patch0 -p0
 
 %build
 %if %{with_ksudoku}
