@@ -16,6 +16,7 @@ BuildRequires: libxml2-utils
 # Do not comment ggz. For now we're excluding /etc/ggz.modules, but freeciv package is wrong too.
 # read this if you have some doubt http://svn.ggzgamingzone.org/trac.cgi/browser/trunk/docs/ggz-project/packagers
 BuildRequires: ggz-client-libs-devel
+BuildRequires: qca2-devel
 Requires:   katomic
 Requires:   kbattleship
 Requires:   kblackbox
