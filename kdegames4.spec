@@ -8,7 +8,7 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
-Release: %mkrel 1
+Release: %mkrel 2
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 Patch0: ksudoku-4.1.73-fix-build.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
