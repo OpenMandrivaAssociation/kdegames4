@@ -866,6 +866,27 @@ Single player falling blocks puzzle game
 
 #-----------------------------------------------------------------------------
 
+%package -n     bomber
+Summary:        bomber
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+Conflicts:      kdegames4 < 3.91
+Provides:       bomber4
+
+%description -n bomber
+Bomberman like game
+
+%files -n bomber
+%defattr(-,root,root)
+%{_kde_bindir}/bomber
+%{_kde_datadir}/applications/kde4/bomber.desktop
+%{_kde_appsdir}/bomber
+%{_kde_datadir}/config.kcfg/bomber.kcfg
+%{_kde_docdir}/HTML/en/bomber
+%{_kde_iconsdir}/hicolor/*/apps/bomber.*
+
+#-----------------------------------------------------------------------------
+
 %package -n     ksirk
 Summary:        Single player falling blocks puzzle game
 Group:          Graphical desktop/KDE
