@@ -3,12 +3,12 @@
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.1.73
+Version: 4.1.80
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
-Release: %mkrel 2
+Release: %mkrel 1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 Patch0: ksudoku-4.1.73-fix-build.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
