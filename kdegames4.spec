@@ -53,6 +53,7 @@ Requires:   ksirk
 Requires:   kbreakout 
 Requires:   kapman
 Requires:   killbots
+Requires:   bomber
 
 Obsoletes:  kde4-kbackgammon < 1:4.0.74-4  
 
