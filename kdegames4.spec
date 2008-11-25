@@ -98,6 +98,7 @@ Summary:        Common files needed by Kdegames4 packages
 Group:          Graphical desktop/KDE
 Requires:       kdebase4-runtime
 Obsoletes:	    kdegames
+Obsoletes:      %{_lib}kdegames1
 
 %description core
 Common files needed by Kdegames4 packages
@@ -1082,6 +1083,7 @@ KDE 4 library.
 %package devel
 Summary:    Headers files for kdegames
 Group:      Development/KDE and Qt
+Obsoletes:  %{_lib}kdegames1-devel
 Requires:   kdelibs4-devel
 Requires:   %libkdegames = %epoch:%version
 Requires:   %libkmahjongglib = %epoch:%version
