@@ -8,7 +8,7 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
-Release: %mkrel 2
+Release: %mkrel 3
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 Patch0: ksudoku-4.1.73-fix-build.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
@@ -97,8 +97,8 @@ This is a compilation of various games for KDE project
 Summary:        Common files needed by Kdegames4 packages
 Group:          Graphical desktop/KDE
 Requires:       kdebase4-runtime
-Obsoletes:	    kdegames
-Obsoletes:      %{_lib}kdegames1
+Obsoletes:	    kdegames < 1:3.5.10-2
+Obsoletes:      %{_lib}kdegames1 < 1:3.5.10-2
 
 %description core
 Common files needed by Kdegames4 packages
@@ -1083,7 +1083,7 @@ KDE 4 library.
 %package devel
 Summary:    Headers files for kdegames
 Group:      Development/KDE and Qt
-Obsoletes:  %{_lib}kdegames1-devel
+Obsoletes:  %{_lib}kdegames1-devel < 1:3.5.10-2
 Requires:   kdelibs4-devel
 Requires:   %libkdegames = %epoch:%version
 Requires:   %libkmahjongglib = %epoch:%version
