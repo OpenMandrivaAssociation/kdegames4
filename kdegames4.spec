@@ -1,16 +1,12 @@
-%define with_ksudoku 1
-%{?_with_ksudoku: %{expand: %%global with_ksudoku 1}}
-
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.1.80
+Version: 4.1.81
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
-Release: %mkrel 3
+Release: %mkrel 1
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
-Patch0: ksudoku-4.1.73-fix-build.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 4.0.83
 BuildRequires: libxml2-utils
@@ -35,9 +31,7 @@ Requires:   kspaceduel
 Requires:   ktuberling
 Requires:   kfourinline
 Requires:   lskat
-%if %{with_ksudoku}
 Requires:   ksudoku
-%endif
 Requires:   kgoldrunner
 Requires:   ktuberling
 Requires:   kiriki
@@ -77,9 +71,7 @@ This is a compilation of various games for KDE project
 	- ktuberling: kids game: make your own potato (NO french fries!)
 	- kfourinline: place 4 pieces in a row
 	- Lskat: lieutnant skat
-%if %{with_ksudoku}
 	- Ksudoku: Play, create and solve sudoku grids
-%endif
 	- KGoldrunner: a game of action and puzzle solving.
 	- KTuberling: "potato editor" game
 	- Kiriki: Close of Yahtzee
@@ -469,7 +461,6 @@ It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 
 #-----------------------------------------------------------------------------
 
-%if %{with_ksudoku}
 %package -n     ksudoku
 Summary:        KSudoku - Play, create and solve sudoku grids 
 Group:          Graphical desktop/KDE
@@ -508,9 +499,6 @@ More information at http://en.wikipedia.org/wiki/Sudoku
 %_kde_datadir/config/ksudokurc
 %_kde_iconsdir/hicolor/*/apps/ksudoku.png
 %_kde_docdir/*/*/ksudoku
-%else # with_ksudoku
-%exclude %_kde_docdir/*/*/ksudoku
-%endif # with_ksudoku
 
 #-----------------------------------------------------------------------------
 
@@ -1107,23 +1095,14 @@ Headers files needed to build applications based on kdegames applications.
 
 %prep
 %setup -q -n kdegames-%version
-%patch0 -p0
 
 %build
-%if %{with_ksudoku}
 %cmake_kde4
-%else
-%cmake_kde4 -DBUILD_ksudoku=FALSE
-%endif
-
 %make
 
 %install
 rm -fr %buildroot
-
-cd build
-
-make install DESTDIR=%buildroot 
+%makeinstall_std -C build
 
 %clean
 rm -fr %buildroot
