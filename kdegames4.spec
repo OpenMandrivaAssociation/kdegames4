@@ -857,14 +857,14 @@ Single player falling blocks puzzle game
 #-----------------------------------------------------------------------------
 
 %package -n     bomber
-Summary:        bomber
+Summary:        Arcade bombing game
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       bomber4
 
 %description -n bomber
-Bomberman like game
+Arcade bombing game
 
 %files -n bomber
 %defattr(-,root,root)
