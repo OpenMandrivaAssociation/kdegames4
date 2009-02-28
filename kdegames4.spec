@@ -1,14 +1,14 @@
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.2.0
+Version: 4.2.1
+Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
-Release: %mkrel 2
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
-BuildRequires: kdelibs4-devel >= 4.0.83
+BuildRequires: kdelibs4-devel >= 4.2.0
 BuildRequires: libxml2-utils
 # Do not comment ggz. For now we're excluding /etc/ggz.modules, but freeciv package is wrong too.
 # read this if you have some doubt http://svn.ggzgamingzone.org/trac.cgi/browser/trunk/docs/ggz-project/packagers
