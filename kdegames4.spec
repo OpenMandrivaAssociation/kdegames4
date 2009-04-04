@@ -1,12 +1,13 @@
 Name: kdegames4
 Summary: KDE - Games
 Version: 4.2.2
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
+Patch0:     kdegames-4.2.2-fix-ksirk-crash.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 4.2.0
 BuildRequires: libxml2-utils
@@ -1095,6 +1096,7 @@ Headers files needed to build applications based on kdegames applications.
 
 %prep
 %setup -q -n kdegames-%version
+%patch0 -p1
 
 %build
 %cmake_kde4
