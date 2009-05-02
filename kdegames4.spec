@@ -1,12 +1,14 @@
+%define kderevision  svn954171
+
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.2.2
-Release: %mkrel 3
+Version: 4.2.70
+Release: %mkrel 0.%kderevision.1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
+Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.%kderevision.tar.bz2
 Patch0:     kdegames-4.2.2-fix-ksirk-crash.patch
 Patch100:   kdegames-4.2.3-rev946936.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
@@ -436,6 +438,7 @@ kbattleship: battleship game with built-in game server
 %_kde_docdir/*/*/kbattleship
 %_kde_iconsdir/hicolor/*/apps/kbattleship.png
 %_kde_appsdir/kbattleship
+%_kde_datadir/kde4/services/kbattleship.protocol
 
 #-----------------------------------------------------------------------------
 
@@ -672,14 +675,61 @@ Kshisen: patience game where you take away all pieces
 %_kde_appsdir/kshisen
 %_kde_datadir/config.kcfg/kshisen.kcfg
 %_kde_docdir/*/*/kshisen
-%_kde_iconsdir/hicolor/*/apps/kshisen.png
+
+#-----------------------------------------------------------------------------
+
+%package -n     ktron
+Summary:        Simple Tron clone
+Group:          Graphical desktop/KDE
+URL:        http://games.kde.org/game.php?game=ktron
+Requires:       kdegames4-core
+Provides:       ktron4
+
+%description -n ktron
+Well known from the famous movie, KTron is a popular computer 
+game for two players. In a fast action sequence both players 
+have to move and avoid colliding with any walls, the opponent 
+as well as the own path. The player colliding first looses the 
+game.
+
+%files -n ktron
+%defattr(-,root,root)
+%_kde_bindir/ktron
+%_kde_datadir/applications/kde4/ktron.desktop
+%_kde_appsdir/ktron
+%_kde_datadir/config.kcfg/ktron.kcfg
+%_kde_datadir/config/ktron.knsrc
+%_kde_iconsdir/hicolor/*/*/ktron.png
+%_kde_docdir/HTML/en/ktron
+
+#-----------------------------------------------------------------------------
+
+%package -n     kdesnake
+Summary:        snake race played against the computer
+Group:          Graphical desktop/KDE
+URL:		    http://games.kde.org/game.php?game=kdesnake
+Requires:       kdegames4-core
+Provides:       kdesnake4
+
+%description -n kdesnake
+KSnake Race is a fast action game where you steer a snake 
+which has to eat food. While eating the snake grows. But 
+once a player collides with the other snake or the wall 
+the game is lost. This becomes of course more and more 
+difficult the longer the snakes grow.
+
+%files -n kdesnake
+%defattr(-,root,root)
+%_kde_bindir/kdesnake
+%_kde_datadir/applications/kde4/kdesnake.desktop
+%_kde_iconsdir/hicolor/*/*/kdesnake.*
 
 #-----------------------------------------------------------------------------
 
 %package -n     ksquares
 Summary:        KSquares: an implementation of the popular paper based game squares
 Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=ksquares
+URL:        http://games.kde.org/game.php?game=ksquares
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Conflicts:      kdegames4-core < 3.96.1-0.740193.1
@@ -1096,7 +1146,7 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %prep
-%setup -q -n kdegames-%version
+%setup -q -n kdegames-%version.%kderevision
 %patch0 -p1
 %patch100 -p0
 %build
