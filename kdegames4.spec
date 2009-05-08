@@ -2,13 +2,13 @@
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.2.71
-Release: %mkrel 0.%kderevision.1
+Version: 4.2.85
+Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.%kderevision.tar.bz2
+Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 Patch0:     kdegames-4.2.2-fix-ksirk-crash.patch
 Patch100:   kdegames-4.2.3-rev946936.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
@@ -967,13 +967,6 @@ Obsoletes:  %{_lib}kdegames4 > 1:4.1.0
 %description -n %libkdegames
 KDE 4 library.
 
-%if %mdkversion < 200900
-%post -n %libkdegames -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %libkdegames -p /sbin/ldconfig
-%endif
-
 %files -n %libkdegames
 %defattr(-,root,root)
 %_kde_libdir/libkdegames.so.*
@@ -990,13 +983,6 @@ Obsoletes:  %{_lib}kmahjongglib5 < 1:3.93.0-0.714146.1
 
 %description -n %libkmahjongglib
 KDE 4 library.
-
-%if %mdkversion < 200900
-%post -n %libkmahjongglib -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %libkmahjongglib -p /sbin/ldconfig
-%endif
 
 %files -n %libkmahjongglib
 %defattr(-,root,root)
@@ -1016,13 +1002,6 @@ Obsoletes: %{_lib}kolflib1 < 1:3.97.1-0.746784.1
 %description -n %libkolfprivate
 KDE 4 library.
 
-%if %mdkversion < 200900
-%post -n %libkolfprivate -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %libkolfprivate -p /sbin/ldconfig
-%endif
-
 %files -n %libkolfprivate
 %defattr(-,root,root)
 %_kde_libdir/libkolfprivate.so.*
@@ -1038,13 +1017,6 @@ Conflicts:  %{_lib}kdegames4 < 3.91
 
 %description -n %libkggzgames
 KDE 4 library.
-
-%if %mdkversion < 200900
-%post -n %libkggzgames -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %libkggzgames -p /sbin/ldconfig
-%endif
 
 %files -n %libkggzgames
 %defattr(-,root,root)
@@ -1062,13 +1034,6 @@ Conflicts:  %{_lib}kdegames4 < 3.91
 %description -n %libkggzmod
 KDE 4 library.
 
-%if %mdkversion < 200900
-%post -n %libkggzmod -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %libkggzmod -p /sbin/ldconfig
-%endif
-
 %files -n %libkggzmod
 %defattr(-,root,root)
 %_kde_libdir/libkggzmod.so.*
@@ -1085,13 +1050,6 @@ Conflicts:  %{_lib}kdegames4 < 3.91
 %description -n %libkggznet
 KDE 4 library.
 
-%if %mdkversion < 200900
-%post -n %libkggznet -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %libkggznet -p /sbin/ldconfig
-%endif
-
 %files -n %libkggznet
 %defattr(-,root,root)
 %_kde_libdir/libkggznet.so.*
@@ -1107,13 +1065,6 @@ Conflicts:  %{_lib}kdegames4 < 3.91
 
 %description -n %libiris_ksirk
 KDE 4 library.
-
-%if %mdkversion < 200900
-%post -n %libiris_ksirk -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %libiris_ksirk -p /sbin/ldconfig
-%endif
 
 %files -n %libiris_ksirk
 %defattr(-,root,root)
@@ -1146,7 +1097,7 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %prep
-%setup -q -n kdegames-%version.%kderevision
+%setup -q -n kdegames-%version
 %patch0 -p1
 %patch100 -p0
 %build
