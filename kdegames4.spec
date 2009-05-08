@@ -1098,7 +1098,7 @@ Headers files needed to build applications based on kdegames applications.
 
 %prep
 %setup -q -n kdegames-%version
-%patch0 -p1
+#%patch0 -p1
 %patch100 -p0
 %build
 %cmake_kde4
