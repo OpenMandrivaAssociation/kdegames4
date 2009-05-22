@@ -1,14 +1,23 @@
-%define kderevision  svn961800
+%define branch 1
+%{?_branch: %{expand: %%global branch 1}}
+
+%if %branch
+%define kderevision svn969966
+%endif
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.2.85
+Version: 4.2.87
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
+%if %branch
+Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version%kderevision.tar.bz2
+%else
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
+%endif
 Patch0:     kdegames-4.2.2-fix-ksirk-crash.patch
 Patch100:   kdegames-4.2.3-rev946936.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
@@ -674,6 +683,7 @@ Kshisen: patience game where you take away all pieces
 %_kde_datadir/applications/kde4/kshisen.desktop
 %_kde_appsdir/kshisen
 %_kde_datadir/config.kcfg/kshisen.kcfg
+%_kde_iconsdir/hicolor/*/apps/*
 %_kde_docdir/*/*/kshisen
 
 #-----------------------------------------------------------------------------
@@ -1097,7 +1107,11 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %prep
+%if %branch
+%setup -q -n kdegames-%version%kderevision
+%else
 %setup -q -n kdegames-%version
+%endif
 #%patch0 -p1
 %patch100 -p0
 %build
