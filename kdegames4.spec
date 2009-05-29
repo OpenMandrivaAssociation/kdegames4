@@ -2,12 +2,12 @@
 %{?_branch: %{expand: %%global branch 1}}
 
 %if %branch
-%define kderevision svn969966
+%define kderevision svn973768
 %endif
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.2.87
+Version: 4.2.88
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
@@ -18,7 +18,6 @@ Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version%kderevis
 %else
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 %endif
-Patch0:     kdegames-4.2.2-fix-ksirk-crash.patch
 Patch100:   kdegames-4.2.3-rev946936.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 4.2.0
@@ -1112,8 +1111,8 @@ Headers files needed to build applications based on kdegames applications.
 %else
 %setup -q -n kdegames-%version
 %endif
-#%patch0 -p1
 %patch100 -p0
+
 %build
 %cmake_kde4
 %make
