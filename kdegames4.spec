@@ -961,6 +961,7 @@ your neighbours with your armies.
 %{_kde_appsdir}/ksirk*
 %{_kde_iconsdir}/*/*/apps/ksirk.png
 %_kde_docdir/*/*/ksirk
+%_kde_docdir/*/*/ksirkskineditor
 
 #-----------------------------------------------------------------------------
 
