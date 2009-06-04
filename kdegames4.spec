@@ -18,7 +18,6 @@ Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version%kderevis
 %else
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 %endif
-Patch100:   kdegames-4.2.3-rev946936.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 4.2.0
 BuildRequires: libxml2-utils
@@ -1112,7 +1111,6 @@ Headers files needed to build applications based on kdegames applications.
 %else
 %setup -q -n kdegames-%version
 %endif
-%patch100 -p0
 
 %build
 %cmake_kde4
