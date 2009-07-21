@@ -59,7 +59,6 @@ Requires:   kbreakout
 Requires:   kapman
 Requires:   killbots
 Requires:   bomber
-
 Obsoletes:  kde4-kbackgammon < 1:4.0.74-4  
 
 %description
@@ -100,8 +99,6 @@ This is a compilation of various games for KDE project
 Summary:        Common files needed by Kdegames4 packages
 Group:          Graphical desktop/KDE
 Requires:       kdebase4-runtime
-Obsoletes:	    kdegames < 1:3.5.10-2
-Obsoletes:      %{_lib}kdegames1 < 1:3.5.10-2
 Conflicts:      kshisen < 1:4.2.95-2
 
 %description core
@@ -998,13 +995,12 @@ your neighbours with your armies.
 #-----------------------------------------------------------------------------
 
 %define libkdegames %mklibname kdegames 5
+%define wronglibkdegames %mklibname kdegames 4
 
 %package -n %libkdegames
 Summary:    KDE 4 library
 Group:      System/Libraries
-Conflicts:  %{_lib}kdegames4 < 3.91
-Obsoletes:  %{_lib}kdegames5 < 1:3.93.0-0.714146.1
-Obsoletes:  %{_lib}kdegames4 > 1:4.1.0
+Obsoletes:  %wronglibkdegames
 
 %description -n %libkdegames
 KDE 4 library.
