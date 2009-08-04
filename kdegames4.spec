@@ -1,6 +1,6 @@
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.2.98
+Version: 4.3.0
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
@@ -49,6 +49,8 @@ Requires:   kbreakout
 Requires:   kapman
 Requires:   killbots
 Requires:   bomber
+Requires:   ktron
+Requires:   kdesnake
 Obsoletes:  kde4-kbackgammon < 1:4.0.74-4  
 
 %description
@@ -726,7 +728,8 @@ Summary:        snake race played against the computer
 Group:          Graphical desktop/KDE
 URL:		    http://games.kde.org/game.php?game=kdesnake
 Requires:       kdegames4-core
-Provides:       kdesnake4
+Provides:       kdesnake4 = %version
+Provides:       ksnake = %version
 Conflicts:      kshisen < 1:4.2.95-2
 
 %description -n kdesnake
