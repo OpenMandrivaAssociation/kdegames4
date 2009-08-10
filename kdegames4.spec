@@ -15,42 +15,42 @@ BuildRequires: libxml2-utils
 # read this if you have some doubt http://svn.ggzgamingzone.org/trac.cgi/browser/trunk/docs/ggz-project/packagers
 BuildRequires: ggz-client-libs-devel
 BuildRequires: qca2-devel
-Requires:   katomic
-Requires:   kbattleship
-Requires:   kblackbox
-Requires:   kbounce
-Requires:   klines
-Requires:   kmahjongg
-Requires:   kmines
-Requires:   kolf
-Requires:   konquest
-Requires:   kpat
-Requires:   kreversi
-Requires:   ksame
-Requires:   kshisen
-Requires:   kspaceduel
-Requires:   ktuberling
-Requires:   kfourinline
-Requires:   lskat
-Requires:   ksudoku
-Requires:   kgoldrunner
-Requires:   ktuberling
-Requires:   kiriki
-Requires:   kjumpingcube
-Requires:   bovo
-Requires:   ksquares
-Requires:   knetwalk
-Requires:   kollision
-Requires:   kubrick
-Requires:   kdiamond
-Requires:   kblocks
-Requires:   ksirk
-Requires:   kbreakout 
-Requires:   kapman
-Requires:   killbots
-Requires:   bomber
-Requires:   ktron
-Requires:   kdesnake
+Suggests:   katomic
+Suggests:   kbattleship
+Suggests:   kblackbox
+Suggests:   kbounce
+Suggests:   klines
+Suggests:   kmahjongg
+Suggests:   kmines
+Suggests:   kolf
+Suggests:   konquest
+Suggests:   kpat
+Suggests:   kreversi
+Suggests:   ksame
+Suggests:   kshisen
+Suggests:   kspaceduel
+Suggests:   ktuberling
+Suggests:   kfourinline
+Suggests:   lskat
+Suggests:   ksudoku
+Suggests:   kgoldrunner
+Suggests:   ktuberling
+Suggests:   kiriki
+Suggests:   kjumpingcube
+Suggests:   bovo
+Suggests:   ksquares
+Suggests:   knetwalk
+Suggests:   kollision
+Suggests:   kubrick
+Suggests:   kdiamond
+Suggests:   kblocks
+Suggests:   ksirk
+Suggests:   kbreakout 
+Suggests:   kapman
+Suggests:   killbots
+Suggests:   bomber
+Suggests:   ktron
+Suggests:   kdesnake
 Obsoletes:  kde4-kbackgammon < 1:4.0.74-4  
 
 %description
@@ -960,9 +960,9 @@ Arcade bombing game
 #-----------------------------------------------------------------------------
 
 %package -n     ksirk
-Summary:        Single player falling blocks puzzle game
+Summary:        Computerized version of a well known strategy board game
 Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=ksirk
+URL:		    http://games.kde.org/game.php?game=ksirk
 Requires:       kdegames4-core
 Conflicts:      kdegames4 < 3.91
 Provides:       ksirk4
