@@ -1,7 +1,7 @@
 Name: kdegames4
 Summary: KDE - Games
 Version: 4.3.0
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -51,6 +51,7 @@ Suggests:   killbots
 Suggests:   bomber
 Suggests:   ktron
 Suggests:   kdesnake
+
 Obsoletes:  kde4-kbackgammon < 1:4.0.74-4  
 
 %description
