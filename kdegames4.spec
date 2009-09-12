@@ -54,6 +54,11 @@ Suggests:   kdesnake
 
 Obsoletes:  kde4-kbackgammon < 1:4.0.74-4  
 
+%if %mdkversion >= 200100
+Obsoletes:   kdegames < 1:3.5.10-3
+Obsoletes:   kdegames3 < 1:3.5.10-3
+%endif
+
 %description
 Games for the K Desktop Environment.
 This is a compilation of various games for KDE project
