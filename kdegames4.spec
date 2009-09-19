@@ -54,7 +54,7 @@ Suggests:   kdesnake
 
 Obsoletes:  kde4-kbackgammon < 1:4.0.74-4  
 
-%if %mdkversion >= 200100
+%if %mdkversion >= 201000
 Obsoletes:   kdegames < 1:3.5.10-3
 Obsoletes:   kdegames3 < 1:3.5.10-3
 %endif
