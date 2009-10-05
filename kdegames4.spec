@@ -1,7 +1,7 @@
 Name: kdegames4
 Summary: KDE - Games
 Version: 4.3.1
-Release: %mkrel 3
+Release: %mkrel 4
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -410,7 +410,7 @@ ksame: collect pieces of the same color
 Summary:	Common files for kmahjongg
 Group:		Graphical desktop/KDE
 Requires:	kdegames4-core
-Conflicts:	kmahjongg < 1:4.3.1-3
+Conflicts:	kmahjongg < 1:4.3.1-4
 
 %description -n kmahjongglib
 Common files for kmahjongg.
