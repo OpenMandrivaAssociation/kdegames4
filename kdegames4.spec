@@ -441,7 +441,6 @@ Kmahjongg: a tile laying patience
 %_kde_bindir/kmahjongg
 %_kde_datadir/applications/kde4/kmahjongg.desktop
 %_kde_appsdir/kmahjongg
-%_kde_appsdir/kmahjongglib
 %_kde_docdir/*/*/kmahjongg
 %_kde_datadir/icons/hicolor/*/apps/kmahjongg.*
 %_kde_datadir/config.kcfg/kmahjongg.kcfg
