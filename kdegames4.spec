@@ -1,12 +1,14 @@
+%define kde_snapshot svn1040395
+
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.3.2
+Version: 4.3.73
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
+Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version%kde_snapshot.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 2:4.2.98
 BuildRequires: kdelibs4-experimental-devel >= 2:4.2.98
@@ -181,6 +183,8 @@ katomic: build complex atoms with a minimal amount of moves
 %_kde_docdir/*/*/katomic
 %_kde_iconsdir/hicolor/*/apps/katomic.png
 %_kde_appsdir/katomic
+%_kde_appsdir/kconf_update/katomic-levelset-upd.pl
+%_kde_appsdir/kconf_update/katomic-levelset.upd
 
 #-----------------------------------------------------------------------------
 
@@ -710,6 +714,7 @@ Kshisen: patience game where you take away all pieces
 %_kde_bindir/kshisen
 %_kde_datadir/applications/kde4/kshisen.desktop
 %_kde_appsdir/kshisen
+%_kde_datadir/sounds/kshisen
 %_kde_datadir/config.kcfg/kshisen.kcfg
 %_kde_iconsdir/hicolor/*/apps/kshisen*
 %_kde_docdir/*/*/kshisen
@@ -1149,7 +1154,7 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %prep
-%setup -q -n kdegames-%version
+%setup -q -n kdegames-%version%kde_snapshot
 
 %build
 %cmake_kde4
