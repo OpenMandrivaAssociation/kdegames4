@@ -3,7 +3,7 @@
 Name: kdegames4
 Summary: KDE - Games
 Version: 4.3.73
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
