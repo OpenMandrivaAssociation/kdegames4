@@ -1,9 +1,9 @@
-%define kde_snapshot svn1040395
+%define kde_snapshot svn1048496
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.3.73
-Release: %mkrel 2
+Version: 4.3.75
+Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -17,7 +17,7 @@ BuildRequires: libxml2-utils
 # read this if you have some doubt http://svn.ggzgamingzone.org/trac.cgi/browser/trunk/docs/ggz-project/packagers
 BuildRequires: ggz-client-libs-devel
 BuildRequires: qca2-devel
-Suggests:   katomic
+Suggests:   atomic
 Suggests:   kbattleship
 Suggests:   kblackbox
 Suggests:   kbounce
@@ -53,7 +53,8 @@ Suggests:   killbots
 Suggests:   bomber
 Suggests:   ktron
 Suggests:   kdesnake
-
+Suggests:   granatier
+Suggests:   kigo
 Obsoletes:  kde4-kbackgammon < 1:4.0.74-4  
 
 %if %mdkversion >= 201000
@@ -183,6 +184,7 @@ katomic: build complex atoms with a minimal amount of moves
 %_kde_docdir/*/*/katomic
 %_kde_iconsdir/hicolor/*/apps/katomic.png
 %_kde_appsdir/katomic
+%_kde_datadir/config/katomic.knsrc
 %_kde_appsdir/kconf_update/katomic-levelset-upd.pl
 %_kde_appsdir/kconf_update/katomic-levelset.upd
 
@@ -1009,6 +1011,46 @@ your neighbours with your armies.
 %{_kde_iconsdir}/*/*/apps/ksirk.png
 %_kde_docdir/*/*/ksirk
 %_kde_docdir/*/*/ksirkskineditor
+
+#-----------------------------------------------------------------------------
+
+%package -n     granatier
+Summary:        KDE Bomberman game
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+
+%description -n granatier
+KDE Bomberman game.
+
+%files -n granatier
+%defattr(-,root,root)
+%_kde_bindir/granatier
+%_kde_datadir/applications/kde4/granatier.desktop
+%_kde_datadir/apps/granatier
+%_kde_datadir/config.kcfg/granatier.kcfg
+%_kde_datadir/doc/HTML/en/granatier
+%_kde_iconsdir/*/*/apps/granatier.svgz
+
+#-----------------------------------------------------------------------------
+
+%package -n     kigo
+Summary:        Go board game for KDE
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+
+%description -n kigo
+Go board game for KDE.
+
+%files -n kigo
+%defattr(-,root,root)
+%_kde_bindir/kigo
+%_kde_datadir/applications/kde4/kigo.desktop
+%_kde_datadir/apps/kigo
+%_kde_datadir/config.kcfg/kigo.kcfg
+%_kde_datadir/config/kigo-games.knsrc
+%_kde_datadir/config/kigo.knsrc
+%_kde_datadir/doc/HTML/en/kigo
+%_kde_iconsdir/*/*/apps/kigo.png
 
 #-----------------------------------------------------------------------------
 
