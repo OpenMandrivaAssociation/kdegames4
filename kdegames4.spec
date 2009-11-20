@@ -3,7 +3,7 @@
 Name: kdegames4
 Summary: KDE - Games
 Version: 4.3.75
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -17,7 +17,7 @@ BuildRequires: libxml2-utils
 # read this if you have some doubt http://svn.ggzgamingzone.org/trac.cgi/browser/trunk/docs/ggz-project/packagers
 BuildRequires: ggz-client-libs-devel
 BuildRequires: qca2-devel
-Suggests:   atomic
+Suggests:   katomic
 Suggests:   kbattleship
 Suggests:   kblackbox
 Suggests:   kbounce
