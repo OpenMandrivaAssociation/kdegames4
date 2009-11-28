@@ -1,9 +1,9 @@
-%define kde_snapshot svn1048496
+%define kde_snapshot svn1053190
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.3.75
-Release: %mkrel 2
+Version: 4.3.77
+Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -238,6 +238,7 @@ faces you can.
 %_kde_appsdir/ktuberling
 %_kde_docdir/*/*/ktuberling
 %_kde_iconsdir/hicolor/*/apps/ktuberling.png
+%_kde_iconsdir/hicolor/*/mimetypes/application-x-tuberling.png
 
 #-----------------------------------------------------------------------------
 
