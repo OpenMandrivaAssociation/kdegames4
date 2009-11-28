@@ -1,4 +1,10 @@
+%define branch 1
+%{?_branch: %{expand: %%global branch 1}}
+
+
+%if %branch
 %define kde_snapshot svn1053190
+%endif
 
 Name: kdegames4
 Summary: KDE - Games
@@ -8,7 +14,11 @@ Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
+%if %branch
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version%kde_snapshot.tar.bz2
+%else
+Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
+%endif
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 2:4.2.98
 BuildRequires: kdelibs4-experimental-devel >= 2:4.2.98
@@ -1197,8 +1207,11 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %prep
+%if %branch
 %setup -q -n kdegames-%version%kde_snapshot
-
+%else
+%setup -q -n kdegames-%version
+%endif
 %build
 %cmake_kde4
 %make
