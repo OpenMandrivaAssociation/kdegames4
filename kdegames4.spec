@@ -20,7 +20,7 @@ Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version%kde_snap
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 %endif
 BuildRoot:	%_tmppath/%name-%version-%release-root
-BuildRequires: kdelibs4-devel >= 2:4.37.77
+BuildRequires: kdelibs4-devel >= 2:4.3.77
 BuildRequires: kdelibs4-experimental-devel >= 2:4.3.77
 BuildRequires: libxml2-utils
 # Do not comment ggz. For now we're excluding /etc/ggz.modules, but freeciv package is wrong too.
