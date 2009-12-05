@@ -19,6 +19,7 @@ Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version%kde_snap
 %else
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 %endif
+Patch101: kdegames-4.3.80-r1058760.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 2:4.3.77
 BuildRequires: kdelibs4-experimental-devel >= 2:4.3.77
@@ -65,6 +66,7 @@ Suggests:   ktron
 Suggests:   kdesnake
 Suggests:   granatier
 Suggests:   kigo
+Suggests:   palapeli
 Obsoletes:  kde4-kbackgammon < 1:4.0.74-4  
 
 %if %mdkversion >= 201000
@@ -1179,12 +1181,62 @@ KDE 4 library.
 %files -n %libiris_ksirk
 %defattr(-,root,root)
 %_kde_libdir/libiris_ksirk.so.*
-#--------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------
+
+%define libpala %mklibname pala 0
+
+%package -n %libpala
+Summary: KDE 4 library
+Group: System/Libraries
+Conflicts: palapeli < 1:4.3.80
+
+%description -n %libpala
+KDE 4 library.
+
+%files -n %libpala
+%defattr(-,root,root)
+%_kde_libdir/libpala.so.0
+%_kde_libdir/libpala.so.0.*
+
+#-----------------------------------------------------------------------------
+
+%package -n	palapeli
+Summary:	Jigsaw puzzle game
+Group:		Graphical desktop/KDE
+Requires:	kdegames4-core
+
+%description -n palapeli
+Palapeli is a jigsaw puzzle game. Unlike other games in that genre, you
+are not limited to aligning pieces on imaginary grids. The pieces are
+freely moveable. Also, Palapeli features real persistency, i.e. everything
+you do is saved on your disk immediately.
+
+%files -n palapeli
+%defattr(-,root,root)
+%_kde_bindir/palapeli
+%_kde_bindir/libpala-puzzlebuilder
+%_kde_libdir/kde4/palapeli_jigsawslicer.so
+%_kde_libdir/kde4/palapeli_rectslicer.so
+%_kde_libdir/kde4/palathumbcreator.so
+%_kde_datadir/applications/kde4/palapeli.desktop
+%_kde_datadir/apps/palapeli
+%_kde_services/ServiceMenus/palapeli_servicemenu.desktop
+%_kde_services/palapeli_jigsawslicer.desktop
+%_kde_services/palapeli_rectslicer.desktop
+%_kde_services/palathumbcreator.desktop
+%_kde_servicetypes/libpala-slicerplugin.desktop
+%_kde_datadir/mime/packages/palapeli-mimetypes.xml
+%_kde_datadir/config/palapeli-collectionrc
+%_kde_datadir/doc/HTML/en/palapeli
+
+#-----------------------------------------------------------------------------
 
 %package devel
 Summary:    Headers files for kdegames
 Group:      Development/KDE and Qt
 Obsoletes:  %{_lib}kdegames1-devel < 1:3.5.10-2
+Obsoletes:  palapeli-devel < 1:4.3.80
 Requires:   kdelibs4-devel
 Requires:   %libkdegames = %epoch:%version
 Requires:   %libkmahjongglib = %epoch:%version
@@ -1193,6 +1245,7 @@ Requires:   %libkggzgames = %epoch:%version
 Requires:   %libkggzmod = %epoch:%version
 Requires:   %libkggznet = %epoch:%version
 Requires:   %libiris_ksirk = %epoch:%version
+Requires:   %libpala = %epoch:%version
 
 %description devel
 Headers files needed to build applications based on kdegames applications.
@@ -1201,6 +1254,9 @@ Headers files needed to build applications based on kdegames applications.
 %defattr(-,root,root,-)
 %_kde_datadir/apps/cmake/modules/FindLibKDEGames.cmake
 %_kde_datadir/apps/cmake/modules/GGZ.cmake
+%_kde_libdir/libpala/libpala-config.cmake
+%_kde_libdir/libpala/pala-targets-release.cmake
+%_kde_libdir/libpala/pala-targets.cmake
 %_kde_libdir/*.so
 %_kde_includedir/*
 
@@ -1212,6 +1268,8 @@ Headers files needed to build applications based on kdegames applications.
 %else
 %setup -q -n kdegames-%version
 %endif
+%patch101 -p0 -b .build
+
 %build
 %cmake_kde4
 %make
