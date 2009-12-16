@@ -1050,6 +1050,7 @@ KDE Bomberman game.
 Summary:        Go board game for KDE
 Group:          Graphical desktop/KDE
 Requires:       kdegames4-core
+Requires:       gnugo 
 
 %description -n kigo
 Go board game for KDE.
