@@ -8,7 +8,7 @@
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.3.80
+Version: 4.3.85
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
@@ -19,10 +19,8 @@ Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version%kde_snap
 %else
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 %endif
-Patch101: kdegames-4.3.80-r1058760.patch
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 2:4.3.77
-BuildRequires: kdelibs4-experimental-devel >= 2:4.3.77
 BuildRequires: libxml2-utils
 # Do not comment ggz. For now we're excluding /etc/ggz.modules, but freeciv package is wrong too.
 # read this if you have some doubt http://svn.ggzgamingzone.org/trac.cgi/browser/trunk/docs/ggz-project/packagers
@@ -1269,7 +1267,6 @@ Headers files needed to build applications based on kdegames applications.
 %else
 %setup -q -n kdegames-%version
 %endif
-%patch101 -p0 -b .build
 
 %build
 %cmake_kde4
