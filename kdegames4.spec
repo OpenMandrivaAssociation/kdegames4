@@ -1040,7 +1040,7 @@ KDE Bomberman game.
 %_kde_datadir/apps/granatier
 %_kde_datadir/config.kcfg/granatier.kcfg
 %_kde_datadir/doc/HTML/en/granatier
-%_kde_iconsdir/*/*/apps/granatier.svgz
+%_kde_iconsdir/*/*/apps/granatier.*
 
 #-----------------------------------------------------------------------------
 
