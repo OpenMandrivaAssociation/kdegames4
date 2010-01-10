@@ -1254,7 +1254,6 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_datadir/apps/cmake/modules/FindLibKDEGames.cmake
 %_kde_datadir/apps/cmake/modules/GGZ.cmake
 %_kde_libdir/libpala/libpala-config.cmake
-%_kde_libdir/libpala/pala-targets-release.cmake
 %_kde_libdir/libpala/pala-targets.cmake
 %_kde_libdir/*.so
 %_kde_includedir/*
