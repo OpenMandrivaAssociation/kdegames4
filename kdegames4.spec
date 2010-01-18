@@ -9,7 +9,7 @@
 Name: kdegames4
 Summary: KDE - Games
 Version: 4.3.90
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -1275,6 +1275,13 @@ Headers files needed to build applications based on kdegames applications.
 %install
 rm -fr %buildroot
 %makeinstall_std -C build
+
+# We copy some missing icons from oxygen to hicolor
+# palapeli ksirkskineditor needs icons evenif on oxygen => Report upstream
+for size in 16 32 48 64 128; do
+    mkdir -p %buildroot/%_datadir/icons/hicolor/${size}x${size}/apps
+    %__cp %buildroot%_kde_iconsdir/oxygen/${size}x${size}/apps/bovo.png %buildroot/%_datadir/icons/hicolor/${size}x${size}/apps
+done
 
 %clean
 rm -fr %buildroot
