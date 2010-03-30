@@ -566,6 +566,7 @@ Provides:       bovo4
 Obsoletes:      kde4-bovo < 1:4.0.68
 Provides:       kde4-bovo = %epoch:%version
 Conflicts:      kshisen < 1:4.2.95-2
+Conflicts:      oxygen-icon-theme < 1:4.4.2
 
 %description -n bovo
 Bovo is a KDE 4 game, modeled upon a classic pen and paper game, 
@@ -577,6 +578,7 @@ where you try to connect five in a row prior to your opponent.
 %_kde_datadir/applications/kde4/bovo.desktop
 %_kde_appsdir/bovo
 %_kde_docdir/*/*/bovo
+%_kde_iconsdir/hicolor/*/*/*
 
 #-----------------------------------------------------------------------------
 
