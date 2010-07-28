@@ -26,6 +26,8 @@ BuildRequires: libxml2-utils
 # read this if you have some doubt http://svn.ggzgamingzone.org/trac.cgi/browser/trunk/docs/ggz-project/packagers
 BuildRequires: ggz-client-libs-devel
 BuildRequires: qca2-devel
+BuildRequires: python-qt4
+BuildRequires: python-kde4
 Suggests:   katomic
 Suggests:   kbattleship
 Suggests:   kblackbox
