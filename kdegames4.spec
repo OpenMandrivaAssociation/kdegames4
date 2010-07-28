@@ -8,8 +8,8 @@
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.4.3
-Release: %mkrel 3
+Version: 4.4.95
+Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
@@ -119,6 +119,7 @@ Common files needed by Kdegames4 packages
 %defattr(-,root,root)
 %_kde_appsdir/kdegames
 %_kde_appsdir/carddecks
+%_kde_datadir/config/kcardtheme.knsrc
 %_kde_iconsdir/oxygen/*/actions/lastmoves.*
 %_kde_iconsdir/oxygen/*/actions/legalmoves.*
 
@@ -726,8 +727,31 @@ kpat: several patience card games
 %_kde_datadir/applications/kde4/kpat.desktop
 %_kde_appsdir/kconf_update/kpat_update_cardwidth.upd
 %_kde_appsdir/kpat
+%_kde_datadir/config.kcfg/kpat.kcfg
+%_kde_datadir/config/kpat.knsrc
 %_kde_docdir/*/*/kpat
 %_kde_iconsdir/hicolor/*/apps/kpat.png
+
+#----------------------------------------------------------------------------
+
+%package -n     kajongg
+Summary:        kajongg : Majongg game for KDE
+Group:          Graphical desktop/KDE
+Requires:       kdegames4-core
+
+%description -n kajongg
+kajongg : Majongg game for KDE
+
+%files -n kajongg
+%defattr(-,root,root)
+%_kde_bindir/kajongg
+%_kde_bindir/kajonggserver
+%_kde_datadir/applications/kde4/kajongg.desktop
+%_kde_appsdir/kajongg
+%_kde_docdir/HTML/en/kajongg
+
+#-----------------------------------------------------------------------------
+
 
 #-----------------------------------------------------------------------------
 
