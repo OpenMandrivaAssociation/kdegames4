@@ -751,9 +751,7 @@ kajongg : Majongg game for KDE
 %_kde_datadir/applications/kde4/kajongg.desktop
 %_kde_appsdir/kajongg
 %_kde_docdir/HTML/en/kajongg
-
-#-----------------------------------------------------------------------------
-
+%_kde_iconsdir/hicolor/*/*/*kajongg*
 
 #-----------------------------------------------------------------------------
 
@@ -1284,6 +1282,7 @@ you do is saved on your disk immediately.
 %_kde_libdir/kde4/palathumbcreator.so
 %_kde_datadir/applications/kde4/palapeli.desktop
 %_kde_datadir/apps/palapeli
+%_kde_iconsdir/hicolor/*/*/*palapeli*
 %_kde_services/ServiceMenus/palapeli_servicemenu.desktop
 %_kde_services/palapeli_jigsawslicer.desktop
 %_kde_services/palapeli_rectslicer.desktop
