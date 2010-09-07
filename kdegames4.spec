@@ -1280,6 +1280,8 @@ you do is saved on your disk immediately.
 %_kde_libdir/kde4/palapeli_jigsawslicer.so
 %_kde_libdir/kde4/palapeli_rectslicer.so
 %_kde_libdir/kde4/palathumbcreator.so
+%_kde_libdir/kde4/palapeli_goldbergslicer.so
+%_kde_datadir/kde4/services/palapeli_goldbergslicer.desktop
 %_kde_datadir/applications/kde4/palapeli.desktop
 %_kde_datadir/apps/palapeli
 %_kde_iconsdir/hicolor/*/*/*palapeli*
