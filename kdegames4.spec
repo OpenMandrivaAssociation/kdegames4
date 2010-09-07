@@ -1,14 +1,14 @@
-%define branch 0
+%define branch 1
 %{?_branch: %{expand: %%global branch 1}}
 
 
 %if %branch
-%define kde_snapshot svn1053190
+%define kde_snapshot svn1170578
 %endif
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.5.0
+Version: 4.5.67
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
