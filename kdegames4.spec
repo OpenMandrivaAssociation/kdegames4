@@ -1,21 +1,20 @@
 %define branch 1
 %{?_branch: %{expand: %%global branch 1}}
 
-
 %if %branch
-%define kde_snapshot svn1170578
+%define kde_snapshot svn1174542
 %endif
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.5.67
+Version: 4.5.68
 Release: %mkrel 1
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
 %if %branch
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version%kde_snapshot.tar.bz2
+Source: ftp://ftp.kde.org/pub/kde/unstable/%version/src/kdegames-%version%kde_snapshot.tar.bz2
 %else
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 %endif
