@@ -730,7 +730,6 @@ kpat: several patience card games
 %defattr(-,root,root)
 %_kde_bindir/kpat
 %_kde_datadir/applications/kde4/kpat.desktop
-%_kde_appsdir/kconf_update/kpat_update_cardwidth.upd
 %_kde_appsdir/kpat
 %_kde_datadir/config.kcfg/kpat.kcfg
 %_kde_datadir/config/kpat.knsrc
