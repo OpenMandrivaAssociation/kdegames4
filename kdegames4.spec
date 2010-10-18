@@ -9,7 +9,7 @@ Name: kdegames4
 Summary: KDE - Games
 Version: 4.5.71
 %if %branch
-Release: %mkrel -c %kde_snapshot 1
+Release: %mkrel -c %kde_snapshot 2
 %else
 Release: %mkrel 1
 %endif
@@ -116,12 +116,14 @@ Summary:        Common files needed by Kdegames4 packages
 Group:          Graphical desktop/KDE
 Requires:       kdebase4-runtime
 Conflicts:      kshisen < 1:4.2.95-2
+Conflicts:	kdegames4-devel < 1:4.5.71-0.svn1184269.2
 
 %description core
 Common files needed by Kdegames4 packages
 
 %files core
 %defattr(-,root,root)
+%_kde_libdir/libkcardgame.so
 %_kde_appsdir/kdegames
 %_kde_appsdir/carddecks
 %_kde_datadir/config/kcardtheme.knsrc
@@ -1322,7 +1324,14 @@ Headers files needed to build applications based on kdegames applications.
 %_kde_datadir/apps/cmake/modules/GGZ.cmake
 %_kde_libdir/libpala/libpala-config.cmake
 %_kde_libdir/libpala/pala-targets*.cmake
-%_kde_libdir/*.so
+%_kde_libdir/libiris_ksirk.so
+%_kde_libdir/libkdegames.so
+%_kde_libdir/libkggzgames.so
+%_kde_libdir/libkggzmod.so
+%_kde_libdir/libkggznet.so
+%_kde_libdir/libkmahjongglib.so
+%_kde_libdir/libkolfprivate.so
+%_kde_libdir/libpala.so
 %_kde_includedir/*
 
 #-----------------------------------------------------------------------------
