@@ -9,7 +9,7 @@ Name: kdegames4
 Summary: KDE - Games
 Version: 4.5.71
 %if %branch
-Release: %mkrel -c %kde_snapshot 2
+Release: %mkrel -c %kde_snapshot 3
 %else
 Release: %mkrel 1
 %endif
@@ -116,14 +116,12 @@ Summary:        Common files needed by Kdegames4 packages
 Group:          Graphical desktop/KDE
 Requires:       kdebase4-runtime
 Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:	kdegames4-devel < 1:4.5.71-0.svn1184269.2
 
 %description core
 Common files needed by Kdegames4 packages
 
 %files core
 %defattr(-,root,root)
-%_kde_libdir/libkcardgame.so
 %_kde_appsdir/kdegames
 %_kde_appsdir/carddecks
 %_kde_datadir/config/kcardtheme.knsrc
@@ -724,6 +722,7 @@ Obsoletes:      kde4-kpat < 1:4.0.68
 Provides:       kde4-kpat = %epoch:%version
 Conflicts:      kshisen < 1:4.2.95-2
 Conflicts:      bovo < 1:4.4.3-3
+Conflicts:	kdegames4-devel < 1:4.5.71-0.svn1184269.2
 
 %description -n kpat
 kpat: several patience card games
@@ -731,6 +730,7 @@ kpat: several patience card games
 %files -n kpat
 %defattr(-,root,root)
 %_kde_bindir/kpat
+%_kde_libdir/libkcardgame.so
 %_kde_datadir/applications/kde4/kpat.desktop
 %_kde_appsdir/kpat
 %_kde_datadir/config.kcfg/kpat.kcfg
