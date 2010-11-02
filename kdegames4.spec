@@ -749,6 +749,7 @@ Group: Graphical desktop/KDE
 Requires: kdegames4-core
 Requires: python-kde4
 Requires: python-twisted-core
+Requires: qt4-database-plugin-sqlite
 
 %description -n kajongg
 kajongg : Majongg game for KDE
