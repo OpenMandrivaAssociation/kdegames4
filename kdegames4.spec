@@ -2,14 +2,14 @@
 %{?_branch: %{expand: %%global branch 1}}
 
 %if %branch
-%define kde_snapshot svn1184269
+%define kde_snapshot svn1192115
 %endif
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.5.71
+Version: 4.5.74
 %if %branch
-Release: %mkrel -c %kde_snapshot 3
+Release: %mkrel -c %kde_snapshot 1
 %else
 Release: %mkrel 1
 %endif
@@ -22,7 +22,7 @@ Source: ftp://ftp.kde.org/pub/kde/unstable/%version/src/kdegames-%version%kde_sn
 %else
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
 %endif
-BuildRoot:	%_tmppath/%name-%version-%release-root
+BuildRoot: %_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 2:4.3.77
 BuildRequires: libxml2-utils
 # Do not comment ggz. For now we're excluding /etc/ggz.modules, but freeciv package is wrong too.
@@ -31,80 +31,79 @@ BuildRequires: ggz-client-libs-devel
 BuildRequires: qca2-devel
 BuildRequires: python-qt4
 BuildRequires: python-kde4
-Suggests:   katomic
-Suggests:   kbattleship
-Suggests:   kblackbox
-Suggests:   kbounce
-Suggests:   klines
-Suggests:   kmahjongg
-Suggests:   kmines
-Suggests:   kolf
-Suggests:   konquest
-Suggests:   kpat
-Suggests:   kreversi
-Suggests:   ksame
-Suggests:   kshisen
-Suggests:   kspaceduel
-Suggests:   ktuberling
-Suggests:   kfourinline
-Suggests:   lskat
-Suggests:   ksudoku
-Suggests:   kgoldrunner
-Suggests:   ktuberling
-Suggests:   kiriki
-Suggests:   kjumpingcube
-Suggests:   bovo
-Suggests:   ksquares
-Suggests:   knetwalk
-Suggests:   kollision
-Suggests:   kubrick
-Suggests:   kdiamond
-Suggests:   kblocks
-Suggests:   ksirk
-Suggests:   kbreakout 
-Suggests:   kapman
-Suggests:   killbots
-Suggests:   bomber
-Suggests:   ktron
-Suggests:   kdesnake
-Suggests:   granatier
-Suggests:   kigo
-Suggests:   palapeli
-Obsoletes:  kde4-kbackgammon < 1:4.0.74-4  
+Suggests: katomic
+Suggests: kbattleship
+Suggests: kblackbox
+Suggests: kbounce
+Suggests: klines
+Suggests: kmahjongg
+Suggests: kmines
+Suggests: kolf
+Suggests: konquest
+Suggests: kpat
+Suggests: kreversi
+Suggests: klickety
+Suggests: kshisen
+Suggests: kspaceduel
+Suggests: ktuberling
+Suggests: kfourinline
+Suggests: lskat
+Suggests: ksudoku
+Suggests: kgoldrunner
+Suggests: ktuberling
+Suggests: kiriki
+Suggests: kjumpingcube
+Suggests: bovo
+Suggests: ksquares
+Suggests: knetwalk
+Suggests: kollision
+Suggests: kubrick
+Suggests: kdiamond
+Suggests: kblocks
+Suggests: ksirk
+Suggests: kbreakout 
+Suggests: kapman
+Suggests: killbots
+Suggests: bomber
+Suggests: ktron
+Suggests: kdesnake
+Suggests: granatier
+Suggests: kigo
+Suggests: palapeli
+Obsoletes: kde4-kbackgammon < 1:4.0.74-4 
 
 %if %mdkversion >= 201000
-Obsoletes:   kdegames < 1:3.5.10-3
-Obsoletes:   kdegames3 < 1:3.5.10-3
+Obsoletes: kdegames < 1:3.5.10-3
+Obsoletes: kdegames3 < 1:3.5.10-3
 %endif
 
 %description
 Games for the K Desktop Environment.
 This is a compilation of various games for KDE project
-	- katomic: build complex atoms with a minimal amount of moves
-	- kbattleship: battleship game with built-in game server
-	- kblackbox: find atoms in a grid by shooting electrons
-	- kbounce: claim areas and don't get disturbed
-	- klines: place 5 equal pieces together, but wait, there are 3 new ones
-	- mahjongg: a tile laying patience
-	- kmines: the classical mine sweeper
-	- kolf: a golf game
-	- konquest: conquer the planets of your enemy
-	- kpat: several patience card games
-	- kreversi: the old reversi board game, also known as othello
-	- ksame: collect pieces of the same color
-	- kshisen: patience game where you take away all pieces
-	- kspaceduel: two player game with shooting spaceships flying around a sun
-	- ktuberling: kids game: make your own potato (NO french fries!)
-	- kfourinline: place 4 pieces in a row
-	- Lskat: lieutnant skat
-	- Ksudoku: Play, create and solve sudoku grids
-	- KGoldrunner: a game of action and puzzle solving.
-	- KTuberling: "potato editor" game
-	- Kiriki: Close of Yahtzee
-	- Kjumpingcube: a tactical game for number-crunchers
-	- Bovo: classic pen and paper game
-	- KSquares: an implementation of the popular paper based game squares
-	- Knetwalk: Turn the board pieces to get all computers connected
+ - katomic: build complex atoms with a minimal amount of moves
+ - kbattleship: battleship game with built-in game server
+ - kblackbox: find atoms in a grid by shooting electrons
+ - kbounce: claim areas and don't get disturbed
+ - klines: place 5 equal pieces together, but wait, there are 3 new ones
+ - mahjongg: a tile laying patience
+ - kmines: the classical mine sweeper
+ - kolf: a golf game
+ - konquest: conquer the planets of your enemy
+ - kpat: several patience card games
+ - kreversi: the old reversi board game, also known as othello
+ - kshisen: patience game where you take away all pieces
+ - kspaceduel: two player game with shooting spaceships flying around a sun
+ - ktuberling: kids game: make your own potato (NO french fries!)
+ - kfourinline: place 4 pieces in a row
+ - Lskat: lieutnant skat
+ - Ksudoku: Play, create and solve sudoku grids
+ - KGoldrunner: a game of action and puzzle solving.
+ - KTuberling: "potato editor" game
+ - Kiriki: Close of Yahtzee
+ - Kjumpingcube: a tactical game for number-crunchers
+ - Bovo: classic pen and paper game
+ - KSquares: an implementation of the popular paper based game squares
+ - Knetwalk: Turn the board pieces to get all computers connected
 
 %files
 %defattr(-,root,root)
@@ -112,10 +111,10 @@ This is a compilation of various games for KDE project
 #--------------------------------------------------------------------
 
 %package core
-Summary:        Common files needed by Kdegames4 packages
-Group:          Graphical desktop/KDE
-Requires:       kdebase4-runtime
-Conflicts:      kshisen < 1:4.2.95-2
+Summary: Common files needed by Kdegames4 packages
+Group: Graphical desktop/KDE
+Requires: kdebase4-runtime
+Conflicts: kshisen < 1:4.2.95-2
 
 %description core
 Common files needed by Kdegames4 packages
@@ -130,17 +129,17 @@ Common files needed by Kdegames4 packages
 
 #-----------------------------------------------------------------------------
 
-%package -n     kgoldrunner
-Summary:        KGoldrunner, a game of action and puzzle solving
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kgoldrunner
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kgoldrunner4
-Obsoletes:      kde4-kgoldrunner < 1:4.0.68
-Provides:       kde4-kgoldrunner = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kgoldrunner
+Summary: KGoldrunner, a game of action and puzzle solving
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kgoldrunner
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kgoldrunner4
+Obsoletes: kde4-kgoldrunner < 1:4.0.68
+Provides: kde4-kgoldrunner = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kgoldrunner
 KGoldrunner, a game of action and puzzle solving. 
@@ -158,14 +157,14 @@ all the gold and climb up to the next level.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kapman
-Summary:        A Pac-Man clone
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Provides:       kapman4
-Provides:       kde4-kapman = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kapman
+Summary: A Pac-Man clone
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Provides: kapman4
+Provides: kde4-kapman = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kapman
 Kapman is a Pac-Man clone.
@@ -181,17 +180,17 @@ Kapman is a Pac-Man clone.
 
 #-----------------------------------------------------------------------------
 
-%package -n     katomic
-Summary:        Build complex atoms with a minimal amount of moves
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=katomic
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       katomic4
-Obsoletes:      kde4-katomic < 1:4.0.68
-Provides:       kde4-katomic = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n katomic
+Summary: Build complex atoms with a minimal amount of moves
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=katomic
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: katomic4
+Obsoletes: kde4-katomic < 1:4.0.68
+Provides: kde4-katomic = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n katomic
 katomic: build complex atoms with a minimal amount of moves
@@ -209,17 +208,17 @@ katomic: build complex atoms with a minimal amount of moves
 
 #-----------------------------------------------------------------------------
 
-%package -n     kblackbox
-Summary:        Find atoms in a grid by shooting electrons
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kblackbox
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kblackbox4
-Obsoletes:      kde4-kblackbox < 1:4.0.68
-Provides:       kde4-kblackbox = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kblackbox
+Summary: Find atoms in a grid by shooting electrons
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kblackbox
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kblackbox4
+Obsoletes: kde4-kblackbox < 1:4.0.68
+Provides: kde4-kblackbox = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kblackbox
 kblackbox: find atoms in a grid by shooting electrons
@@ -234,17 +233,17 @@ kblackbox: find atoms in a grid by shooting electrons
 
 #-----------------------------------------------------------------------------
 
-%package -n     ktuberling
-Summary:        KTuberling: "potato editor" game
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=ktuberling
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       ktuberling4
-Obsoletes:      kde4-ktuberling < 1:4.0.68
-Provides:       kde4-ktuberling = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n ktuberling
+Summary: KTuberling: "potato editor" game
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=ktuberling
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: ktuberling4
+Obsoletes: kde4-ktuberling < 1:4.0.68
+Provides: kde4-ktuberling = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n ktuberling
 KTuberling is a "potato editor" game intended for small 
@@ -263,17 +262,17 @@ faces you can.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kbounce
-Summary:        Claim areas and don't get disturbed
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kbounce
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kbounce4
-Obsoletes:      kde4-kbounce < 1:4.0.68
-Provides:       kde4-kbounce = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kbounce
+Summary: Claim areas and don't get disturbed
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kbounce
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kbounce4
+Obsoletes: kde4-kbounce < 1:4.0.68
+Provides: kde4-kbounce = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kbounce
 kbounce: claim areas and don't get disturbed
@@ -288,14 +287,14 @@ kbounce: claim areas and don't get disturbed
 
 #-----------------------------------------------------------------------------
 
-%package -n     killbots
-Summary:        KDE port of the classic BSD console game robots
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Provides:       kapman4
-Provides:       kde4-killbots = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n killbots
+Summary: KDE port of the classic BSD console game robots
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Provides: kapman4
+Provides: kde4-killbots = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n killbots
 Killbots is a KDE port of the classic BSD console game robots.
@@ -311,18 +310,18 @@ Killbots is a KDE port of the classic BSD console game robots.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kspaceduel
-Summary:        Two player game with shooting spaceships flying around a sun
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kspaceduel
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Conflicts:      kdegames4-core < 3.96.1-0.740193.1
-Provides:       kspaceduel4
-Obsoletes:      kde4-kspaceduel < 1:4.0.68
-Provides:       kde4-kspaceduel = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kspaceduel
+Summary: Two player game with shooting spaceships flying around a sun
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kspaceduel
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Conflicts: kdegames4-core < 3.96.1-0.740193.1
+Provides: kspaceduel4
+Obsoletes: kde4-kspaceduel < 1:4.0.68
+Provides: kde4-kspaceduel = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kspaceduel
 kspaceduel: two player game with shooting spaceships flying around a sun
@@ -338,17 +337,17 @@ kspaceduel: two player game with shooting spaceships flying around a sun
 
 #-----------------------------------------------------------------------------
 
-%package -n     kreversi
-Summary:        Old reversi board game, also known as othello
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kreversi
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kreversi4
-Obsoletes:      kde4-kreversi < 1:4.0.68
-Provides:       kde4-kreversi = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kreversi
+Summary: Old reversi board game, also known as othello
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kreversi
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kreversi4
+Obsoletes: kde4-kreversi < 1:4.0.68
+Provides: kde4-kreversi = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kreversi
 kreversi: the old reversi board game, also known as othello
@@ -363,17 +362,17 @@ kreversi: the old reversi board game, also known as othello
 
 #-----------------------------------------------------------------------------
 
-%package -n     kolf
-Summary:        A golf game
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kolf
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kolf4
-Obsoletes:      kde4-kolf < 1:4.0.68
-Provides:       kde4-kolf = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kolf
+Summary: A golf game
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kolf
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kolf4
+Obsoletes: kde4-kolf < 1:4.0.68
+Provides: kde4-kolf = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kolf
 Kolf is a miniature golf game with 2d top-down view. Courses are dynamic,
@@ -390,17 +389,17 @@ with a variety of playgrounds and tutorial courses.
 
 #-----------------------------------------------------------------------------
 
-%package -n     konquest
-Summary:        Conquer the planets of your enemy
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=konquest
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       konquest4
-Obsoletes:      kde4-konquest < 1:4.0.68
-Provides:       kde4-konquest = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n konquest
+Summary: Conquer the planets of your enemy
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=konquest
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: konquest4
+Obsoletes: kde4-konquest < 1:4.0.68
+Provides: kde4-konquest = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n konquest
 konquest: conquer the planets of your enemy
@@ -413,39 +412,42 @@ konquest: conquer the planets of your enemy
 %_kde_docdir/*/*/konquest
 %_kde_datadir/icons/hicolor/*/apps/konquest.png
 
-
 #-----------------------------------------------------------------------------
 
-%package -n     ksame
-Summary:        Collect pieces of the same color
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=ksame
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       ksame4
-Obsoletes:      kde4-ksame < 1:4.0.68
-Provides:       kde4-ksame = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n klickety
+Summary: An adaptation of the Clickomania game
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Provides: ksame4
+Provides: ksame = %epoch:%version
+Obsoletes: kde4-ksame < 1:4.0.68
+Provides: kde4-ksame = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
+Obsoletes: ksame < 1:4.5.74
 
-%description -n ksame
-ksame: collect pieces of the same color
+%description -n klickety
+Klickety is an adaptation of the Clickomania game.
+The rules are similar to those of the Same game: your goal is to clear
+the board by clicking on groups to destroy them.
 
-%files -n ksame
+%files -n klickety
 %defattr(-,root,root)
-%_kde_bindir/ksame
-%_kde_appsdir/ksame
-%_kde_datadir/applications/kde4/ksame.desktop
-%_kde_docdir/*/*/ksame
-%_kde_datadir/icons/hicolor/*/apps/ksame.png
+%_kde_bindir/klickety
+%_kde_applicationsdir/klickety.desktop
+%_kde_applicationsdir/ksame.desktop
+%_kde_appsdir/klickety
+%_kde_docdir/HTML/en/klickety
+%_kde_iconsdir/*/*/apps/klickety.*
+%_kde_iconsdir/*/*/apps/ksame.*
 
 #-----------------------------------------------------------------------------
 
-%package -n	kmahjongglib
-Summary:	Common files for kmahjongg
-Group:		Graphical desktop/KDE
-Requires:	kdegames4-core
-Conflicts:	kmahjongg < 1:4.3.1-4
+%package -n kmahjongglib
+Summary: Common files for kmahjongg
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Conflicts: kmahjongg < 1:4.3.1-4
 
 %description -n kmahjongglib
 Common files for kmahjongg.
@@ -456,18 +458,18 @@ Common files for kmahjongg.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kmahjongg
-Summary:        A tile laying patience
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kmahjongg
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91i
-Conflicts:      kdegames4-core < 3.96.1-0.740193.1
-Provides:       kmahjongg4
-Obsoletes:      kde4-kmahjongg < 1:4.0.68
-Provides:       kde4-kmahjongg = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kmahjongg
+Summary: A tile laying patience
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kmahjongg
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91i
+Conflicts: kdegames4-core < 3.96.1-0.740193.1
+Provides: kmahjongg4
+Obsoletes: kde4-kmahjongg < 1:4.0.68
+Provides: kde4-kmahjongg = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kmahjongg
 Kmahjongg: a tile laying patience
@@ -483,17 +485,17 @@ Kmahjongg: a tile laying patience
 
 #-----------------------------------------------------------------------------
 
-%package -n     kbattleship
-Summary:        Battleship game with built-in game server
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kbattleship
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kbattleship4
-Obsoletes:      kde4-kbattleship < 1:4.0.68
-Provides:       kde4-kbattleship = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kbattleship
+Summary: Battleship game with built-in game server
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kbattleship
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kbattleship4
+Obsoletes: kde4-kbattleship < 1:4.0.68
+Provides: kde4-kbattleship = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kbattleship
 kbattleship: battleship game with built-in game server
@@ -509,17 +511,17 @@ kbattleship: battleship game with built-in game server
 
 #-----------------------------------------------------------------------------
 
-%package -n     kiriki
-Summary:        Kiriki: Close of Yahtzee 
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kiriki
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kiriki4
-Obsoletes:      kde4-kiriki < 1:4.0.68
-Provides:       kde4-kiriki = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kiriki
+Summary: Kiriki: Close of Yahtzee 
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kiriki
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kiriki4
+Obsoletes: kde4-kiriki < 1:4.0.68
+Provides: kde4-kiriki = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kiriki
 Kiriki is a dice game, written for KDE 4. 
@@ -535,17 +537,17 @@ It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 
 #-----------------------------------------------------------------------------
 
-%package -n     ksudoku
-Summary:        KSudoku - Play, create and solve sudoku grids 
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=ksudoku
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       ksudoku4
-Obsoletes:      kde4-ksudoku < 1:4.0.68
-Provides:       kde4-ksudoku = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n ksudoku
+Summary: KSudoku - Play, create and solve sudoku grids 
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=ksudoku
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: ksudoku4
+Obsoletes: kde4-ksudoku < 1:4.0.68
+Provides: kde4-ksudoku = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n ksudoku
 The word Sudoku means "single number in an alloted place" in Japanese. These
@@ -578,17 +580,17 @@ More information at http://en.wikipedia.org/wiki/Sudoku
 
 #-----------------------------------------------------------------------------
 
-%package -n     bovo
-Summary:        Bovo: classic pen and paper game
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=bovo
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       bovo4
-Obsoletes:      kde4-bovo < 1:4.0.68
-Provides:       kde4-bovo = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      oxygen-icon-theme < 1:4.4.2
+%package -n bovo
+Summary: Bovo: classic pen and paper game
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=bovo
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: bovo4
+Obsoletes: kde4-bovo < 1:4.0.68
+Provides: kde4-bovo = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: oxygen-icon-theme < 1:4.4.2
 
 %description -n bovo
 Bovo is a KDE 4 game, modeled upon a classic pen and paper game, 
@@ -604,18 +606,18 @@ where you try to connect five in a row prior to your opponent.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kjumpingcube
-Summary:        kjumpingcube: a tactical game for number-crunchers
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kjumpingcube
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Conflicts:      kdegames4-core < 3.96.1-0.740193.1
-Provides:       kjumpingcube4
-Obsoletes:      kde4-kjumpingcube < 1:4.0.68
-Provides:       kde4-kjumpingcube = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kjumpingcube
+Summary: kjumpingcube: a tactical game for number-crunchers
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kjumpingcube
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Conflicts: kdegames4-core < 3.96.1-0.740193.1
+Provides: kjumpingcube4
+Obsoletes: kde4-kjumpingcube < 1:4.0.68
+Provides: kde4-kjumpingcube = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kjumpingcube
 KJumpingCube is a tactical one or two-player game. The playing field 
@@ -633,18 +635,18 @@ this you can gain more fields and finally win the board over.
 
 #-----------------------------------------------------------------------------
 
-%package -n     klines
-Summary:        Place 5 equal pieces together, but wait, there are 3 new ones
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=klines
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Conflicts:      kdegames4-core < 3.96.1-0.740193.1
-Provides:       klines4
-Obsoletes:      kde4-klines < 1:4.0.68
-Provides:       kde4-klines = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n klines
+Summary: Place 5 equal pieces together, but wait, there are 3 new ones
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=klines
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Conflicts: kdegames4-core < 3.96.1-0.740193.1
+Provides: klines4
+Obsoletes: kde4-klines < 1:4.0.68
+Provides: kde4-klines = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n klines
 klines: place 5 equal pieces together, but wait, there are 3 new ones
@@ -660,18 +662,18 @@ klines: place 5 equal pieces together, but wait, there are 3 new ones
 
 #-----------------------------------------------------------------------------
 
-%package -n     kmines
-Summary:        The classical mine sweeper
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kmines
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Conflicts:      kdegames4-core < 3.96.1-0.740193.1
-Provides:       kmines4
-Obsoletes:      kde4-kmines < 1:4.0.68
-Provides:       kde4-kmines = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kmines
+Summary: The classical mine sweeper
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kmines
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Conflicts: kdegames4-core < 3.96.1-0.740193.1
+Provides: kmines4
+Obsoletes: kde4-kmines < 1:4.0.68
+Provides: kde4-kmines = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kmines
 kmines: the classical mine sweeper
@@ -687,17 +689,17 @@ kmines: the classical mine sweeper
 
 #-----------------------------------------------------------------------------
 
-%package -n     knetwalk
-Summary:        Turn the board pieces to get all computers connected 
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=knetwalk
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       knetwalk4
-Obsoletes:      kde4-knetwalk < 1:4.0.68
-Provides:       kde4-knetwalk = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n knetwalk
+Summary: Turn the board pieces to get all computers connected 
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=knetwalk
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: knetwalk4
+Obsoletes: kde4-knetwalk < 1:4.0.68
+Provides: kde4-knetwalk = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n knetwalk
 Turn the board pieces to get all computers connected.
@@ -712,17 +714,17 @@ Turn the board pieces to get all computers connected.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kpat
-Summary:        Several patience card games
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kpat4
-Obsoletes:      kde4-kpat < 1:4.0.68
-Provides:       kde4-kpat = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
-Conflicts:	kdegames4-devel < 1:4.5.71-0.svn1184269.2
+%package -n kpat
+Summary: Several patience card games
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kpat4
+Obsoletes: kde4-kpat < 1:4.0.68
+Provides: kde4-kpat = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
+Conflicts: kdegames4-devel < 1:4.5.71-0.svn1184269.2
 
 %description -n kpat
 kpat: several patience card games
@@ -740,10 +742,11 @@ kpat: several patience card games
 
 #----------------------------------------------------------------------------
 
-%package -n     kajongg
-Summary:        kajongg : Majongg game for KDE
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
+%package -n kajongg
+Summary: kajongg : Majongg game for KDE
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Requires: python-kde4
 
 %description -n kajongg
 kajongg : Majongg game for KDE
@@ -759,17 +762,17 @@ kajongg : Majongg game for KDE
 
 #-----------------------------------------------------------------------------
 
-%package -n     kshisen
-Summary:        Patience game where you take away all pieces
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kshisen
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Conflicts:      kdegames4-core < 3.96.1-0.740193.1
-Provides:       kshisen4
-Obsoletes:      kde4-kshisen < 1:4.0.68
-Provides:       kde4-kshisen = %epoch:%version
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kshisen
+Summary: Patience game where you take away all pieces
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kshisen
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Conflicts: kdegames4-core < 3.96.1-0.740193.1
+Provides: kshisen4
+Obsoletes: kde4-kshisen < 1:4.0.68
+Provides: kde4-kshisen = %epoch:%version
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kshisen
 Kshisen: patience game where you take away all pieces
@@ -786,14 +789,14 @@ Kshisen: patience game where you take away all pieces
 
 #-----------------------------------------------------------------------------
 
-%package -n     ktron
-Summary:        Simple Tron clone
-Group:          Graphical desktop/KDE
-URL:        http://games.kde.org/game.php?game=ktron
-Requires:       kdegames4-core
-Provides:       ktron4
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n ktron
+Summary: Simple Tron clone
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=ktron
+Requires: kdegames4-core
+Provides: ktron4
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n ktron
 Well known from the famous movie, KTron is a popular computer 
@@ -814,15 +817,15 @@ game.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kdesnake
-Summary:        snake race played against the computer
-Group:          Graphical desktop/KDE
-URL:		    http://games.kde.org/game.php?game=kdesnake
-Requires:       kdegames4-core
-Provides:       kdesnake4 = %version
-Provides:       ksnake = %version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kdesnake
+Summary: snake race played against the computer
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kdesnake
+Requires: kdegames4-core
+Provides: kdesnake4 = %version
+Provides: ksnake = %version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kdesnake
 KSnake Race is a fast action game where you steer a snake 
@@ -839,18 +842,18 @@ difficult the longer the snakes grow.
 
 #-----------------------------------------------------------------------------
 
-%package -n     ksquares
-Summary:        KSquares: an implementation of the popular paper based game squares
-Group:          Graphical desktop/KDE
-URL:        http://games.kde.org/game.php?game=ksquares
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Conflicts:      kdegames4-core < 3.96.1-0.740193.1
-Provides:       ksquares4
-Obsoletes:      kde4-ksquares < 1:4.0.68
-Provides:       kde4-ksquares = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n ksquares
+Summary: KSquares: an implementation of the popular paper based game squares
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=ksquares
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Conflicts: kdegames4-core < 3.96.1-0.740193.1
+Provides: ksquares4
+Obsoletes: kde4-ksquares < 1:4.0.68
+Provides: kde4-ksquares = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n ksquares
 KSquares is an implementation of the popular paper based game squares. 
@@ -868,19 +871,19 @@ quares wins.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kfourinline
-Summary:        Place 4 pieces in a row
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=kfourinline
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Conflicts:      kdegames4-core < 3.96.1-0.740193.1
-Provides:       kfourinline4
-Obsoletes:      kde4-kwin4 < 3.97.1-0.752247.1
-Obsoletes:      kde4-kfourinline < 1:4.0.68
-Provides:       kde4-kfourinline = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kfourinline
+Summary: Place 4 pieces in a row
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=kfourinline
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Conflicts: kdegames4-core < 3.96.1-0.740193.1
+Provides: kfourinline4
+Obsoletes: kde4-kwin4 < 3.97.1-0.752247.1
+Obsoletes: kde4-kfourinline < 1:4.0.68
+Provides: kde4-kfourinline = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kfourinline
 kfourinline: place 4 pieces in a row
@@ -897,17 +900,17 @@ kfourinline: place 4 pieces in a row
 
 #-----------------------------------------------------------------------------
 
-%package -n     lskat
-Summary:        Lieutnant skat
-Group:          Graphical desktop/KDE
-URL:		http://games.kde.org/game.php?game=lskat
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       lskat4
-Obsoletes:      kde4-lskat < 1:4.0.68
-Provides:       kde4-lskat = %epoch:%version
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n lskat
+Summary: Lieutnant skat
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=lskat
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: lskat4
+Obsoletes: kde4-lskat < 1:4.0.68
+Provides: kde4-lskat = %epoch:%version
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n lskat
 lskat: lieutnant skat
@@ -922,14 +925,14 @@ lskat: lieutnant skat
 
 #-----------------------------------------------------------------------------
 
-%package -n     kdiamond
-Summary:        Three-in-a-row game
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kdiamond4
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kdiamond
+Summary: Three-in-a-row game
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kdiamond4
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kdiamond
 KDiamond is a three-in-a-row game (much like Bejeweled) for the KDE 4 desktop.
@@ -946,14 +949,14 @@ KDiamond is a three-in-a-row game (much like Bejeweled) for the KDE 4 desktop.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kollision
-Summary:        A simple ball dodging game
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kollision4
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kollision
+Summary: A simple ball dodging game
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kollision4
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kollision
 A simple ball dodging game
@@ -969,14 +972,14 @@ A simple ball dodging game
 
 #-----------------------------------------------------------------------------
 
-%package -n     kubrick
-Summary:        Game based on Rubik's Cube
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kubrick4
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kubrick
+Summary: Game based on Rubik's Cube
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kubrick4
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kubrick
 Kubrick, a game based on Rubik's Cube
@@ -991,14 +994,14 @@ Kubrick, a game based on Rubik's Cube
 
 #-----------------------------------------------------------------------------
 
-%package -n     kblocks
-Summary:        Single player falling blocks puzzle game
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kblocks4
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kblocks
+Summary: Single player falling blocks puzzle game
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kblocks4
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kblocks
 Single player falling blocks puzzle game
@@ -1015,14 +1018,14 @@ Single player falling blocks puzzle game
 
 #-----------------------------------------------------------------------------
 
-%package -n     kbreakout
-Summary:        kbreakout
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       kbreakout4
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kbreakout
+Summary: kbreakout
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: kbreakout4
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kbreakout
 Single player falling blocks puzzle game
@@ -1037,14 +1040,14 @@ Single player falling blocks puzzle game
 
 #-----------------------------------------------------------------------------
 
-%package -n     bomber
-Summary:        Arcade bombing game
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       bomber4
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n bomber
+Summary: Arcade bombing game
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: bomber4
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n bomber
 Arcade bombing game
@@ -1060,15 +1063,15 @@ Arcade bombing game
 
 #-----------------------------------------------------------------------------
 
-%package -n     ksirk
-Summary:        Computerized version of a well known strategy board game
-Group:          Graphical desktop/KDE
-URL:		    http://games.kde.org/game.php?game=ksirk
-Requires:       kdegames4-core
-Conflicts:      kdegames4 < 3.91
-Provides:       ksirk4
-Conflicts:      kshisen < 1:4.2.95-2
-Conflicts:      bovo < 1:4.4.3-3
+%package -n ksirk
+Summary: Computerized version of a well known strategy board game
+Group: Graphical desktop/KDE
+URL: http://games.kde.org/game.php?game=ksirk
+Requires: kdegames4-core
+Conflicts: kdegames4 < 3.91
+Provides: ksirk4
+Conflicts: kshisen < 1:4.2.95-2
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n ksirk
 KsirK is a computerized version of a well known strategy board game.
@@ -1089,11 +1092,11 @@ your neighbours with your armies.
 
 #-----------------------------------------------------------------------------
 
-%package -n     granatier
-Summary:        KDE Bomberman game
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Conflicts:      bovo < 1:4.4.3-3
+%package -n granatier
+Summary: KDE Bomberman game
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n granatier
 KDE Bomberman game.
@@ -1109,12 +1112,12 @@ KDE Bomberman game.
 
 #-----------------------------------------------------------------------------
 
-%package -n     kigo
-Summary:        Go board game for KDE
-Group:          Graphical desktop/KDE
-Requires:       kdegames4-core
-Requires:       gnugo 
-Conflicts:      bovo < 1:4.4.3-3
+%package -n kigo
+Summary: Go board game for KDE
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
+Requires: gnugo 
+Conflicts: bovo < 1:4.4.3-3
 
 %description -n kigo
 Go board game for KDE.
@@ -1136,9 +1139,9 @@ Go board game for KDE.
 %define wronglibkdegames %mklibname kdegames 4
 
 %package -n %libkdegames
-Summary:    KDE 4 library
-Group:      System/Libraries
-Obsoletes:  %wronglibkdegames
+Summary: KDE 4 library
+Group: System/Libraries
+Obsoletes: %wronglibkdegames
 
 %description -n %libkdegames
 KDE 4 library.
@@ -1155,8 +1158,8 @@ KDE 4 library.
 Summary: KDE 4 library
 Group: System/Libraries
 Requires: kmahjongglib = %{epoch}:%{version}
-Conflicts:  %{_lib}kdegames4 < 3.91
-Obsoletes:  %{_lib}kmahjongglib5 < 1:3.93.0-0.714146.1
+Conflicts: %{_lib}kdegames4 < 3.91
+Obsoletes: %{_lib}kmahjongglib5 < 1:3.93.0-0.714146.1
 
 %description -n %libkmahjongglib
 KDE 4 library.
@@ -1172,7 +1175,7 @@ KDE 4 library.
 %package -n %libkolfprivate
 Summary: KDE 4 library
 Group: System/Libraries
-Conflicts:  %{_lib}kdegames4 < 3.91
+Conflicts: %{_lib}kdegames4 < 3.91
 Obsoletes: %{_lib}kolflib1.2.0 < 1:3.93.0-0.714146.1
 Obsoletes: %{_lib}kolflib1 < 1:3.97.1-0.746784.1
 
@@ -1190,7 +1193,7 @@ KDE 4 library.
 %package -n %libkggzgames
 Summary: KDE 4 library
 Group: System/Libraries
-Conflicts:  %{_lib}kdegames4 < 3.91
+Conflicts: %{_lib}kdegames4 < 3.91
 
 %description -n %libkggzgames
 KDE 4 library.
@@ -1206,7 +1209,7 @@ KDE 4 library.
 %package -n %libkggzmod
 Summary: KDE 4 library
 Group: System/Libraries
-Conflicts:  %{_lib}kdegames4 < 3.91
+Conflicts: %{_lib}kdegames4 < 3.91
 
 %description -n %libkggzmod
 KDE 4 library.
@@ -1222,7 +1225,7 @@ KDE 4 library.
 %package -n %libkggznet
 Summary: KDE 4 library
 Group: System/Libraries
-Conflicts:  %{_lib}kdegames4 < 3.91
+Conflicts: %{_lib}kdegames4 < 3.91
 
 %description -n %libkggznet
 KDE 4 library.
@@ -1238,7 +1241,7 @@ KDE 4 library.
 %package -n %libiris_ksirk
 Summary: KDE 4 library
 Group: System/Libraries
-Conflicts:  %{_lib}kdegames4 < 3.91
+Conflicts: %{_lib}kdegames4 < 3.91
 
 %description -n %libiris_ksirk
 KDE 4 library.
@@ -1266,10 +1269,10 @@ KDE 4 library.
 
 #-----------------------------------------------------------------------------
 
-%package -n	palapeli
-Summary:	Jigsaw puzzle game
-Group:		Graphical desktop/KDE
-Requires:	kdegames4-core
+%package -n palapeli
+Summary: Jigsaw puzzle game
+Group: Graphical desktop/KDE
+Requires: kdegames4-core
 
 %description -n palapeli
 Palapeli is a jigsaw puzzle game. Unlike other games in that genre, you
@@ -1301,19 +1304,19 @@ you do is saved on your disk immediately.
 #-----------------------------------------------------------------------------
 
 %package devel
-Summary:    Headers files for kdegames
-Group:      Development/KDE and Qt
-Obsoletes:  %{_lib}kdegames1-devel < 1:3.5.10-2
-Obsoletes:  palapeli-devel < 1:4.3.80
-Requires:   kdelibs4-devel
-Requires:   %libkdegames = %epoch:%version
-Requires:   %libkmahjongglib = %epoch:%version
-Requires:   %libkolfprivate = %epoch:%version
-Requires:   %libkggzgames = %epoch:%version
-Requires:   %libkggzmod = %epoch:%version
-Requires:   %libkggznet = %epoch:%version
-Requires:   %libiris_ksirk = %epoch:%version
-Requires:   %libpala = %epoch:%version
+Summary: Headers files for kdegames
+Group: Development/KDE and Qt
+Obsoletes: %{_lib}kdegames1-devel < 1:3.5.10-2
+Obsoletes: palapeli-devel < 1:4.3.80
+Requires: kdelibs4-devel
+Requires: %libkdegames = %epoch:%version
+Requires: %libkmahjongglib = %epoch:%version
+Requires: %libkolfprivate = %epoch:%version
+Requires: %libkggzgames = %epoch:%version
+Requires: %libkggzmod = %epoch:%version
+Requires: %libkggznet = %epoch:%version
+Requires: %libiris_ksirk = %epoch:%version
+Requires: %libpala = %epoch:%version
 
 %description devel
 Headers files needed to build applications based on kdegames applications.
