@@ -29,6 +29,7 @@ BuildRequires: libxml2-utils
 # read this if you have some doubt http://svn.ggzgamingzone.org/trac.cgi/browser/trunk/docs/ggz-project/packagers
 BuildRequires: ggz-client-libs-devel
 BuildRequires: qca2-devel
+BuildRequires: sqlite3-devel
 BuildRequires: python-qt4
 BuildRequires: python-kde4
 BuildRequires: python-twisted-core
