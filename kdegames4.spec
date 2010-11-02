@@ -31,6 +31,7 @@ BuildRequires: ggz-client-libs-devel
 BuildRequires: qca2-devel
 BuildRequires: python-qt4
 BuildRequires: python-kde4
+BuildRequires: python-twisted-core
 Suggests: katomic
 Suggests: kbattleship
 Suggests: kblackbox
@@ -747,6 +748,7 @@ Summary: kajongg : Majongg game for KDE
 Group: Graphical desktop/KDE
 Requires: kdegames4-core
 Requires: python-kde4
+Requires: python-twisted-core
 
 %description -n kajongg
 kajongg : Majongg game for KDE
