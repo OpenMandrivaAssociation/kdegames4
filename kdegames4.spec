@@ -439,6 +439,8 @@ the board by clicking on groups to destroy them.
 %_kde_applicationsdir/klickety.desktop
 %_kde_applicationsdir/ksame.desktop
 %_kde_appsdir/klickety
+%_kde_appsdir/kconf_update/klickety.upd
+%_kde_appsdir/kconf_update/klickety-2.0-inherit-ksame-highscore.pl
 %_kde_docdir/HTML/en/klickety
 %_kde_iconsdir/*/*/apps/klickety.*
 %_kde_iconsdir/*/*/apps/ksame.*
