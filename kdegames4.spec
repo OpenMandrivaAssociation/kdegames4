@@ -7,7 +7,7 @@
 
 Name: kdegames4
 Summary: KDE - Games
-Version: 4.6.0
+Version: 4.6.1
 %if %branch
 Release: %mkrel -c %kde_snapshot 1
 %else
