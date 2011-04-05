@@ -9,9 +9,9 @@ Name: kdegames4
 Summary: KDE - Games
 Version: 4.6.2
 %if %branch
-Release: %mkrel -c %kde_snapshot 1
+Release: 0.%kde_snapshot.1
 %else
-Release: %mkrel 1
+Release: 1
 %endif
 Epoch: 1
 Group: Graphical desktop/KDE
