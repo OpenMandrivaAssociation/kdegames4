@@ -1,28 +1,12 @@
-%define branch 0
-%{?_branch: %{expand: %%global branch 1}}
-
-%if %branch
-%define kde_snapshot svn1198704
-%endif
-
 Name: kdegames4
 Summary: KDE - Games
 Version: 4.6.4
-%if %branch
-Release: 0.%kde_snapshot.1
-%else
 Release: 1
-%endif
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://games.kde.org/
-%if %branch
-Source: ftp://ftp.kde.org/pub/kde/unstable/%version/src/kdegames-%version%kde_snapshot.tar.bz2
-%else
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/kdegames-%version.tar.bz2
-%endif
-BuildRoot: %_tmppath/%name-%version-%release-root
 BuildRequires: kdelibs4-devel >= 2:4.3.77
 BuildRequires: libxml2-utils
 # Do not comment ggz. For now we're excluding /etc/ggz.modules, but freeciv package is wrong too.
@@ -1346,20 +1330,12 @@ Headers files needed to build applications based on kdegames applications.
 #-----------------------------------------------------------------------------
 
 %prep
-%if %branch
-%setup -q -n kdegames-%version%kde_snapshot
-%else
 %setup -q -n kdegames-%version
-%endif
 
 %build
 %cmake_kde4
 %make
 
 %install
-rm -fr %buildroot
 %makeinstall_std -C build
-
-%clean
-rm -fr %buildroot
 
