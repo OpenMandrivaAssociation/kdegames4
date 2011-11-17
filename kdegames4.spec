@@ -92,7 +92,7 @@ This is a compilation of various games for KDE project
  - Knetwalk: Turn the board pieces to get all computers connected
 
 %files
-%defattr(-,root,root)
+
 
 #--------------------------------------------------------------------
 
@@ -106,7 +106,7 @@ Conflicts: kshisen < 1:4.2.95-2
 Common files needed by Kdegames4 packages
 
 %files core
-%defattr(-,root,root)
+
 %_kde_appsdir/kdegames
 %_kde_appsdir/carddecks
 %_kde_datadir/config/kcardtheme.knsrc
@@ -133,7 +133,7 @@ Run through the maze, dodge your enemies, collect
 all the gold and climb up to the next level.
 
 %files -n kgoldrunner
-%defattr(-,root,root)
+
 %attr(0755,root,root) %_kde_bindir/kgoldrunner
 %_kde_datadir/applications/kde4/KGoldrunner.desktop
 %_kde_datadir/config/kgoldrunner.knsrc
@@ -156,7 +156,7 @@ Conflicts: bovo < 1:4.4.3-3
 Kapman is a Pac-Man clone.
 
 %files -n kapman
-%defattr(-,root,root)
+
 %_kde_bindir/kapman
 %_kde_datadir/applications/kde4/kapman.desktop
 %_kde_appsdir/kapman
@@ -182,7 +182,7 @@ Conflicts: bovo < 1:4.4.3-3
 katomic: build complex atoms with a minimal amount of moves
 
 %files -n katomic
-%defattr(-,root,root)
+
 %_kde_bindir/katomic
 %_kde_datadir/applications/kde4/katomic.desktop
 %_kde_docdir/*/*/katomic
@@ -210,7 +210,7 @@ Conflicts: bovo < 1:4.4.3-3
 kblackbox: find atoms in a grid by shooting electrons
 
 %files -n kblackbox
-%defattr(-,root,root)
+
 %_kde_bindir/kblackbox
 %_kde_datadir/applications/kde4/kblackbox.desktop
 %_kde_appsdir/kblackbox
@@ -238,7 +238,7 @@ has no winner; the only purpose is to make the funniest
 faces you can.
 
 %files -n ktuberling
-%defattr(-,root,root)
+
 %_kde_bindir/ktuberling
 %_kde_datadir/applications/kde4/ktuberling.desktop
 %_kde_appsdir/ktuberling
@@ -264,7 +264,7 @@ Conflicts: bovo < 1:4.4.3-3
 kbounce: claim areas and don't get disturbed
 
 %files -n kbounce
-%defattr(-,root,root)
+
 %_kde_bindir/kbounce
 %_kde_datadir/applications/kde4/kbounce.desktop
 %_kde_appsdir/kbounce
@@ -286,7 +286,7 @@ Conflicts: bovo < 1:4.4.3-3
 Killbots is a KDE port of the classic BSD console game robots.
 
 %files -n killbots
-%defattr(-,root,root)
+
 %_kde_bindir/killbots
 %_kde_datadir/applications/kde4/killbots.desktop
 %_kde_appsdir/killbots
@@ -313,7 +313,7 @@ Conflicts: bovo < 1:4.4.3-3
 kspaceduel: two player game with shooting spaceships flying around a sun
 
 %files -n kspaceduel
-%defattr(-,root,root)
+
 %_kde_bindir/kspaceduel
 %_kde_datadir/applications/kde4/kspaceduel.desktop
 %_kde_appsdir/kspaceduel
@@ -339,7 +339,7 @@ Conflicts: bovo < 1:4.4.3-3
 kreversi: the old reversi board game, also known as othello
 
 %files -n kreversi
-%defattr(-,root,root)
+
 %_kde_bindir/kreversi
 %_kde_datadir/applications/kde4/kreversi.desktop
 %_kde_appsdir/kreversi
@@ -366,7 +366,7 @@ and up to 10 people can play at once in competition. Kolf comes equipped
 with a variety of playgrounds and tutorial courses.
 
 %files -n kolf
-%defattr(-,root,root)
+
 %_kde_bindir/kolf
 %_kde_datadir/applications/kde4/kolf.desktop
 %_kde_appsdir/kolf
@@ -391,7 +391,7 @@ Conflicts: bovo < 1:4.4.3-3
 konquest: conquer the planets of your enemy
 
 %files -n konquest
-%defattr(-,root,root)
+
 %_kde_bindir/konquest
 %_kde_datadir/applications/kde4/konquest.desktop
 %_kde_appsdir/konquest
@@ -418,7 +418,7 @@ The rules are similar to those of the Same game: your goal is to clear
 the board by clicking on groups to destroy them.
 
 %files -n klickety
-%defattr(-,root,root)
+
 %_kde_bindir/klickety
 %_kde_applicationsdir/klickety.desktop
 %_kde_applicationsdir/ksame.desktop
@@ -441,7 +441,7 @@ Conflicts: kmahjongg < 1:4.3.1-4
 Common files for kmahjongg.
 
 %files -n kmahjongglib
-%defattr(-,root,root)
+
 %_kde_appsdir/kmahjongglib
 
 #-----------------------------------------------------------------------------
@@ -463,7 +463,7 @@ Conflicts: bovo < 1:4.4.3-3
 Kmahjongg: a tile laying patience
 
 %files -n kmahjongg
-%defattr(-,root,root)
+
 %_kde_bindir/kmahjongg
 %_kde_datadir/applications/kde4/kmahjongg.desktop
 %_kde_appsdir/kmahjongg
@@ -489,7 +489,7 @@ Conflicts: bovo < 1:4.4.3-3
 kbattleship: battleship game with built-in game server
 
 %files -n kbattleship
-%defattr(-,root,root)
+
 %_kde_bindir/kbattleship
 %_kde_datadir/applications/kde4/kbattleship.desktop
 %_kde_docdir/*/*/kbattleship
@@ -516,7 +516,7 @@ Kiriki is a dice game, written for KDE 4.
 It is a clone of Gnome Tali (gtali) that is a clone of Yahtzee!
 
 %files -n kiriki
-%defattr(-,root,root)
+
 %_kde_bindir/kiriki
 %_kde_datadir/applications/kde4/kiriki.desktop
 %_kde_docdir/*/*/kiriki
@@ -558,7 +558,7 @@ you).
 More information at http://en.wikipedia.org/wiki/Sudoku
 
 %files -n ksudoku
-%defattr(-,root,root)
+
 %_kde_bindir/ksudoku
 %_kde_datadir/applications/kde4/ksudoku.desktop
 %_kde_appsdir/ksudoku
@@ -585,7 +585,7 @@ Bovo is a KDE 4 game, modeled upon a classic pen and paper game,
 where you try to connect five in a row prior to your opponent.
 
 %files -n bovo
-%defattr(-,root,root)
+
 %_kde_bindir/bovo
 %_kde_datadir/applications/kde4/bovo.desktop
 %_kde_appsdir/bovo
@@ -613,7 +613,7 @@ consists of squares that contains points which can be increased. By
 this you can gain more fields and finally win the board over.
 
 %files -n kjumpingcube
-%defattr(-,root,root)
+
 %_kde_bindir/kjumpingcube
 %_kde_datadir/applications/kde4/kjumpingcube.desktop
 %_kde_appsdir/kjumpingcube
@@ -640,7 +640,7 @@ Conflicts: bovo < 1:4.4.3-3
 klines: place 5 equal pieces together, but wait, there are 3 new ones
 
 %files -n klines
-%defattr(-,root,root)
+
 %_kde_bindir/klines
 %_kde_datadir/applications/kde4/klines.desktop
 %_kde_appsdir/klines
@@ -667,7 +667,7 @@ Conflicts: bovo < 1:4.4.3-3
 kmines: the classical mine sweeper
 
 %files -n kmines
-%defattr(-,root,root)
+
 %_kde_bindir/kmines
 %_kde_datadir/applications/kde4/kmines.desktop
 %_kde_appsdir/kmines
@@ -693,7 +693,7 @@ Conflicts: bovo < 1:4.4.3-3
 Turn the board pieces to get all computers connected.
 
 %files -n knetwalk
-%defattr(-,root,root)
+
 %_kde_bindir/knetwalk
 %_kde_datadir/applications/kde4/knetwalk.desktop
 %_kde_appsdir/knetwalk
@@ -718,7 +718,7 @@ Conflicts: kdegames4-devel < 1:4.5.71-0.svn1184269.2
 kpat: several patience card games
 
 %files -n kpat
-%defattr(-,root,root)
+
 %_kde_bindir/kpat
 %_kde_libdir/libkcardgame.so
 %_kde_datadir/applications/kde4/kpat.desktop
@@ -742,7 +742,7 @@ Requires: qt4-database-plugin-sqlite
 kajongg : Majongg game for KDE
 
 %files -n kajongg
-%defattr(-,root,root)
+
 %_kde_bindir/kajongg
 %_kde_bindir/kajonggserver
 %_kde_datadir/applications/kde4/kajongg.desktop
@@ -768,7 +768,7 @@ Conflicts: bovo < 1:4.4.3-3
 Kshisen: patience game where you take away all pieces
 
 %files -n kshisen
-%defattr(-,root,root)
+
 %_kde_bindir/kshisen
 %_kde_datadir/applications/kde4/kshisen.desktop
 %_kde_appsdir/kshisen
@@ -796,7 +796,7 @@ as well as the own path. The player colliding first looses the
 game.
 
 %files -n ktron
-%defattr(-,root,root)
+
 %_kde_bindir/ktron
 %_kde_datadir/applications/kde4/ktron.desktop
 %_kde_appsdir/ktron
@@ -825,7 +825,7 @@ the game is lost. This becomes of course more and more
 difficult the longer the snakes grow.
 
 %files -n kdesnake
-%defattr(-,root,root)
+
 %_kde_bindir/kdesnake
 %_kde_datadir/applications/kde4/kdesnake.desktop
 %_kde_iconsdir/hicolor/*/*/kdesnake.*
@@ -851,7 +851,7 @@ You must draw lines to complete squares, the player with the most s
 quares wins.
 
 %files -n ksquares
-%defattr(-,root,root)
+
 %_kde_bindir/ksquares
 %_kde_datadir/applications/kde4/ksquares.desktop
 %_kde_appsdir/ksquares
@@ -879,7 +879,7 @@ Conflicts: bovo < 1:4.4.3-3
 kfourinline: place 4 pieces in a row
 
 %files -n kfourinline
-%defattr(-,root,root)
+
 %_kde_bindir/kfourinline
 %_kde_bindir/kfourinlineproc
 %_kde_datadir/applications/kde4/kfourinline.desktop
@@ -906,7 +906,7 @@ Conflicts: bovo < 1:4.4.3-3
 lskat: lieutnant skat
 
 %files -n lskat
-%defattr(-,root,root)
+
 %_kde_bindir/lskat
 %_kde_datadir/applications/kde4/lskat.desktop
 %_kde_appsdir/lskat
@@ -928,7 +928,7 @@ Conflicts: bovo < 1:4.4.3-3
 KDiamond is a three-in-a-row game (much like Bejeweled) for the KDE 4 desktop.
 
 %files -n kdiamond
-%defattr(-,root,root)
+
 %_kde_bindir/kdiamond
 %_kde_datadir/applications/kde4/kdiamond.desktop
 %_kde_appsdir/kdiamond
@@ -952,7 +952,7 @@ Conflicts: bovo < 1:4.4.3-3
 A simple ball dodging game
 
 %files -n kollision
-%defattr(-,root,root)
+
 %_kde_bindir/kollision
 %_kde_datadir/applications/kde4/kollision.desktop
 %_kde_appsdir/kollision
@@ -975,7 +975,7 @@ Conflicts: bovo < 1:4.4.3-3
 Kubrick, a game based on Rubik's Cube
 
 %files -n kubrick
-%defattr(-,root,root)
+
 %_kde_bindir/kubrick
 %_kde_datadir/applications/kde4/kubrick.desktop
 %_kde_appsdir/kubrick
@@ -997,7 +997,7 @@ Conflicts: bovo < 1:4.4.3-3
 Single player falling blocks puzzle game
 
 %files -n kblocks
-%defattr(-,root,root)
+
 %_kde_bindir/kblocks
 %_kde_datadir/applications/kde4/kblocks.desktop
 %_kde_appsdir/kblocks
@@ -1021,7 +1021,7 @@ Conflicts: bovo < 1:4.4.3-3
 Single player falling blocks puzzle game
 
 %files -n kbreakout
-%defattr(-,root,root)
+
 %{_kde_bindir}/kbreakout
 %{_kde_datadir}/applications/kde4/kbreakout.desktop
 %{_kde_appsdir}/kbreakout
@@ -1043,7 +1043,7 @@ Conflicts: bovo < 1:4.4.3-3
 Arcade bombing game
 
 %files -n bomber
-%defattr(-,root,root)
+
 %{_kde_bindir}/bomber
 %{_kde_datadir}/applications/kde4/bomber.desktop
 %{_kde_appsdir}/bomber
@@ -1070,7 +1070,7 @@ of the game is simply to conquer the World... It is done by attacking
 your neighbours with your armies.
 
 %files -n ksirk
-%defattr(-,root,root)
+
 %{_kde_bindir}/ksirk*
 %{_kde_datadir}/applications/kde4/ksirk*.desktop
 %{_kde_datadir}/config.kcfg/ksirk*settings.kcfg
@@ -1092,7 +1092,7 @@ Conflicts: bovo < 1:4.4.3-3
 KDE Bomberman game.
 
 %files -n granatier
-%defattr(-,root,root)
+
 %_kde_bindir/granatier
 %_kde_datadir/applications/kde4/granatier.desktop
 %_kde_datadir/apps/granatier
@@ -1113,7 +1113,7 @@ Conflicts: bovo < 1:4.4.3-3
 Go board game for KDE.
 
 %files -n kigo
-%defattr(-,root,root)
+
 %_kde_bindir/kigo
 %_kde_datadir/applications/kde4/kigo.desktop
 %_kde_datadir/apps/kigo
@@ -1137,7 +1137,7 @@ Obsoletes: %wronglibkdegames
 KDE 4 library.
 
 %files -n %libkdegames
-%defattr(-,root,root)
+
 %_kde_libdir/libkdegames.so.*
 
 #-----------------------------------------------------------------------------
@@ -1155,7 +1155,7 @@ Obsoletes: %{_lib}kmahjongglib5 < 1:3.93.0-0.714146.1
 KDE 4 library.
 
 %files -n %libkmahjongglib
-%defattr(-,root,root)
+
 %_kde_libdir/libkmahjongglib.so.*
 
 #-----------------------------------------------------------------------------
@@ -1173,7 +1173,7 @@ Obsoletes: %{_lib}kolflib1 < 1:3.97.1-0.746784.1
 KDE 4 library.
 
 %files -n %libkolfprivate
-%defattr(-,root,root)
+
 %_kde_libdir/libkolfprivate.so.*
 
 #-----------------------------------------------------------------------------
@@ -1189,7 +1189,7 @@ Conflicts: %{_lib}kdegames4 < 3.91
 KDE 4 library.
 
 %files -n %libkggzgames
-%defattr(-,root,root)
+
 %_kde_libdir/libkggzgames.so.*
 
 #-----------------------------------------------------------------------------
@@ -1205,7 +1205,7 @@ Conflicts: %{_lib}kdegames4 < 3.91
 KDE 4 library.
 
 %files -n %libkggzmod
-%defattr(-,root,root)
+
 %_kde_libdir/libkggzmod.so.*
 
 #-----------------------------------------------------------------------------
@@ -1221,7 +1221,7 @@ Conflicts: %{_lib}kdegames4 < 3.91
 KDE 4 library.
 
 %files -n %libkggznet
-%defattr(-,root,root)
+
 %_kde_libdir/libkggznet.so.*
 
 #-----------------------------------------------------------------------------
@@ -1237,7 +1237,7 @@ Conflicts: %{_lib}kdegames4 < 3.91
 KDE 4 library.
 
 %files -n %libiris_ksirk
-%defattr(-,root,root)
+
 %_kde_libdir/libiris_ksirk.so.*
 
 #-----------------------------------------------------------------------------
@@ -1253,7 +1253,7 @@ Conflicts: palapeli < 1:4.3.80
 KDE 4 library.
 
 %files -n %libpala
-%defattr(-,root,root)
+
 %_kde_libdir/libpala.so.0
 %_kde_libdir/libpala.so.0.*
 
@@ -1271,7 +1271,7 @@ freely moveable. Also, Palapeli features real persistency, i.e. everything
 you do is saved on your disk immediately.
 
 %files -n palapeli
-%defattr(-,root,root)
+
 %_kde_bindir/palapeli
 %_kde_bindir/libpala-puzzlebuilder
 %_kde_libdir/kde4/palapeli_jigsawslicer.so
