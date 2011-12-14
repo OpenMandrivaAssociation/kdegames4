@@ -17,6 +17,7 @@ BuildRequires: sqlite3-devel
 BuildRequires: python-qt4
 BuildRequires: python-kde4
 BuildRequires: python-twisted-core
+BuildRequires: openal-devel
 Suggests: katomic
 Suggests: kbattleship
 Suggests: kblackbox
