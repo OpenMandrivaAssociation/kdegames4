@@ -1,7 +1,10 @@
+# workaround bug in rpm unpackaged subdir check
+%define _unpackaged_subdirs_terminate_build 0
+
 Name: kdegames4
 Summary: KDE - Games
 Version: 4.7.90
-Release: 1
+Release: 2
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
