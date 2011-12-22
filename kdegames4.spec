@@ -728,6 +728,7 @@ kpat: several patience card games
 %_kde_datadir/config/kpat.knsrc
 %_kde_docdir/*/*/kpat
 %_kde_iconsdir/hicolor/*/apps/kpat.png
+%_datadir/mime/packages/kpatience.xml
 
 #----------------------------------------------------------------------------
 
