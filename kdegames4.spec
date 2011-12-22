@@ -1274,7 +1274,6 @@ you do is saved on your disk immediately.
 %files -n palapeli
 
 %_kde_bindir/palapeli
-%_kde_bindir/libpala-puzzlebuilder
 %_kde_libdir/kde4/palapeli_jigsawslicer.so
 %_kde_libdir/kde4/palapeli_rectslicer.so
 %_kde_libdir/kde4/palathumbcreator.so
