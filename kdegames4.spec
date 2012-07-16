@@ -1030,8 +1030,7 @@ Headers files needed to build applications based on kdegames applications.
 %{_kde_appsdir}/cmake/modules/FindKDEGames.cmake
 %{_kde_appsdir}/cmake/modules/KDEGamesConfig.cmake
 %{_kde_appsdir}/cmake/modules/KDEGamesConfigVersion.cmake
-%{_kde_appsdir}/cmake/modules/KDEGamesLibraryDepends.cmake
-%{_kde_appsdir}/cmake/modules/KDEGamesLibraryDepends-release.cmake
+%{_kde_appsdir}/cmake/modules/KDEGamesLibraryDepends*.cmake
 %{_kde_libdir}/libpala/libpala-config.cmake
 %{_kde_libdir}/libpala/pala-targets*.cmake
 %{_kde_libdir}/libiris_ksirk.so
