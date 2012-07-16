@@ -111,7 +111,6 @@ Common files needed by Kdegames4 packages
 
 %files core
 
-%_kde_appsdir/kdegames
 %_kde_appsdir/carddecks
 %_kde_datadir/config/kcardtheme.knsrc
 %_kde_iconsdir/oxygen/*/actions/lastmoves.*
