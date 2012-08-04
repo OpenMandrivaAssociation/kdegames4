@@ -3,13 +3,13 @@
 
 Name:		kdegames4
 Summary:	KDE - Games
-Version:	4.8.97
-Release:	1
+Version: 4.9.0
+Release: 1
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPL
 URL:		http://games.kde.org/
-Source:		ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/kdegames-%{version}.tar.xz
+Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kdegames-%{version}.tar.xz
 Patch0:		kdegames-4.8.97-l10n-ru.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	libxml2-utils
