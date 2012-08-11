@@ -1027,9 +1027,9 @@ Requires:	%{libpala} = %{EVRD}
 Headers files needed to build applications based on kdegames applications.
 
 %files devel
-%{_kde_appsdir}/cmake/modules/KDEGamesConfig.cmake
-%{_kde_appsdir}/cmake/modules/KDEGamesConfigVersion.cmake
-%{_kde_appsdir}/cmake/modules/KDEGamesLibraryDepends*.cmake
+%{_kde_libdir}/cmake/KDEGames/KDEGamesConfig.cmake
+%{_kde_libdir}/cmake/KDEGames/KDEGamesConfigVersion.cmake
+%{_kde_libdir}/cmake/KDEGames/KDEGamesLibraryDepends*.cmake
 %{_kde_libdir}/libpala/libpala-config.cmake
 %{_kde_libdir}/libpala/pala-targets*.cmake
 %{_kde_libdir}/libiris_ksirk.so
