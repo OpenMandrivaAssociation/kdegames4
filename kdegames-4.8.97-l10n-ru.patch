@@ -1,0 +1,52 @@
+diff -urN kdegames-4.8.97/kigo/data/themes/plain.desktop kdegames-4.8.97-patched/kigo/data/themes/plain.desktop
+--- kdegames-4.8.97/kigo/data/themes/plain.desktop	2012-07-11 09:51:57.000000000 +1100
++++ kdegames-4.8.97-patched/kigo/data/themes/plain.desktop	2012-07-16 18:35:45.646889475 +1100
+@@ -20,6 +20,7 @@
+ Name[pl]=Zwykły
+ Name[pt]=Simples
+ Name[pt_BR]=Simples
++Name[ru]=Простая
+ Name[se]=Dábálaš
+ Name[sl]=Preprosto
+ Name[sr]=Обична
+@@ -51,6 +52,7 @@
+ Description[pl]=Zwykły motyw Kigo oparty o domyślny motyw stworzony przez Arturo Silva
+ Description[pt]=O tema simples do Kigo, baseado no tema predefinido de Arturo Silva
+ Description[pt_BR]=Tema simples do Kigo baseado no tema padrão por Arturo Silva
++Description[ru]=Простая тема Kigo, основанная на теме по умолчанию от Arturo Silva
+ Description[sl]=Preprosta tema za KIgo, ki temelji na privzeti temi avtorja Artura Silve
+ Description[sr]=Обична тема за Киго на основу подразумеване Артура Силве
+ Description[sr@ijekavian]=Обична тема за Киго на основу подразумијеване Артура Силве
+diff -urN kdegames-4.8.97/ktron/themes/neon.desktop kdegames-4.8.97-patched/ktron/themes/neon.desktop
+--- kdegames-4.8.97/ktron/themes/neon.desktop	2012-07-11 09:51:51.000000000 +1100
++++ kdegames-4.8.97-patched/ktron/themes/neon.desktop	2012-07-16 18:31:41.804892058 +1100
+@@ -26,6 +26,7 @@
+ Name[pl]=Neon
+ Name[pt]=Néon
+ Name[pt_BR]=Neon
++Name[ru]=Неон
+ Name[sk]=Neón
+ Name[sl]=Neon
+ Name[sr]=Неонка
+diff -urN kdegames-4.8.97/libkdegames/carddecks/svg-nicu-white/index.desktop kdegames-4.8.97-patched/libkdegames/carddecks/svg-nicu-white/index.desktop
+--- kdegames-4.8.97/libkdegames/carddecks/svg-nicu-white/index.desktop	2012-07-11 09:51:52.000000000 +1100
++++ kdegames-4.8.97-patched/libkdegames/carddecks/svg-nicu-white/index.desktop	2012-07-16 18:31:41.811892058 +1100
+@@ -23,6 +23,7 @@
+ Name[pl]=Białe Nicu
+ Name[pt]=Nicu Branco
+ Name[pt_BR]=Nicu branco
++Name[ru]=Nicu White
+ Name[sk]=Nicu biela
+ Name[sl]=Nicu bela
+ Name[sr]=Бели нику
+diff -urN kdegames-4.8.97/palapeli/slicers/palapeli_goldbergslicer.desktop kdegames-4.8.97-patched/palapeli/slicers/palapeli_goldbergslicer.desktop
+--- kdegames-4.8.97/palapeli/slicers/palapeli_goldbergslicer.desktop	2012-07-11 09:51:51.000000000 +1100
++++ kdegames-4.8.97-patched/palapeli/slicers/palapeli_goldbergslicer.desktop	2012-07-16 18:35:06.784889886 +1100
+@@ -71,6 +71,7 @@
+ Comment[pl]=Wcześniej znane znane jako program kawałkujący Goldberg
+ Comment[pt]=Antigamente conhecido como Divisor de Goldberg
+ Comment[pt_BR]=Anteriormente conhecido como divisão de Goldberg
++Comment[ru]=Раньше назывался Goldberg Slicer
+ Comment[sl]=Predhodno znan kot Goldbergov rezalnik
+ Comment[sr]=Раније познат као Голдбергов секач
+ Comment[sr@ijekavian]=Раније познат као Голдбергов сјекач
