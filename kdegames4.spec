@@ -1,6 +1,6 @@
 Name:		kdegames4
 Summary:	KDE - Games
-Version:	4.10.0
+Version:	4.10.1
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -104,6 +104,9 @@ This is a compilation of various games for KDE project:
 # Nothing
 
 %changelog
+* Sat Mar 09 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.10.1-1
+- New version 4.10.1
+
 * Mon Feb 18 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.10.0-1
 - Just a metapackage with Suggests from now on
 
