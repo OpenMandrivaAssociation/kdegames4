@@ -1,11 +1,11 @@
-Name:		kdegames4
 Summary:	KDE - Games
-Version:	4.11.1
+Name:		kdegames4
+Version:	4.11.2
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
-License:	GPL
-URL:		http://games.kde.org/
+License:	GPLv2+
+Url:		http://games.kde.org/
 Suggests:	bomber
 Suggests:	bovo
 Suggests:	granatier
@@ -104,6 +104,9 @@ This is a compilation of various games for KDE project:
 # Nothing
 
 %changelog
+* Wed Oct 02 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.11.2-1
+- New version 4.11.2
+
 * Tue Sep 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.11.1-1
 - New version 4.11.1
 
