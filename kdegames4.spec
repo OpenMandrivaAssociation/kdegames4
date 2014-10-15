@@ -1,6 +1,6 @@
 Summary:	KDE - Games
 Name:		kdegames4
-Version:	4.14.1
+Version:	4.14.2
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -104,6 +104,9 @@ This is a compilation of various games for KDE project:
 # Nothing
 
 %changelog
+* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.14.2-1
+- New version 4.14.2
+
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.14.1-1
 - New version 4.14.1
 
