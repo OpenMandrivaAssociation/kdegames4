@@ -5,7 +5,7 @@ Release:	3
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://games.kde.org/
+Url:		https://games.kde.org/
 Suggests:	bomber
 Suggests:	bovo
 Suggests:	granatier
